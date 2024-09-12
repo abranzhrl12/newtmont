@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#3498db">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Newmont</title>
+    <link rel="icon" href="Assets/iconos-Logo/iconoweb.png" sizes="16x16" type="image/png">
+    <link rel="preload" href="public/Styles/styles.css" as="style">
+    <link rel="stylesheet" href="public/Styles/styles.css">    
+</head>
+<body>
+
+<section class="login">
+    <form class="login__form" action="/start.html">  
+        <img class="login__img" src="Assets/iconos-Logo/LOGO_NEWMONT-topaz-enhance-1.5x.png" alt="">
+        <div class="login__content">
+             <label for="" class="login__label">Usuario</label>
+             <img class="login__icon" src="/Assets/iconos/Usuario_login.svg" alt="">
+             <input id="user" class="login__input" type="text" placeholder="Ingresa tu nombre de usuario">
+        </div>
+        <div class="login__content">
+            <label for="" class="login__label">Contraseña  
+            </label>
+            <img class="login__icon" src="/Assets/iconos/Contraseña_login.svg" alt="">
+            <input id="password" class="login__input" type="password" placeholder="Ingresar Contraseña" >
+            <img class="login__icon-hidden" src="/Assets/iconos/Ocultar_contraseña.svg" alt="">
+        </div>
+        <input id="session" class="login__btn" type="submit" value="Iniciar Sessión">
+    </form>
+</section>
+<img class="svg-Background" src="/Assets/fondos/newmont_fondo-topaz-enhance-4x.svg" alt="">
+<script>
+    // JavaScript para alternar el tipo de input entre password y text
+    const togglePassword = document.querySelector('.login__icon-hidden');
+    const passwordInput = document.getElementById('password');
+
+    togglePassword.addEventListener('click', function () {
+        // Cambia el tipo del input entre 'password' y 'text'
+        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordInput.setAttribute('type', type);
+
+        // Cambia el ícono
+        const icon = type === 'password' ? '/Assets/iconos/Ocultar_contraseña.svg' : '/Assets/iconos/Ver_contraseña.svg';
+        this.setAttribute('src', icon);
+    });
+</script>
+</body>
+</html>

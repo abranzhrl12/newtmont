@@ -1,0 +1,127 @@
+@use '../globales/mixins' as m;
+@use '../globales/global' ;
+.login{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    &__form{
+     width: 90%;
+     max-width: 42rem;
+     height: 48rem;
+     background: #ffff;
+     color: black;
+     border-radius: var(--radius-Login);
+     box-shadow: var(--shadow-Login);
+     padding: 6rem 4.8rem;
+     @include m.desktopFull {
+        width: 38rem;
+        height: 42rem;
+        padding: 4rem 4.2rem;
+     }
+     @include m.telefonoFull {
+        height: 48rem;
+        padding: 7rem 4rem;
+     }
+     @include m.telefonom {
+        height: 46rem;
+        padding: 6rem 4rem;
+     }
+   
+    }
+    &__img{
+        max-width: 26.2rem;
+        margin: 0 auto;
+        padding-bottom: 2rem;
+       @include m.desktopFull {
+        padding-bottom: 1rem;
+       }
+       @include m.telefono {
+        max-width: 22.2rem;
+       }
+        
+    }
+    &__content{
+        display: grid;
+        padding-bottom: 2rem;
+        position: relative;
+       @include m.desktopFull {
+        padding-bottom: 1rem;
+       }
+    }
+    &__input{
+        all: unset;
+        height: 4.2rem;
+        outline: 1px solid #CFD5E6;
+        border-radius: 0.5rem;
+        font-family: "Open Sans";
+        padding-left: 4.2rem;
+     
+       
+    }
+    #password:not(:placeholder-shown) + .login__icon-hidden {
+        display: block;
+    }
+    &__label{
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+    }
+    &__icon{
+        width:2rem;
+        position: absolute;
+        bottom: 3rem;
+        left: 1rem;
+        right: 0;
+        @include m.desktopFull {
+            bottom: 2rem;
+        }
+    }
+    &__icon-hidden{
+        display: block;
+        width: 2.9rem;
+        position: absolute;
+        bottom: 3rem;
+        right: 0.3rem;
+        display: none;
+        background-color: white;
+        cursor: pointer;
+
+        @include m.desktopFull {
+            bottom: calc(100% - 72%);
+        
+        }
+    }
+    &__btn{
+        all: unset;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 1.5rem 0;
+        border-radius: 1rem;
+        background-color: #0C2B82;
+        color: white;
+        margin-top: 2rem;
+        cursor: pointer;
+        transition: transform .4s, opacity .4s;
+        &:hover{
+            opacity: 0.95;
+           
+            transform: scale(1.01);
+        }
+    }
+   
+}
+.svg-Background{
+    width: 100%;
+    height: 100%;
+   position: fixed;
+   bottom: -28%;
+   z-index: -1;
+    @include m.desktop {
+        bottom: -40%;
+    }
+  
+}
+// 

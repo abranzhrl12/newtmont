@@ -1,0 +1,78 @@
+@use "./variables" as v;
+/* Mixin para teléfonos (pequeños) */
+@mixin telefono {
+    @media (max-width: v.$phone) {
+      @content;
+    }
+  }
+  
+  /* Mixin para teléfonos (medianos) */
+  @mixin telefonom {
+    @media (max-width: v.$phone-medium) {
+      @content;
+    }
+  }
+  
+  /* Mixin para teléfonos (grandes) */
+  @mixin telefonoFull {
+    @media (max-width: v.$phone-large) {
+      @content;
+    }
+  }
+  
+  /* Mixin para tabletas pequeñas */
+  @mixin tabletsmall {
+    @media (max-width: v.$tablet-small) {
+      @content;
+    }
+  }
+  
+  /* Mixin para tabletas medianas pequeñas */
+  @mixin tabletmsmall {
+    @media (max-width: v.$tablet-medium-small) {
+      @content;
+    }
+  }
+  
+  /* Mixin para tabletas */
+  @mixin tablet {
+    @media (max-width: v.$tablet) {
+      @content;
+    }
+  }
+  
+  /* Mixin para tabletas grandes */
+  @mixin tabletM {
+    @media (max-width: v.$tablet-medium) {
+      @content;
+    }
+  }
+  
+  /* Mixin para tabletas extra grandes */
+  @mixin tabletxl {
+    @media (max-width: v.$tablet-extra-large) {
+      @content;
+    }
+  }
+  
+  /* Mixin para escritorios */
+  @mixin desktop {
+    @media (max-width: v.$desktop) {
+      @content;
+    }
+  }
+  
+  /* Mixin para escritorios grandes */
+  @mixin desktopFull {
+    @media (max-width: v.$desktop-full) {
+      @content;
+    }
+  }
+  
+  /* Mixin para escritorios ultra HD */
+  @mixin desktopFullHD {
+    @media (max-width: v.$desktop-ultra-hd) {
+      @content;
+    }
+  }
+  

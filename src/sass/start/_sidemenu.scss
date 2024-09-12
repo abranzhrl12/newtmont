@@ -1,0 +1,186 @@
+@use '../globales/mixins' as m;
+@use '../globales/global';
+.menu{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    @include m.desktop {
+        overflow: none;
+        &__side:has(.menu__sublist-input:checked){
+            width: 28rem;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            scrollbar-color: rgb(223, 173, 35) transparent ;
+         scrollbar-width: thin; 
+       
+         
+    }
+    }
+    @include m.telefonoFull {
+        flex-direction: column;
+    }
+   &__figure{
+    width: 100%;
+    height: 6rem;
+    background-image: var(--imgicon-Lateral);
+    background-size: contain;
+    background-repeat: no-repeat;
+    @include m.telefonoFull {
+        height: 4.5rem;
+    }
+   }
+    &__side{       
+        position: relative;
+        margin-top: 2.2rem;
+        margin-bottom: 2.2rem;
+        padding: 0 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 28rem;
+        max-width: 28rem;
+        transition: max-width .5s;
+        --display-item:block;
+        font-size: 1.6rem;
+        @include m.desktopFull {
+            width: 23rem;
+            font-size: 1.35rem;
+        }
+        @include m.telefonoFull {
+           margin: 1.8rem 0;
+       
+          
+        }
+        
+        // @include m.telefonoFull {
+        //     height: 2vh;
+        // }
+       
+       
+    }  
+    &__side:has(#contraer:checked){
+        display: flex;
+
+        max-width: 8rem;
+     
+    }
+    &__labelicono{
+        @include m.telefonoFull {
+            display: none;
+        }
+    }
+    &__icon-arrow{
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        padding: 1.3rem;
+        background-color: white;
+        position: absolute;
+        top: 5.5rem;
+        right: -1.2rem;
+        box-shadow: 0 6px 12px rgba(58, 58, 58, 0.15);
+       cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+        z-index: 99;
+       &:hover{
+          transform: scale(1.03);
+       }
+    }
+    //lista-elements-primary
+    &__list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        gap: 2rem;
+        @include m.telefonoFull {
+           display: none;
+        }
+    }
+    &__item{
+        display: flex; 
+        width: 90%;
+        margin: 0 auto;
+        padding: 1rem;
+        gap: 1rem;
+        cursor: pointer;
+        border-radius: 0.4rem;
+       
+        &--sub{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-bottom: 2rem;
+           
+        }
+        // &:hover{
+        //     background-color: orange;
+        // }
+    }
+    &__item-Administration{
+        display: flex;
+        gap: 2rem;
+        cursor: pointer;
+    }
+ 
+   &__sublist-input{
+    display: none;
+   }
+    &__sublist-input:checked + .menu__sublist{
+     
+        padding: 0;
+        max-height: 38.4rem; /* Ajusta según el tamaño de tu contenido */
+        visibility: visible;
+        opacity: 1;
+        padding-top: 2rem;
+        
+    }
+    &__sublist{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.5s ease, opacity 0.3s ease, visibility 0.4s ease,padding 0.4s;
+        width: 80%;
+        margin: 0 auto;
+        margin-top:-2rem;
+    }
+    &__sublist-item{
+        display: flex;
+        gap: 1rem;
+    }
+    &__profile{
+        @include m.telefonoFull {
+            display: none
+        };
+    }
+}
+.menu__item.active{
+transition: background-color .5s;
+background-color: orange;
+}
+
+//contraer menu lateral
+#contraer{
+    display: none;
+}
+#contraer:checked ~ .menu__list .menu__item .menu__item-text {
+  display: none;
+}
+#contraer:checked ~ .menu__list .menu__item .menu__icon-boking {
+    transform: scale(1.2);
+  }
+
+#contraer:checked + .menu__figure{
+    max-width: 3rem;
+     --imgicon-Lateral:url(../../../Assets/iconos-Logo/NEM-9b518837.png);
+}
+#contraer:not(:checked) + .menu__figure{
+  
+    --imgicon-Lateral:   url(../../../Assets/iconos-Logo/aaaa-gigapixel-standard\ v2-1x.png);
+}

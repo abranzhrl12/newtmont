@@ -61,9 +61,12 @@
         border-radius: .5rem;
         cursor: pointer;
         transition: background-color .4s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
         @include m.telefonoFull {
-            width: 13rem;
-            
+            width: 13rem;   
         }
         &--bg{
             background-color: #0C2B82;
@@ -73,6 +76,10 @@
             background-color: #0C2B82;
             opacity: .9;
             color: white;
+        }
+        &:hover .content__btn-svg {
+            fill: #fff;
+           
         }
     }
 }

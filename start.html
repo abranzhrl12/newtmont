@@ -13,7 +13,7 @@
 <body>
     <section class="menu">  
         <div class="menu__side">
-            <div>  
+            <div class="menu__side-content">  
                 <label class="menu__labelicono" for="contraer">
                     
                   
@@ -29,6 +29,10 @@
                     <!-- <img width="190" src="./Assets/iconos-Logo/aaaa-gigapixel-standard v2-1x.png" alt=""> -->
                     
                 </div>
+                <label for="input-movil">
+                    <svg class="menu__icon-hamburger" width="20"  viewBox="0 0 448 512"><path fill="#ffffff" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+                </label>
+                <input id="input-movil" type="checkbox">
                                 
                 <ul class="menu__list">
                     <li  class="menu__item"> 
@@ -40,7 +44,7 @@
                       <span class="menu__item-text">Dashboard</span>  
                     </li>
                     <li  class="menu__item menu__item--sub"> 
-                        <label class="menu__item-Administration" for="subdrop">
+                        <label class="menu__item-Administration " for="subdrop">
                             <img class="menu__icon-boking" src="/Assets/iconos/Administración.svg" alt="">
                             <span class="menu__item-text"> 
                                 Administración
@@ -81,7 +85,7 @@
                             </li>
                             <li class="menu__sublist-item">
                                 <img class="menu__icon-boking" src="/Assets/iconos/Origen _de_traslado.svg" alt="">
-                                Origen de traslado
+                                traslado
                             </li>
                         </ul>
                     </li>
@@ -98,6 +102,7 @@
 
 
             <div class="menu__profile">
+                <img  class="menu__profile-img" src="/Assets/profile/prueba.jpg" alt="">
                 Administrador del sistema 
             </div>
          </div>
@@ -105,8 +110,17 @@
             <div class="content__header">
                 <h3 class="content__title">Booking service</h3>
                 <div class="content__buttons">
-                    <button class="content__btn">Carga Masiva</button>
-                    <button class="content__btn content__btn--bg">Registrar</button>
+                    <button class="content__btn">
+                        <svg   width="20" id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17">
+                           
+                            <g id="Capa_1-2" data-name="Capa 1">
+                              <path class="content__btn-svg" fill="#0C2B82" class="cls-1" d="m9,3.63v8.06c0,.59-.45,1.06-1,1.06s-1-.47-1-1.06V3.63l-2.29,2.44c-.39.42-1.03.42-1.42,0-.39-.42-.39-1.09,0-1.5L7.29.31c.39-.42,1.03-.42,1.42,0l4,4.25c.39.42.39,1.09,0,1.5-.39.42-1.02.42-1.42,0l-2.29-2.44ZM2,11.69h4c0,1.17.9,2.13,2,2.13s2-.95,2-2.13h4c1.1,0,2,.95,2,2.13v1.06c0,1.17-.9,2.13-2,2.13H2c-1.1,0-2-.95-2-2.13v-1.06c0-1.17.9-2.13,2-2.13Zm11.5,3.45c.2,0,.39-.08.53-.23.14-.15.22-.35.22-.56s-.08-.41-.22-.56c-.14-.15-.33-.23-.53-.23s-.39.08-.53.23c-.14.15-.22.35-.22.56s.08.41.22.56c.14.15.33.23.53.23Z"/>
+                            </g>
+                          </svg>
+                        Carga Masiva</button>
+                    <button class="content__btn content__btn--bg">
+                        <img src="./Assets/iconos/Registrar.svg" alt="">
+                        Registrar</button>
                 </div>
             </div>
             <div class="content-table">
@@ -166,6 +180,15 @@
       item.addEventListener('click', () => {
         items.forEach(i => i.classList.remove('active'));
         item.classList.toggle('active');
+      });
+    });
+
+
+    const itemssub = document.querySelectorAll('.menu__sublist-item');
+    itemssub.forEach(items => {
+      items.addEventListener('click', () => {
+        itemssub.forEach(i => i.classList.remove('active'));
+        items.classList.toggle('active');
       });
     });
 

@@ -29,6 +29,7 @@
         height: 4.5rem;
     }
    }
+   
     &__side{       
         position: relative;
         margin-top: 2.2rem;
@@ -42,12 +43,16 @@
         transition: max-width .5s;
         --display-item:block;
         font-size: 1.6rem;
+       
         @include m.desktopFull {
             width: 23rem;
             font-size: 1.35rem;
         }
         @include m.telefonoFull {
+            width: 100%;
+            max-width: 100%;
            margin: 1.8rem 0;
+           
        
           
         }
@@ -58,6 +63,27 @@
        
        
     }  
+
+    &__side-content{
+        display: flex;
+        flex-direction: column;
+
+         @include m.telefonoFull {
+            flex-direction: row;
+            justify-content: space-between;
+         }
+       
+       
+    }
+    &__icon-hamburger{
+        display: none;
+        @include m.telefonoFull {
+            display: block;
+            cursor: pointer;
+           
+         }
+        
+    }
     &__side:has(#contraer:checked){
         display: flex;
 
@@ -132,39 +158,64 @@
     &__sublist-input:checked + .menu__sublist{
      
         padding: 0;
-        max-height: 38.4rem; /* Ajusta según el tamaño de tu contenido */
+        max-height: 50.4rem; /* Ajusta según el tamaño de tu contenido */
         visibility: visible;
         opacity: 1;
-        padding-top: 2rem;
+        margin-bottom: -3rem;
         
     }
     &__sublist{
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+      
+        gap: 1.2rem;
         max-height: 0;
         overflow: hidden;
         opacity: 0;
         transition: max-height 0.5s ease, opacity 0.3s ease, visibility 0.4s ease,padding 0.4s;
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
-        margin-top:-2rem;
+        margin-top: -2rem;
+        
+        
     }
     &__sublist-item{
+        width: 100%;
         display: flex;
         gap: 1rem;
+        transition: background-color .3s , opaciy .3s;
+        opacity: .9;
+        padding:  0.9rem;
+        border-radius: 0.6rem;
+        
     }
     &__profile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
         @include m.telefonoFull {
             display: none
         };
     }
+    &__profile-img{
+        width: 3rem;
+        height: 3rem;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        object-fit: cover;
+    }
 }
-.menu__item.active{
+#subdrop:checked + .menu__sublist{
+   padding-top:3rem;
+}
+.menu__item.active:not(.menu__item--sub){
 transition: background-color .5s;
 background-color: orange;
 }
-
+.menu__sublist-item.active{
+    background-color: orange;
+}
 //contraer menu lateral
 #contraer{
     display: none;
@@ -183,4 +234,30 @@ background-color: orange;
 #contraer:not(:checked) + .menu__figure{
   
     --imgicon-Lateral:   url(../../../Assets/iconos-Logo/aaaa-gigapixel-standard\ v2-1x.png);
+}
+
+
+///movil
+#input-movil{
+    display: none;
+}
+.menu__list{
+    @include m.telefonoFull {
+        display: block;
+        position: fixed;
+        top: 0;
+        width: 60%;
+        height: 100vh;
+        transition: transform .4s;
+        
+    
+        transform: translateX(-110%);
+        background-color: blue;
+        z-index: 9;
+    };
+   
+}
+
+#input-movil:checked + .menu__list{
+    transform: translateX(-10%);
 }

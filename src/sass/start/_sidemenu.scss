@@ -232,7 +232,7 @@ background-color: orange;
      --imgicon-Lateral:url(../../../Assets/iconos-Logo/NEM-9b518837.png);
 }
 #contraer:not(:checked) + .menu__figure{
-  
+    
     --imgicon-Lateral:   url(../../../Assets/iconos-Logo/aaaa-gigapixel-standard\ v2-1x.png);
 }
 
@@ -249,8 +249,7 @@ background-color: orange;
         width: 60%;
         height: 100vh;
         transition: transform .4s;
-        
-    
+
         transform: translateX(-110%);
         background-color: blue;
         z-index: 9;
@@ -259,5 +258,24 @@ background-color: orange;
 }
 
 #input-movil:checked + .menu__list{
-    transform: translateX(-10%);
+ 
+        @include m.telefonoFull {
+            transform: translateX(-10%);
+    };
 }
+
+
+.close-hamburger{
+    display: none;
+    @include m.telefonoFull {
+        display: block;
+    
+};
+
+}
+
+.menu__list.ative{
+    transform: translateX(-110%)!important;
+    
+}
+

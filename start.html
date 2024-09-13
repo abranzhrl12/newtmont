@@ -7,7 +7,9 @@
     <link rel="icon" href="Assets/iconos-Logo/iconoweb.png" sizes="16x16" type="image/png">
     <link rel="preload" href="public/Styles/styles.css" as="style">
     <link rel="stylesheet" href="public/Styles/styles.css">    
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="combos.js" defer></script>
+    <script type="module" src="date.js"></script>
 </head>
 
 <body>
@@ -196,30 +198,212 @@
                 <div class="modal__form">
                     <div class="modal__inputs">
                         <div class="modal__content-primary">
-                            <div class="modal__content-inputs">
-                                <label for="">Fotocheck</label>
+                            <div class="modal__content-inputs  modal__content-inputs--pd">
+                                <label for=""><span class="span-name">Fotocheck</span></label>
                                 <input type="text" class="modal__input modal__input--primary">
                             </div>
-                            <div class="modal__content-inputs">
-                                <label for="">DNI</label>
+                            <div class="modal__content-inputs modal__content-inputs--pd">
+                                <label for=""><span class="span-name" >DNI</span></label>
                                 <input type="text" class="modal__input modal__input--primary">
                             </div>
                         </div>
                         <div class="modal__content-inputs"> 
-                            <label for="">Nombres y Apellidos</label>
+                            <label for=""><span class="span-name">Nombres y Apellidos</span> </label>
                             <input type="text" class="modal__input">
                         </div>
                         <div class="modal__content-inputs">
-                            <label for="Fecha Inicial">Fecha Inicial</label>
-                            <input type="datetime" class="modal__input">
+                            <label for="Fecha Inicial"><span class="span-name">Fecha Inicial</span> </label>
+                            <!-- <input type="datetime" class="modal__input"> -->
+                            <div class="datepicker-container">
+                                <div class="datepciker-content">
+                                    <input type="text" class="date-input" placeholder="Select date" id="inputdate" />
+                                    <label for="inputdate" >
+                                        <div class="labeldate">
+                                            <svg class="icon-calendar" width="20" id="Capa_2" data-name="Capa 2" viewBox="0 0 16.09 16.34">
+                                                <defs>
+                                                  <style>
+                                                    .cls-1 {
+                                                      fill: none;
+                                                      stroke: #0c2b82;
+                                                      stroke-linecap: round;
+                                                      stroke-linejoin: round;
+                                                    }
+                                                  </style>
+                                                </defs>
+                                                <g id="Capa_2-2" data-name="Capa 2">
+                                                  <path class="cls-1" d="m13.92,2.04H2.18c-.93,0-1.68.69-1.68,1.53v10.73c0,.85.75,1.53,1.68,1.53h11.74c.93,0,1.68-.69,1.68-1.53V3.57c0-.85-.75-1.53-1.68-1.53Z"/>
+                                                  <path class="cls-1" d="m11.4.5v3.07"/>
+                                                  <path class="cls-1" d="m4.69.5v3.07"/>
+                                                  <path class="cls-1" d="m.5,6.63h15.09"/>
+                                                </g>
+                                              </svg>
+                                        </div>
+                                       
+                                    </label>
+                                </div>
+                                
+                            
+                                  <div class="datepicker" hidden>
+                                    <!-- .datepicker-header -->
+                                    <div class="datepicker-header">
+                                      <button class="prev"> <svg width="12" viewBox="0 0 320 512"><path fill="#0C2B82" d="M52.7 267.3c-6.2-6.2-6.2-16.4 0-22.6l160-160c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6L86.6 256 235.3 404.7c6.2 6.2 6.2 16.4 0 22.6s-16.4 6.2-22.6 0l-160-160z"/></svg></button>
+                            
+                                      <div>
+                                        <select class="month-input">
+                                          <option>January</option>
+                                          <option>February</option>
+                                          <option>March</option>
+                                          <option>April</option>
+                                          <option>May</option>
+                                          <option>June</option>
+                                          <option>July</option>
+                                          <option>August</option>
+                                          <option>September</option>
+                                          <option>October</option>
+                                          <option>November</option>
+                                          <option>December</option>
+                                        </select>
+                                        <input type="number" class="year-input" />
+                                      </div>
+                            
+                                      <button class="next">
+                                        <svg class="arror-rigth" width="12" viewBox="0 0 320 512"><path fill="#0C2B82" d="M52.7 267.3c-6.2-6.2-6.2-16.4 0-22.6l160-160c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6L86.6 256 235.3 404.7c6.2 6.2 6.2 16.4 0 22.6s-16.4 6.2-22.6 0l-160-160z"/></svg>
+                                      </button>
+                                    </div>
+                                    <!-- /.datepicker-header -->
+                            
+                                    <!-- .days -->
+                                    <div class="days">
+                                      <span>Sun</span>
+                                      <span>Mon</span>
+                                      <span>Tue</span>
+                                      <span>Wed</span>
+                                      <span>Thu</span>
+                                      <span>Fri</span>
+                                      <span>Sat</span>
+                                    </div>
+                                    <!-- /.days -->
+                            
+                                    <!-- .dates -->
+                                    <div class="dates"></div>
+                                    <!-- /.dates -->
+                            
+                                    <!-- .datepicker-footer -->
+                                    <div class="datepicker-footer">
+                                      <button class="cancel">Cancel</button>
+                                      <button class="apply">Apply</button>
+                                    </div>
+                                    <!-- /.datepicker-footer -->
+                                  </div>
+                                </div>
+                        
                         </div>
                     </div>
                     <div class="modal__combos">
-                        <input type="text">
+                        <div class="modal__combo-company">
+                            <label for=""><span class="span-name">Empresa</span> </label>
+                            <div class="select-menu">
+                                <div class="select">
+                                  <span>Elija una Empresa</span>
+                                  <i class="fas fa-angle-down"></i>
+                                </div>
+                                <div class="options-list">
+                                  <div class="option">Contratista</div>
+                                  <div class="option">Newmont</div>
+                                </div>
+                              </div>
+                            
+                            
+                        </div>
+                        <div class="modal__combo-area">
+                            <label for=""><span class="span-name">Área de Trabajo</span> </label>
+                            <div class="select-menu">
+                                <div class="select">
+                                  <span>Elija un Área</span>
+                                  <i class="fas fa-angle-down"></i>
+                                </div>
+                                <div class="options-list">
+                                  <div class="option">Contratista</div>
+                                  <div class="option">Newmont</div>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="modal__combo-regime">
+                            <label for=""><span class="span-name">Régimen de Trabajo</span> </label>
+                            <div class="select-menu">
+                                <div class="select">
+                                  <span>Elija un Régimen</span>
+                                  <i class="fas fa-angle-down"></i>
+                                </div>
+                                <div class="options-list">
+                                  <div class="option">10 x 10</div>
+                                  <div class="option">12 x 12</div>
+                                  <div class="option">14 x 14</div>
+                                  <div class="option">16 x 16</div>
+                                </div>
+                              </div>
+                        </div>
+                        
+                    </div>
+                    <div class="modal__date">
+                        <div class="modal__date-content">
+                            <label for="" class="modal__date-title">Fechas Booking</label>
+                            <div class="modal__paragraph-content">
+                                <p class="modal__date-paragraph">Selecione una fecha Inicial</p>
+                            </div>
+                           
+                        </div>
                     </div>
                 </div>
+
                 <div class="modal__settings">
-                    
+                    <div>
+                        <div>
+                            <label for="">Guardia</label>
+                            <label for=""><input type="radio" >Si</label>
+                            
+                            <label for=""><input type="radio" >No</label>
+                        </div>
+                        <div>
+                            <label for="">Requiere Alojamiento</label>
+                            <label for=""><input type="radio" >Si</label>
+                            
+                            <label for=""><input type="radio" >No</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="">Servicios</label>
+                        <div>
+                            <label for=""> <input type="checkbox">Desayuno</label>
+                            <label for=""> <input type="checkbox">Almuerzo</label>
+                            <label for=""> <input type="checkbox">Cena</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label for=""><span class="span-name">Comedor donde Almuerza</span> </label>
+                        <div class="select-menu">
+                            <div class="select">
+                              <span>Elija una Comedor</span>
+                              <i class="fas fa-angle-down"></i>
+                            </div>
+                            <div class="options-list">
+                              <div class="option">Contratista</div>
+                              <div class="option">Newmont</div>
+                            </div>
+                          </div>
+                          <label for=""><span class="span-name">Campamento de Pernoche</span> </label>
+                          <div class="select-menu">
+                              <div class="select">
+                                <span>Elija una Campamento</span>
+                                <i class="fas fa-angle-down"></i>
+                              </div>
+                              <div class="options-list">
+                                <div class="option">Contratista</div>
+                                <div class="option">Newmont</div>
+                              </div>
+                            </div>
+                    </div>
+                   
                 </div>
             </div>
         </div>

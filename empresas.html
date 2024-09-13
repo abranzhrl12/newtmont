@@ -27,7 +27,8 @@
                 <input id="contraer"  type="checkbox">
                   <!-- <img width="190" src="./Assets/iconos-Logo/aaaa-gigapixel-standard v2-1x.png" alt=""> -->
                 <div class="menu__figure">
-                           
+                  
+                    
                 </div>
                 <label for="input-movil">
                     <svg class="menu__icon-hamburger" width="20"  viewBox="0 0 448 512"><path fill="#ffffff" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
@@ -58,11 +59,8 @@
                         <input class="menu__sublist-input" id="subdrop" type="checkbox">
                         <ul class="menu__sublist">
                             <li  class="menu__sublist-item">
-                                <a href="empresas.html" class="menu__sub-link">
-                                    <img class="menu__icon-boking" src="/Assets/iconos/Empresas.svg" alt="">
-                                    Empresas
-                                </a>
-                               
+                                <img class="menu__icon-boking" src="/Assets/iconos/Empresas.svg" alt="">
+                                Empresas
                             </li>
                             <li class="menu__sublist-item">
                                 <img class="menu__icon-boking" src="/Assets/iconos/Áreas.svg" alt="">
@@ -117,27 +115,22 @@
          <div class="content">
             <div class="content__header">
                 <h3 class="content__title">Booking service</h3>
-                <div class="content__buttons">
-                    <button class="content__btn">
-                        <svg   width="20" id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17">
-                           
-                            <g id="Capa_1-2" data-name="Capa 1">
-                              <path class="content__btn-svg" fill="#0C2B82" class="cls-1" d="m9,3.63v8.06c0,.59-.45,1.06-1,1.06s-1-.47-1-1.06V3.63l-2.29,2.44c-.39.42-1.03.42-1.42,0-.39-.42-.39-1.09,0-1.5L7.29.31c.39-.42,1.03-.42,1.42,0l4,4.25c.39.42.39,1.09,0,1.5-.39.42-1.02.42-1.42,0l-2.29-2.44ZM2,11.69h4c0,1.17.9,2.13,2,2.13s2-.95,2-2.13h4c1.1,0,2,.95,2,2.13v1.06c0,1.17-.9,2.13-2,2.13H2c-1.1,0-2-.95-2-2.13v-1.06c0-1.17.9-2.13,2-2.13Zm11.5,3.45c.2,0,.39-.08.53-.23.14-.15.22-.35.22-.56s-.08-.41-.22-.56c-.14-.15-.33-.23-.53-.23s-.39.08-.53.23c-.14.15-.22.35-.22.56s.08.41.22.56c.14.15.33.23.53.23Z"/>
-                            </g>
-                          </svg>
-                        Carga Masiva</button>
-                    <button class="content__btn content__btn--bg" id="register-Btn">
-                        <img src="./Assets/iconos/Registrar.svg" alt="">
-                        Registrar
-                    
-                    </button>
-                  
-                </div>
+              
             </div>
+            <div>
+                <h4 class="content__title-subtitem"">Gestione su Empresa</h4>
+            </div>
+           
             <div class="content-table">
                 <div class="content-table__header">
                     <div>
-                        Actions
+                        Empresas
+                    </div>
+                    <div>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <button>Agregar Empresa</button>
                     </div>
                 </div>
                 <!-- <table   class="table-data">
@@ -185,45 +178,6 @@
          </div>
 
     </section>
-    <div  class="modal" >
-        <div class="modal__content">
-            <div class="modal__header">
-                <h5 class="modal__title">Registro
-                    <svg class="modal__close" width="20" viewBox="0 0 384 512"><path fill="#0C2B82" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
-                </h5>
-            </div>
-            <div class="modal__body">
-                <div class="modal__form">
-                    <div class="modal__inputs">
-                        <div class="modal__content-primary">
-                            <div class="modal__content-inputs">
-                                <label for="">Fotocheck</label>
-                                <input type="text" class="modal__input modal__input--primary">
-                            </div>
-                            <div class="modal__content-inputs">
-                                <label for="">DNI</label>
-                                <input type="text" class="modal__input modal__input--primary">
-                            </div>
-                        </div>
-                        <div class="modal__content-inputs"> 
-                            <label for="">Nombres y Apellidos</label>
-                            <input type="text" class="modal__input">
-                        </div>
-                        <div class="modal__content-inputs">
-                            <label for="Fecha Inicial">Fecha Inicial</label>
-                            <input type="datetime" class="modal__input">
-                        </div>
-                    </div>
-                    <div class="modal__combos">
-                        <input type="text">
-                    </div>
-                </div>
-                <div class="modal__settings">
-                    
-                </div>
-            </div>
-        </div>
-    </div>
    <script>
     
     const subdrop=document.querySelector('#subdrop');
@@ -276,34 +230,11 @@ allItems.forEach(item => {
         document.documentElement.style.setProperty('--itemsMenu-ColorPrimary', baseColor);
         svgangle.classList.toggle('active');
     })
-
     const initialPage=document.querySelector('.menu__figure');
     initialPage.addEventListener('click',()=>{
         console.log('hola')
         window.location.href = 'start.html';
     })
-
-    const registerBtn=document.querySelector('#register-Btn');
-    const contentModal=document.querySelector('.modal__content')
-    const closeModal=document.querySelector('.modal__close');
-    const modal=document.querySelector('.modal');
-    registerBtn.addEventListener('click',()=>{
-     
-
-       
-        contentModal.classList.add('active');
-        modal.classList.add('active');
-    })
-
-    closeModal.addEventListener('click',()=>{
-     
-        contentModal.classList.remove('active');
-        setTimeout(() => {
-            modal.classList.remove('active');
-    }, 500); 
- })
-   
-
    </script>
 </body>
 </html>

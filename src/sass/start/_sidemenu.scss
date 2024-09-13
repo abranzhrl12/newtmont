@@ -4,32 +4,44 @@
     width: 100%;
     height: 100vh;
     display: flex;
-    @include m.desktop {
-        overflow: none;
-        &__side:has(.menu__sublist-input:checked){
-            width: 28rem;
-            overflow-y: scroll;
-            overflow-x: hidden;
-            scrollbar-color: rgb(223, 173, 35) transparent ;
-         scrollbar-width: thin; 
-       
-         
-    }
-    }
+
+
     @include m.telefonoFull {
+       
         flex-direction: column;
+    
+        padding: 0;
+        margin: 0;
+
     }
+  
    &__figure{
     width: 100%;
     height: 6rem;
     background-image: var(--imgicon-Lateral);
     background-size: contain;
     background-repeat: no-repeat;
+    cursor: pointer;
     @include m.telefonoFull {
         height: 4.5rem;
     }
    }
-   
+   &__side:has(.menu__sublist-input:checked){
+    @include m.desktopFull {
+        width: 28rem;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        scrollbar-color: transparent transparent ;
+        
+         scrollbar-width:none; 
+    
+    }
+
+       @include m.telefonoFull {
+        width: 100%;
+        scrollbar-width: none; 
+    }     
+}
     &__side{       
         position: relative;
         margin-top: 2.2rem;
@@ -67,10 +79,12 @@
     &__side-content{
         display: flex;
         flex-direction: column;
-
+        
          @include m.telefonoFull {
             flex-direction: row;
             justify-content: space-between;
+            height: 5rem;
+            
          }
        
        
@@ -110,7 +124,7 @@
         box-shadow: 0 6px 12px rgba(58, 58, 58, 0.15);
        cursor: pointer;
         transition: transform 0.3s ease-in-out;
-        z-index: 99;
+        z-index: 1;
        &:hover{
           transform: scale(1.03);
        }
@@ -122,9 +136,23 @@
         justify-content: center;
         align-content: center;
         gap: 2rem;
+       
         @include m.telefonoFull {
-           display: none;
-        }
+            display: block;
+            position: fixed;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            top: 0;
+            width: 60%;
+            height: 100vh;
+            transition: transform .4s;
+            transform: translateX(-110%);
+            background-color: blue;
+            z-index: 9;
+            padding-right: 1rem;
+            padding-left: 2rem
+        };
     }
     &__item{
         display: flex; 
@@ -134,24 +162,49 @@
         gap: 1rem;
         cursor: pointer;
         border-radius: 0.4rem;
-       
         &--sub{
+            width: 90%;
+            margin: 0 auto;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            padding: 0;
             padding-bottom: 2rem;
-           
+            
         }
         // &:hover{
         //     background-color: orange;
         // }
     }
-    &__item-Administration{
+   
+    &__item-text{
+        // opacity: 0;
+        overflow: hidden;
+        text-wrap: nowrap;
         display: flex;
-        gap: 2rem;
-        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+       
     }
- 
+    &__angle-right{
+        margin-left: 1rem;
+        transition: transform 0.2s;
+        
+    }
+    &__angle-right.active{
+        transform: rotate(90deg);
+    }
+    &__item-Administration{
+        display: block;
+        display: flex;
+        gap: 1rem;
+        cursor: pointer;
+      
+        padding: 1rem;
+        border-radius: 0.4rem;
+        
+    }
+   
    &__sublist-input{
     display: none;
    }
@@ -162,22 +215,21 @@
         visibility: visible;
         opacity: 1;
         margin-bottom: -3rem;
+       
         
     }
+  
     &__sublist{
         display: flex;
         flex-direction: column;
-      
         gap: 1.2rem;
         max-height: 0;
         overflow: hidden;
         opacity: 0;
-        transition: max-height 0.5s ease, opacity 0.3s ease, visibility 0.4s ease,padding 0.4s;
+        transition: max-height 0.4s ease, opacity  0.3s ease, visibility 0.4s ease,padding 0.3s;
         width: 90%;
         margin: 0 auto;
         margin-top: -2rem;
-        
-        
     }
     &__sublist-item{
         width: 100%;
@@ -187,7 +239,12 @@
         opacity: .9;
         padding:  0.9rem;
         border-radius: 0.6rem;
-        
+        cursor: pointer;
+       
+    }
+    &__sub-link{
+      
+        color: white;
     }
     &__profile{
         display: flex;
@@ -208,20 +265,28 @@
 }
 #subdrop:checked + .menu__sublist{
    padding-top:3rem;
+  
 }
 .menu__item.active:not(.menu__item--sub){
 transition: background-color .5s;
-background-color: orange;
+background-color: var(--itemsMenu-ColorPrimary);
 }
 .menu__sublist-item.active{
-    background-color: orange;
+    background-color: #FCAF17;
+}
+
+.menu__item-Administration.active{
+    transition: background-color .5s;
+    background-color: var(--itemsMenu-ColorPrimary);
 }
 //contraer menu lateral
 #contraer{
     display: none;
 }
+
+
 #contraer:checked ~ .menu__list .menu__item .menu__item-text {
-  display: none;
+display: none;
 }
 #contraer:checked ~ .menu__list .menu__item .menu__icon-boking {
     transform: scale(1.2);
@@ -232,7 +297,7 @@ background-color: orange;
      --imgicon-Lateral:url(../../../Assets/iconos-Logo/NEM-9b518837.png);
 }
 #contraer:not(:checked) + .menu__figure{
-    
+   
     --imgicon-Lateral:   url(../../../Assets/iconos-Logo/aaaa-gigapixel-standard\ v2-1x.png);
 }
 
@@ -241,24 +306,9 @@ background-color: orange;
 #input-movil{
     display: none;
 }
-.menu__list{
-    @include m.telefonoFull {
-        display: block;
-        position: fixed;
-        top: 0;
-        width: 60%;
-        height: 100vh;
-        transition: transform .4s;
 
-        transform: translateX(-110%);
-        background-color: blue;
-        z-index: 9;
-    };
-   
-}
 
 #input-movil:checked + .menu__list{
- 
         @include m.telefonoFull {
             transform: translateX(-10%);
     };
@@ -268,14 +318,14 @@ background-color: orange;
 .close-hamburger{
     display: none;
     @include m.telefonoFull {
+        cursor: pointer;
         display: block;
+        margin-top: 1.5rem;
+        
+        align-self: flex-end;
+       
     
 };
 
-}
-
-.menu__list.ative{
-    transform: translateX(-110%)!important;
-    
 }
 

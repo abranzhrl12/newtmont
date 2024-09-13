@@ -1,7 +1,9 @@
 @use '../globales/mixins' as m;
-
 .content{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     margin-top: 1.5rem;
     margin-right: 1.5rem;
     margin-bottom: 1.5rem;
@@ -14,7 +16,7 @@
         margin-bottom: 0;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
-        height: 100vh;
+        height: calc(100vh - 8.7rem);
     }
    
     &__header{
@@ -47,6 +49,7 @@
     &__buttons{
         display: flex;
         gap: 3rem;
+        
         @include m.telefonoFull {
            gap: 2rem;
             
@@ -82,6 +85,11 @@
            
         }
     }
+    &__title-subtitem{
+     
+        padding-left: 4rem;
+        color: #071435;
+     }
 }
 
 .content-table{
@@ -93,12 +101,22 @@
     box-shadow: 0 6px 12px rgba(58, 58, 58, 0.15);
     color: black;
     border:  0.2rem solid #CFD5E6;
-    overflow-x: scroll;
-    overflow-y: hidden;
+
+    @include m.telefonoFull {
+       height: 66.5rem;
+    }
+    @include m.telefono {
+        height: 50rem;
+    }
+    // overflow-x: scroll;
+    // overflow-y: hidden;
     &__header{
         border-bottom: 0.1rem solid #CFD5E6;
         padding: 2.2rem;
+        display: flex;
+        justify-content: space-between;
     }
+   
 }
 
 

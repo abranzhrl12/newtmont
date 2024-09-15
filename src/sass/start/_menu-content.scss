@@ -12,6 +12,7 @@
     padding-bottom:2.8rem;
     overflow: hidden;
     @include m.telefonoFull {
+        position: relative;
         margin-top: 0;
         margin-bottom: 0;
         border-bottom-left-radius: 0;
@@ -106,6 +107,7 @@
        height: 66.5rem;
     }
     @include m.telefono {
+  
         height: 50rem;
     }
     // overflow-x: scroll;

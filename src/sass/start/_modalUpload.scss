@@ -1,0 +1,171 @@
+@use '../globales/mixins' as m;
+.load{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.7);
+    display: block;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+    display: none;
+    
+}
+
+
+
+.modal-load{
+    width: 53rem;
+    height: 67.6rem;
+    background-color: white;
+    border-radius: .8rem;
+    animation: startUpload .4s forwards;
+    @include m.telefonoFull {
+        width: 93%;
+    }
+    &__title{
+        padding: 2rem 3.5rem;
+        color: #0C2B82;
+        display: flex;
+        justify-content: space-between;
+      
+    }
+    &__contentfile{
+        width: 100%;
+        border-top: .1rem solid #CFD5E6;
+        border-bottom:.1rem solid #CFD5E6; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem 2rem;
+    }
+    &__download{
+        display: block;
+        border: none;
+        width: 46.4rem;
+        padding: 1.2rem 3rem;
+        border-radius: .8rem;
+        border: .3rem solid #0C2B82;
+        display: flex;
+        justify-content: space-between;
+        border-color: #EBF0F9;
+        align-items: center;
+        color: #0C2B82;
+        font-weight: 700;
+        font-size: 1.8rem;
+       
+    }
+    &__content-steps{
+        width: 95%;
+        padding: 2.5rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+       
+        color: #6B7286;
+        @include m.telefonoFull {
+            width: 100%;
+            padding: 2.5rem 1rem 2.5rem 1rem;
+        }
+    }
+    &__step{
+        outline: 1px solid #6B7286;
+        width: 3.8rem;
+        height: 3.8rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+       
+      
+    }
+    &__step--one{
+        margin-right: -.4rem;
+    }
+    &__step--one::after{
+        content: " - - - - - - - - - - - - ";
+        font-size: 2rem;
+
+    height: 0.2rem;
+
+    display: block;
+    position: absolute;
+    top: .2rem;
+    left: 4.2rem;
+    @include m.telefonoFull {
+        content: " - - - - - - - -";
+    }
+    }
+    &__step--two{
+        // margin-left: -0.4rem;
+        margin-right: 1.1rem;
+    }
+    &__step--two::after{
+        content: "- - - - - - - - - - - - ";
+        font-size: 2rem;
+    width: 13.6rem;
+    height: 0.2rem;
+
+    display: block;
+    position: absolute;
+    top: .2rem;
+    left: 4.1rem;
+    @include m.telefonoFull {
+        content: " - - - - - - - -";   
+    }
+    }
+    &__label{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        text-wrap: nowrap;
+       
+    }
+    // &__step-line{
+    //     width: 50rem;
+    //     height: .2rem;
+    //     background-color: red;
+    //     display: flex;
+   
+    //     margin-top: 2rem;
+        
+    // }
+}
+.load.active{
+    display: block;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+}
+ .modal-load.active{
+     animation: endUpload .4s forwards;
+ }
+
+
+
+@keyframes startUpload {
+    0%{
+     transform: translateY(-150%);
+    } 
+    100%{
+     transform: translateY(0);  
+    }
+ }
+
+@keyframes endUpload {
+    0%{
+        transform: translateY(0); 
+        
+       } 
+       100%{
+        transform: translateY(-150%);
+       }
+}

@@ -36,10 +36,10 @@ html {
     font-family: var(--primary-font);
     font-size: 1.6rem;
     line-height: 1.6;
-     min-height: 300vh;
+     min-height: auto;
      background: var(--background-Color);
      color: white;
-     overflow: hidden;
+    //  overflow: hidden;
    
     
   }

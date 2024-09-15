@@ -1,0 +1,17 @@
+.modalM{
+    width: 100%;
+    height: auto;
+    display: block;
+    z-index: 1;
+    overflow: hidden;
+
+    border-radius: 0.8rem;
+    background-color: white;
+    &__contentM{
+     
+        background-color: red!important;
+    }
+    &__title{
+        color: #FCAF17;
+    }
+}

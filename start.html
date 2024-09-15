@@ -98,7 +98,7 @@
                     </li>
                     <li class="menu__item"> 
                         <img class="menu__icon-boking" src="/Assets/iconos/Carga_masiva.svg" alt="">
-                      <span class="menu__item-text">Carga Masiva</span>  
+                      <span class="menu__item-text" >Carga Masiva</span>  
                     </li>
                 </ul>
 
@@ -120,7 +120,7 @@
             <div class="content__header">
                 <h3 class="content__title">Booking service</h3>
                 <div class="content__buttons">
-                    <button class="content__btn">
+                    <button class="content__btn" id="btnupload">
                         <svg   width="20" id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17">
                            
                             <g id="Capa_1-2" data-name="Capa 1">
@@ -197,26 +197,35 @@
             <div class="modal__body">
                 <div class="modal__form">
                     <div class="modal__inputs">
-                        <div class="modal__content-primary">
-                            <div class="modal__content-inputs  modal__content-inputs--pd">
+                        <!-- fotocheck - dni -->
+                   
+                            <div class="modal__content-inputs  modal__content-primary">
                                 <label for=""><span class="span-name">Fotocheck</span></label>
                                 <input type="text" class="modal__input modal__input--primary">
                             </div>
-                            <div class="modal__content-inputs modal__content-inputs--pd">
+                            
+                      
+
+                     
+                            <div class="modal__content-inputs modal__content-primaryT">
                                 <label for=""><span class="span-name" >DNI</span></label>
                                 <input type="text" class="modal__input modal__input--primary">
                             </div>
-                        </div>
-                        <div class="modal__content-inputs"> 
+                            
+                      
+                       
+                        <!-- nombrres apellidos -->
+                        <div class="modal__content-inputs modal__input--surnames"> 
                             <label for=""><span class="span-name">Nombres y Apellidos</span> </label>
                             <input type="text" class="modal__input">
                         </div>
-                        <div class="modal__content-inputs">
+                        <!-- inputdate -->
+                        <div class="modal__content-inputs modal__input--date">
                             <label for="Fecha Inicial"><span class="span-name">Fecha Inicial</span> </label>
                             <!-- <input type="datetime" class="modal__input"> -->
                             <div class="datepicker-container">
                                 <div class="datepciker-content">
-                                    <input type="text" class="date-input" placeholder="Select date" id="inputdate" />
+                                    <input type="text" class="date-input" placeholder="" id="inputdate" />
                                     <label for="inputdate" >
                                         <div class="labeldate">
                                             <svg class="icon-calendar" width="20" id="Capa_2" data-name="Capa 2" viewBox="0 0 16.09 16.34">
@@ -274,18 +283,20 @@
                             
                                     <!-- .days -->
                                     <div class="days">
-                                      <span>Sun</span>
-                                      <span>Mon</span>
-                                      <span>Tue</span>
-                                      <span>Wed</span>
-                                      <span>Thu</span>
-                                      <span>Fri</span>
-                                      <span>Sat</span>
+                                      <span>Do</span>
+                                      <span>Lu</span>
+                                      <span>Ma</span>
+                                      <span>Mi</span>
+                                      <span>Ju</span>
+                                      <span>Vi</span>
+                                      <span>Sa</span>
                                     </div>
                                     <!-- /.days -->
                             
                                     <!-- .dates -->
-                                    <div class="dates"></div>
+                                    <div class="dates">
+
+                                    </div>
                                     <!-- /.dates -->
                             
                                     <!-- .datepicker-footer -->
@@ -298,8 +309,8 @@
                                 </div>
                         
                         </div>
-                    </div>
-                    <div class="modal__combos">
+
+                        <!-- combo empresa -->
                         <div class="modal__combo-company">
                             <label for=""><span class="span-name">Empresa</span> </label>
                             <div class="select-menu">
@@ -315,6 +326,7 @@
                             
                             
                         </div>
+                        <!-- combo area -->
                         <div class="modal__combo-area">
                             <label for=""><span class="span-name">Área de Trabajo</span> </label>
                             <div class="select-menu">
@@ -328,6 +340,7 @@
                                 </div>
                               </div>
                         </div>
+                        <!-- reginemn -->
                         <div class="modal__combo-regime">
                             <label for=""><span class="span-name">Régimen de Trabajo</span> </label>
                             <div class="select-menu">
@@ -345,6 +358,9 @@
                         </div>
                         
                     </div>
+                    <!-- <div class="modal__combos">
+                        
+                    </div> -->
                     <div class="modal__date">
                         <div class="modal__date-content">
                             <label for="" class="modal__date-title">Fechas Booking</label>
@@ -357,57 +373,243 @@
                 </div>
 
                 <div class="modal__settings">
-                    <div>
-                        <div>
-                            <label for="">Guardia</label>
-                            <label for=""><input type="radio" >Si</label>
+                    <div class="modal__radios">
+                        <div class="modal__radios-content">
+                            <label for=""><span class="span-name">Guardia</span> </label>
+                            <div class="modal__radio">
+                                <label for="yesG" class="modal__lblRa"><input type="radio" id="yesG" name="radioS" >Si</label>
                             
-                            <label for=""><input type="radio" >No</label>
-                        </div>
-                        <div>
-                            <label for="">Requiere Alojamiento</label>
-                            <label for=""><input type="radio" >Si</label>
+                                <label for="radioS" class="modal__lblRa"><input type="radio" name="radioS">No</label>
+                            </div>
                             
-                            <label for=""><input type="radio" >No</label>
+                           
+                        </div>
+                        <div class="modal__radios-content">
+                            <label for=""> <span class="span-name">Requiere Alojamiento</span></label>
+                            <div class="modal__radio">
+                                <label for="" class="modal__lblRa"><input type="radio" name="radioR">Si</label>
+                            
+                                <label for="" class="modal__lblRa"><input type="radio" name="radioR">No</label>
+                            </div>
+                           
                         </div>
                     </div>
-                    <div>
-                        <label for="">Servicios</label>
-                        <div>
-                            <label for=""> <input type="checkbox">Desayuno</label>
-                            <label for=""> <input type="checkbox">Almuerzo</label>
-                            <label for=""> <input type="checkbox">Cena</label>
+                    <div class="modal__checkboxes-content">
+                        <label for=""> <span class="span-name">Servicios</span></label>
+                        <div class="modal__checkboxes">
+                            <label for="" class="modal__label-checkbox"> <input type="checkbox"> <span class="span-nameS">Desayuno</span></label>
+                            <label for="" class="modal__label-checkbox"> <input type="checkbox"><span class="span-nameS">Almuerzo</span> </label>
+                            <label for="" class="modal__label-checkbox"> <input type="checkbox"><span class="span-nameS">Cena</span> </label>
                         </div>
                     </div>
-                    <div>
-                        <label for=""><span class="span-name">Comedor donde Almuerza</span> </label>
-                        <div class="select-menu">
-                            <div class="select">
-                              <span>Elija una Comedor</span>
-                              <i class="fas fa-angle-down"></i>
-                            </div>
-                            <div class="options-list">
-                              <div class="option">Contratista</div>
-                              <div class="option">Newmont</div>
-                            </div>
-                          </div>
-                          <label for=""><span class="span-name">Campamento de Pernoche</span> </label>
-                          <div class="select-menu">
-                              <div class="select">
-                                <span>Elija una Campamento</span>
-                                <i class="fas fa-angle-down"></i>
+                    <!-- combos -->
+                    <div class="modal__comboboxes">
+                        <div class="modal__comboA">
+                            <label for=""><span class="span-name">Comedor donde Almuerza</span> </label>
+                            <div class="select-menu">
+                                <div class="select">
+                                  <span>Elija una Comedor</span>
+                                  <i class="fas fa-angle-down"></i>
+                                </div>
+                                <div class="options-list">
+                                  <div class="option">Contratista</div>
+                                  <div class="option">Newmont</div>
+                                </div>
                               </div>
-                              <div class="options-list">
-                                <div class="option">Contratista</div>
-                                <div class="option">Newmont</div>
+                        </div>
+                      
+                        <div class="modal__comboB">
+                            <label for=""><span class="span-name">Campamento de Pernoche</span> </label>
+                            <div class="select-menu">
+                                <div class="select">
+                                  <span>Elija una Campamento</span>
+                                  <i class="fas fa-angle-down"></i>
+                                </div>
+                                <div class="options-list">
+                                  <div class="option">Contratista</div>
+                                  <div class="option">Newmont</div>
+                                </div>
                               </div>
-                            </div>
+                        </div>
+                       
+                         
+
+                        <div class="modal__comboC">
+                            <label for=""><span class="span-name">Desde (Paradero Cajamarca)</span> </label>
+                            <div class="select-menu">
+                                <div class="select">
+                                  <span>Elija un Origen</span>
+                                  <i class="fas fa-angle-down"></i>
+                                </div>
+                                <div class="options-list">
+                                  <div class="option">Contratista</div>
+                                  <div class="option">Newmont</div>
+                                </div>
+                              </div>
+                        </div>
+                      
+        
+
+                        <div class="modal__comboD">
+                            <label for=""><span class="span-name">Hacia(Punto de trabajo en mina)</span> </label>
+                            <div class="select-menu">
+                                <div class="select">
+                                  <span>Elija un Destino</span>
+                                  <i class="fas fa-angle-down"></i>
+                                </div>
+                                <div class="options-list">
+                                  <div class="option">Contratista</div>
+                                  <div class="option">Newmont</div>
+                                </div>
+                              </div>
+                        </div>
+
+
                     </div>
-                   
+                 
+
+                    <div class="content-buttons">
+                      <button class="content-buttons__btn content-buttons__btn--bg">
+                          <svg width="20" id="Capa_2" data-name="Capa 2" viewBox="0 0 17 17">
+                          <defs>
+                            <style>
+                              .cls-10 {
+                                fill: #fff;
+                              }
+                        
+                              .cls-2 {
+                                fill: #6b7286;
+                                stroke: #6b7286;
+                                stroke-linecap: round;
+                                stroke-width: 1.5px;
+                              }
+                            </style>
+                          </defs>
+                          <g id="Capa_2-2" data-name="Capa 20">
+                            <rect class="cls-10" width="17" height="17" rx="4" ry="4"/>
+                            <path class="cls-2" d="m6,6l6,6"/>
+                            <path class="cls-2" d="m12,6l-6,6"/>
+                          </g>
+                        </svg> Cancelar</button>
+                      <button class="content-buttons__btn">
+                          <svg width="20" id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17">
+                              <defs>
+                                <style>
+                                  .cls-1 {
+                                    fill: #fff;
+                                  }
+                                </style>
+                              </defs>
+                              <g id="Capa_2-2" data-name="Capa 2">
+                                <path class="cls-1" d="m13,0H4C1.79,0,0,1.8,0,4v9c0,2.21,1.79,4,4,4h9c2.21,0,4-1.79,4-4V4c0-2.2-1.79-4-4-4Zm-.07,7.28l-4.73,4.41c-.39.37-1.03.37-1.43,0l-2.7-2.52c-.39-.37-.39-.96,0-1.33.4-.37,1.04-.37,1.43,0l1.99,1.85,4.01-3.74c.39-.37,1.03-.37,1.43,0,.39.37.39.97,0,1.33Z"/>
+                              </g>
+                            </svg>
+                          Registrar</button>
+                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <section class="load">
+      <div class="modal-load">
+        <h3 class="modal-load__title">Carga Masiva
+            <svg id="closeLoad" class="modal__close" width="26" viewBox="0 0 384 512"><path fill="#0C2B82" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+        </h3>
+        <div class="modal-load__contentfile">
+            <button class="modal-load__download">Descargar Archivo de Carga 
+              <svg width="20" id="Capa_7" data-name="Capa 7"  viewBox="0 0 13.6 17">
+                <defs>
+                  <style>
+                    .cls-7 {
+                      fill: #0c2b82;
+                      fill-rule: evenodd;
+                    }
+                  </style>
+                </defs>
+                <g id="Capa_2-7" data-name="Capa 6">
+                  <path class="cls-7" d="m6.8,0v5.53c0,.34.13.66.37.9s.56.37.9.37h5.53v8.5c0,.45-.18.88-.5,1.2s-.75.5-1.2.5H1.7c-.45,0-.88-.18-1.2-.5-.32-.32-.5-.75-.5-1.2V1.7c0-.45.18-.88.5-1.2.32-.32.75-.5,1.2-.5h5.1Zm0,7.65c-.23,0-.44.09-.6.25-.16.16-.25.38-.25.6v2.3l-.35-.35c-.16-.15-.38-.24-.6-.24-.22,0-.44.09-.59.25-.16.16-.25.37-.25.59,0,.22.08.44.24.6l1.8,1.8c.08.08.17.14.28.18.1.04.21.06.33.06s.22-.02.33-.06c.1-.04.2-.11.28-.18l1.8-1.8c.08-.08.15-.17.19-.28.04-.1.07-.22.07-.33,0-.11-.02-.22-.06-.33-.04-.1-.11-.2-.19-.28-.08-.08-.17-.14-.28-.19-.1-.04-.22-.06-.33-.06-.11,0-.22.02-.33.07-.1.04-.2.11-.28.19l-.35.35v-2.3c0-.23-.09-.44-.25-.6-.16-.16-.38-.25-.6-.25ZM8.5.04c.32.07.62.23.85.46l3.75,3.75c.23.23.39.53.46.85h-5.06V.04Z"/>
+                </g>
+              </svg></button>
+            
+        </div>
+        <div class="modal-load__content-steps">
+            <label for="" class="modal-load__label"><span class="modal-load__step modal-load__step--one">1</span>
+            Carga de Datos
+            </label>
+            <label for="" class="modal-load__label"><span class="modal-load__step modal-load__step--two">2</span>
+                Validación de Datos
+                </label>
+                <label for="" class="modal-load__label"><span class="modal-load__step">3</span>
+                    Resultados
+                    </label>
+        </div>
+        <div class="file-upload">
+            <!-- Drop Zone for Drag and Drop -->
+            <div class="drop-zone" id="dropZone">
+                <img id="fileIcon" class="file-icon" src="./Assets/iconos/Arrastra_aqui.svg" />
+              <span>Arrastra y suelte los archivos aqui o</span>
+          
+              <label for="fileInput" class="upload-btn">
+              
+                Selecione un Archivo
+           </label>
+            </div>
+          
+            <!-- Button for File Upload -->
+            <!-- <label for="fileInput" class="upload-btn">
+              
+                 Selecione un Archivo
+            </label> -->
+            
+            <input type="file" id="fileInput" accept=".xlsx,.xls,.pdf" style="display: none;" />
+          
+            <!-- Preview section -->
+            <div id="fileInfo" class="file-info"></div>
+            <span class="file-textarchive">Archivos soportados: xlsx (Excel)</span>
+            <div class="content-buttons content-buttons--carga">
+                <button class="content-buttons__btn content-buttons__btn--bg content-buttons__btn--width">
+                    <svg width="20" id="Capa_2" data-name="Capa 2" viewBox="0 0 17 17">
+                    <defs>
+                      <style>
+                        .cls-10 {
+                          fill: #fff;
+                        }
+                  
+                        .cls-2 {
+                          fill: #6b7286;
+                          stroke: #6b7286;
+                          stroke-linecap: round;
+                          stroke-width: 1.5px;
+                        }
+                      </style>
+                    </defs>
+                    <g id="Capa_2-2" data-name="Capa 20">
+                      <rect class="cls-10" width="17" height="17" rx="4" ry="4"/>
+                      <path class="cls-2" d="m6,6l6,6"/>
+                      <path class="cls-2" d="m12,6l-6,6"/>
+                    </g>
+                  </svg> Cancelar</button>
+                <button class="content-buttons__btn ">
+                    <svg width="20" id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17">
+                        <defs>
+                          <style>
+                            .cls-1 {
+                              fill: #fff;
+                            }
+                          </style>
+                        </defs>
+                        <g id="Capa_2-2" data-name="Capa 2">
+                          <path class="cls-1" d="m8.5,0C3.8,0,0,3.81,0,8.5s3.8,8.5,8.5,8.5,8.5-3.8,8.5-8.5S13.19,0,8.5,0Zm4.42,9.43l-3.82,3.81c-.23.24-.61.24-.85,0-.23-.23-.23-.61,0-.84l2.8-2.8h-7.05c-.33,0-.6-.27-.6-.6s.27-.6.6-.6h7.05l-2.8-2.79c-.23-.24-.23-.62,0-.85.24-.24.62-.24.85,0l3.82,3.82c.24.23.24.61,0,.85Z"/>
+                        </g>
+                      </svg>
+                    Registrar</button>
+               </div>
+          </div>
+          
+          
+      </div>
+    </section>
+    
    <script>
     
     const subdrop=document.querySelector('#subdrop');
@@ -415,9 +617,19 @@
     const itemAdministration=document.querySelector('.menu__item-Administration')
     const nuevoColor='#3A68C5';
     const baseColor='#FCAF17'
+    const contraer=document.querySelector("#contraer")
+     const registerBtn=document.querySelector('#register-Btn');
+    const contentModal=document.querySelector('.modal__content')
+    const closeModal=document.querySelector('.modal__close');
+    const modal=document.querySelector('.modal');
+    const btnUpload=document.querySelector('#btnupload')
+    console.log(btnUpload)
+    const modalload=document.querySelector('.load')
+    const closeLoad=document.querySelector('#closeLoad')
+    const contentload=document.querySelector('.modal-load')
    // Crea un array que incluye todos los elementos de 'items' y 'itemssub' (si está definido)
 const allItems = [...items, itemAdministration].filter(Boolean); // `filter(Boolean)` elimina los valores `null` o `undefined`
-
+const itemssub = document.querySelectorAll('.menu__sublist-item');
 // Añade un evento de clic a cada elemento
 allItems.forEach(item => {
   item.addEventListener('click', () => {
@@ -427,10 +639,34 @@ allItems.forEach(item => {
     // Añade la clase 'active' al elemento clicado
     console.log(item)
     item.classList.add('active');
+    itemssub.forEach(i => i.classList.remove('active'));
+    subdrop.checked=false;
+    document.documentElement.style.setProperty('--itemsMenu-ColorPrimary', baseColor);
   });
 });
+// modal de cargar
+btnUpload.addEventListener('click', () => {
+  console.log('Upload')
+  contentload.classList.remove('active');
+  modalload.classList.add('active');  // Sin el punto antes de 'active'
+});
 
-    const itemssub = document.querySelectorAll('.menu__sublist-item');
+closeLoad.addEventListener('click', () => {
+  contentload.classList.add('active');  // Sin el punto antes de 'active'
+  setTimeout(() => {
+    modalload.classList.remove('active');
+    }, 400); 
+});
+
+contraer.addEventListener('click', () => {
+  if (contraer.checked) {
+    // Si 'contraer' está marcado, marca 'subdrop' y remueve la clase 'active' de todos los items
+    subdrop.checked = false;
+
+  
+  }
+});
+  
     itemssub.forEach(items => {
       items.addEventListener('click', () => {
         itemssub.forEach(i => i.classList.remove('active'));
@@ -459,6 +695,9 @@ allItems.forEach(item => {
         itemssub.forEach(i => i.classList.remove('active'));
         document.documentElement.style.setProperty('--itemsMenu-ColorPrimary', baseColor);
         svgangle.classList.toggle('active');
+        if (subdrop && subdrop.type === 'checkbox' && contraer) {
+      contraer.checked = false;  // Marca el checkbox 'contraer' si corresponde
+    }
     })
 
     const initialPage=document.querySelector('.menu__figure');
@@ -467,16 +706,22 @@ allItems.forEach(item => {
         window.location.href = 'start.html';
     })
 
-    const registerBtn=document.querySelector('#register-Btn');
-    const contentModal=document.querySelector('.modal__content')
-    const closeModal=document.querySelector('.modal__close');
-    const modal=document.querySelector('.modal');
+   
+    let widtch=window.innerWidth;
+    window.addEventListener('resize', () => {
+    widtch = window.innerWidth;
+});
+
     registerBtn.addEventListener('click',()=>{
      
 
-       
+       if(widtch>960){
         contentModal.classList.add('active');
         modal.classList.add('active');
+       }else{
+        window.location.href = 'registro.html';
+       }
+       
     })
 
     closeModal.addEventListener('click',()=>{
@@ -486,7 +731,60 @@ allItems.forEach(item => {
             modal.classList.remove('active');
     }, 500); 
  })
-   
+ const dropZone = document.getElementById('dropZone');
+const fileInput = document.getElementById('fileInput');
+const fileIcon = document.getElementById('fileIcon');
+const fileInfo = document.getElementById('fileInfo');
+
+// Drag and Drop Events
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropZone.classList.add('dragover');
+});
+
+dropZone.addEventListener('dragleave', () => {
+  dropZone.classList.remove('dragover');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropZone.classList.remove('dragover');
+  handleFiles(e.dataTransfer.files);
+});
+
+// Button Click for File Input
+fileInput.addEventListener('change', () => {
+  handleFiles(fileInput.files);
+});
+
+// Handle Files Function
+function handleFiles(files) {
+  const file = files[0];
+
+  if (file) {
+    const fileType = file.type;
+    const fileName = file.name;
+
+    // Show file info
+    fileInfo.textContent = `Uploaded: ${fileName}`;
+
+    // Update icon based on file type
+    if (fileType === 'application/pdf') {
+      fileIcon.src = 'pdf-icon.png'; // replace with your PDF icon path
+    } else if (
+      fileType ===
+        'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' ||
+      fileType === 'application/vnd.ms-excel'
+    ) {
+      fileIcon.src = './Assets/iconos/office365.png'; // replace with your Excel icon path
+    } else {
+      fileIcon.src = ''; // if it's not a supported type
+    }
+
+    // Display icon
+    fileIcon.style.display = 'block';
+  }
+}
 
    </script>
 </body>

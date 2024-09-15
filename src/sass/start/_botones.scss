@@ -1,0 +1,42 @@
+// botones
+@use '../globales/mixins' as m;
+.content-buttons{
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-shrink: 0;
+    gap: 2rem;
+    @include m.telefonoFull {
+        margin-bottom: 0;
+      padding: 2rem 0;
+    }
+    &--carga{
+        padding: 0 3rem;
+    }
+    &__btn{
+        all: unset;  
+        display: inline-block;
+        width: 100%;
+        background-color: #0C2B82;
+        color: white;
+        text-align: center;
+        padding: 1rem 2rem;
+        border-radius: .8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        cursor: pointer;
+        transition: opacity .2s;
+       &--bg{
+        background-color: #6B7286;
+       }
+       &--width{
+        width: 85%;
+       }
+       &:hover{
+        opacity: .9;
+       }
+    } 
+}

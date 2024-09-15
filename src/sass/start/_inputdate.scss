@@ -1,11 +1,13 @@
 
 .datepicker-container{
     width: 100%!important;
+   
+    
 }
 .date-input {
     
     padding: 10px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     border-radius: 5px;
     border: 1px solid #eee;
   }
@@ -15,6 +17,7 @@
   .datepicker-container {
     width: fit-content;
     position: relative;
+    
   }
   
   .datepicker {
@@ -25,6 +28,8 @@
     background: #fff;
     padding: 10px;
     border-radius: 5px;
+    box-shadow: 0 6px 12px rgba(58, 58, 58, 0.15);
+
    
   }
   
@@ -33,30 +38,39 @@
     border: none;
     border-radius: 3px;
     background: transparent;
-    font-size: 14px;
+    font-size: 1.2rem;
     font-weight: 500;
     text-transform: uppercase;
     transition: 0.3s;
   }
   
-  .days,
+
   .dates {
+    display: grid;
+    grid-template-columns: repeat(7, 34px);
+    gap: 2px;
+    margin-block: 6px;
+
+  }
+  .days{
     display: grid;
     grid-template-columns: repeat(7, 32px);
     gap: 2px;
-    margin-block: 10px;
+    margin-block: 4px;
   }
   
   .days span {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
     text-align: center;
+  
   }
   
   .dates button {
     color: slategray;
     aspect-ratio: 1;
+    border-radius: 50%;
   }
   
   .dates button:disabled {
@@ -71,11 +85,13 @@
   
   .dates button.today {
     background: rgba(147, 112, 216, 0.2);
+   
     color: mediumpurple;
   }
   
   .dates button.selected {
-    background: mediumpurple;
+    background: rgb(90, 25, 222);
+   
     color: #fff;
   }
   
@@ -102,7 +118,7 @@
   }
   
   .datepicker-header button:hover {
-    color: mediumpurple;
+    color: rgb(62, 15, 156);
   }
   
   .datepicker-footer {
@@ -130,6 +146,13 @@
     color: #071435;
  
   }
+  .dates{
+ 
+    padding: 0;
+    gap: 0;
+    margin: 0;
+   
+  }
   .month-input{
     padding: 0.5rem;
     border-radius: .5rem;
@@ -144,6 +167,7 @@
     position: relative;
     overflow: hidden;
 
+    background-color: transparent;
    
  
   }
@@ -156,8 +180,8 @@
     width: 100%;
     outline: none;
     overflow: hidden;
-    border-radius: .4rem;
-    outline: 5px solid rgb(187, 187, 187);
+
+    padding: 1rem 1rem;
   }
 .labeldate{
     width: inherit;
@@ -167,7 +191,7 @@
     position: absolute;
     top: 0;
     right: 0.2rem;
-    padding: 0.62rem;
+    padding: 1.1rem;
     border-left: 2px solid #CFD5E6;
 
 }

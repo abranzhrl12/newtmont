@@ -1,672 +1,745 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Newmont</title>
-    <link rel="icon" href="Assets/iconos-Logo/iconoweb.png" sizes="16x16" type="image/png">
-    <link rel="preload" href="public/Styles/styles.css" as="style">
-    <link rel="stylesheet" href="public/Styles/styles.css">    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="combos.js" defer></script>
-    <script type="module" src="date.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newmont</title>
+  <link rel="icon" href="Assets/iconos-Logo/iconoweb.png" sizes="16x16" type="image/png">
+  <link rel="preload" href="public/Styles/styles.css" as="style">
+  <link rel="stylesheet" href="public/Styles/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.1.6/css/dataTables.dataTables.css" />
+  <script src="combos.js" defer></script>
+  <script type="module" src="date.js"></script>
 </head>
 
 <body>
-    <section class="menu">  
-        <div class="menu__side">
-            <div class="menu__side-content">  
-                <label class="menu__labelicono" for="contraer">
-                    
-                  
-                    <div class="menu__icon-arrow">
-                     
-                        <img  src="/Assets/iconos/angle-left.svg" alt="">
-        
-                </div>
-                </label>
-               
-                <input id="contraer"  type="checkbox">
-                  <!-- <img width="190" src="./Assets/iconos-Logo/aaaa-gigapixel-standard v2-1x.png" alt=""> -->
-                <div class="menu__figure">
-                           
-                </div>
-                <label for="input-movil">
-                    <svg class="menu__icon-hamburger" width="20"  viewBox="0 0 448 512"><path fill="#ffffff" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
-                </label>
-                <input id="input-movil" type="checkbox">
-                                
-                <ul class="menu__list">
-                   <svg class="close-hamburger" width="20" viewBox="0 0 384 512"><path fill="#ffffff" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
-                   
-                    <li  class="menu__item"> 
-                        <img class="menu__icon-boking" src="/Assets/iconos/Booking_service.svg" alt="">
-                       <span class="menu__item-text">Booking Service</span> 
-                    </li>
-                    <li class="menu__item"> 
-                        <img class="menu__icon-boking" src="/Assets/iconos/Dashboard.svg" alt="">
-                      <span class="menu__item-text">Dashboard</span>  
-                    </li>
-                    <li  class=" menu__item--sub"> 
-                        <label class="menu__item-Administration" for="subdrop">
-                            <img class="menu__icon-boking" src="/Assets/iconos/Administración.svg" alt="">
-                            <span class="menu__item-text"> 
-                                Administración
-                                <svg class="menu__angle-right" width="10" viewBox="0 0 320 512"><path fill="#ffffff" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
-                             </span>
-                          
-                        </label>          
-                      
-                        <input class="menu__sublist-input" id="subdrop" type="checkbox">
-                        <ul class="menu__sublist">
-                            <li  class="menu__sublist-item">
-                                <a href="empresas.html" class="menu__sub-link">
-                                    <img class="menu__icon-boking" src="/Assets/iconos/Empresas.svg" alt="">
-                                    Empresas
-                                </a>
-                               
-                            </li>
-                            <li class="menu__sublist-item">
-                                <img class="menu__icon-boking" src="/Assets/iconos/Áreas.svg" alt="">
-                                Áreas
-                            </li>
-                            <li class="menu__sublist-item">
-                                <img class="menu__icon-boking" src="/Assets/iconos/Régimenes.svg" alt="">
-                                Régimenes
-                            </li>
-                            <li class="menu__sublist-item">
-                                <img class="menu__icon-boking" src="/Assets/iconos/Campamentos.svg" alt="">
-                                Campamentos
-                            </li>
-                            <li class="menu__sublist-item">
-                                <img class="menu__icon-boking" src="/Assets/iconos/Comedores.svg" alt="">
-                                Comedores
-                            </li>
-                            <li class="menu__sublist-item">
-                                <img class="menu__icon-boking" src="/Assets/iconos/Destinos.svg" alt="">
-                                Destinos
-                            </li>
-                            <li class="menu__sublist-item">
-                                <img class="menu__icon-boking" src="/Assets/iconos/Usuarios.svg" alt="">
-                                Usuarios
-                            </li>
-                            <li class="menu__sublist-item">
-                                <img class="menu__icon-boking" src="/Assets/iconos/Origen _de_traslado.svg" alt="">
-                                traslado
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu__item"> 
-                        <img class="menu__icon-boking" src="/Assets/iconos/Carga_masiva.svg" alt="">
-                      <span class="menu__item-text" >Carga Masiva</span>  
-                    </li>
-                </ul>
+  <section class="menu">
+    <div class="menu__side">
+      <div class="menu__side-content">
+        <label class="menu__labelicono" for="contraer">
 
 
+          <div class="menu__icon-arrow">
 
-            </div>
-           
+            <img src="/Assets/iconos/angle-left.svg" alt="">
 
+          </div>
+        </label>
 
-            <div class="menu__profile">
-                <img  class="menu__profile-img" src="/Assets/profile/prueba.jpg" alt="">
-              
+        <input id="contraer" type="checkbox">
+        <!-- <img width="190" src="./Assets/iconos-Logo/aaaa-gigapixel-standard v2-1x.png" alt=""> -->
+        <div class="menu__figure">
+
+        </div>
+        <label for="input-movil">
+          <svg class="menu__icon-hamburger" width="20" viewBox="0 0 448 512">
+            <path fill="#ffffff"
+              d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
+          </svg>
+        </label>
+        <input id="input-movil" type="checkbox">
+
+        <ul class="menu__list">
+          <svg class="close-hamburger" width="20" viewBox="0 0 384 512">
+            <path fill="#ffffff"
+              d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+          </svg>
+
+          <li class="menu__item">
+            <img class="menu__icon-boking" src="/Assets/iconos/Booking_service.svg" alt="">
+            <span class="menu__item-text">Booking Service</span>
+          </li>
+          <li class="menu__item">
+            <img class="menu__icon-boking" src="/Assets/iconos/Dashboard.svg" alt="">
+            <span class="menu__item-text">Dashboard</span>
+          </li>
+          <li class=" menu__item--sub">
+            <label class="menu__item-Administration" for="subdrop">
+              <img class="menu__icon-boking" src="/Assets/iconos/Administración.svg" alt="">
               <span class="menu__item-text">
-                Administrador del sistema 
-              </span>  
-            </div>
-         </div>
-         <div class="content">
-            <div class="content__header">
-                <h3 class="content__title">Booking service</h3>
-                <div class="content__buttons">
-                    <button class="content__btn" id="btnupload">
-                        <svg   width="20" id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17">
-                           
-                            <g id="Capa_1-2" data-name="Capa 1">
-                              <path class="content__btn-svg" fill="#0C2B82" class="cls-1" d="m9,3.63v8.06c0,.59-.45,1.06-1,1.06s-1-.47-1-1.06V3.63l-2.29,2.44c-.39.42-1.03.42-1.42,0-.39-.42-.39-1.09,0-1.5L7.29.31c.39-.42,1.03-.42,1.42,0l4,4.25c.39.42.39,1.09,0,1.5-.39.42-1.02.42-1.42,0l-2.29-2.44ZM2,11.69h4c0,1.17.9,2.13,2,2.13s2-.95,2-2.13h4c1.1,0,2,.95,2,2.13v1.06c0,1.17-.9,2.13-2,2.13H2c-1.1,0-2-.95-2-2.13v-1.06c0-1.17.9-2.13,2-2.13Zm11.5,3.45c.2,0,.39-.08.53-.23.14-.15.22-.35.22-.56s-.08-.41-.22-.56c-.14-.15-.33-.23-.53-.23s-.39.08-.53.23c-.14.15-.22.35-.22.56s.08.41.22.56c.14.15.33.23.53.23Z"/>
-                            </g>
-                          </svg>
-                        Carga Masiva</button>
-                    <button class="content__btn content__btn--bg" id="register-Btn">
-                        <img src="./Assets/iconos/Registrar.svg" alt="">
-                        Registrar
-                    
-                    </button>
-                  
-                </div>
-            </div>
-            <div class="content-table">
-                <div class="content-table__header">
-                    <div>
-                        Actions
-                    </div>
-                </div>
-                <!-- <table   class="table-data">
-                    <thead style="padding: 0;margin: 0;">
-                        <tr class="table-data__header">
-                            <th class="table-data__th">Id</th>
-                            <th class="table-data__th">Fecha Registro</th>
-                            <th class="table-data__th">Fotocheck</th>
-                            <th class="table-data__th">DNI</th>
-                            <th class="table-data__th">Nombres y Apellidos</th>
-                            <th class="table-data__th">Área</th>
-                            <th class="table-data__th">Régimen</th>
-                            <th class="table-data__th">Origen Traslado</th>
-                            <th class="table-data__th">Destino</th>
-                            <th class="table-data__th">Comedor</th>
-                            <th class="table-data__th">Campamento</th>
-                            <th class="table-data__th">Servicio</th>
-                            <th class="table-data__th">Empresa</th>
-                            <th class="table-data__th">Guardia</th>
-                            <th class="table-data__th">Alojamiento</th>
-                            <th class="table-data__th">Fecha Reservas</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr >
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>7</td>
-                            <td>8</td>
-                            <td>9</td>
-                            <td>10</td>
-                            <td>11</td>
-                            <td>12</td>
-                            <td>13</td>
-                            <td>14</td>
-                            <td>15</td>
-                        </tr>
-                    </tbody>
-                </table> -->
-            </div>
-         </div>
+                Administración
+                <svg class="menu__angle-right" width="10" viewBox="0 0 320 512">
+                  <path fill="#ffffff"
+                    d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+                </svg>
+              </span>
 
-    </section>
-    <div  class="modal" >
-        <div class="modal__content">
-            <div class="modal__header">
-                <h5 class="modal__title">Registro
-                    <svg class="modal__close" width="20" viewBox="0 0 384 512"><path fill="#0C2B82" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
-                </h5>
-            </div>
-            <div class="modal__body">
-                <div class="modal__form">
-                    <div class="modal__inputs">
-                        <!-- fotocheck - dni -->
-                   
-                            <div class="modal__content-inputs  modal__content-primary">
-                                <label for=""><span class="span-name">Fotocheck</span></label>
-                                <input type="text" class="modal__input modal__input--primary">
-                            </div>
-                            
-                      
-
-                     
-                            <div class="modal__content-inputs modal__content-primaryT">
-                                <label for=""><span class="span-name" >DNI</span></label>
-                                <input type="text" class="modal__input modal__input--primary">
-                            </div>
-                            
-                      
-                       
-                        <!-- nombrres apellidos -->
-                        <div class="modal__content-inputs modal__input--surnames"> 
-                            <label for=""><span class="span-name">Nombres y Apellidos</span> </label>
-                            <input type="text" class="modal__input">
-                        </div>
-                        <!-- inputdate -->
-                        <div class="modal__content-inputs modal__input--date">
-                            <label for="Fecha Inicial"><span class="span-name">Fecha Inicial</span> </label>
-                            <!-- <input type="datetime" class="modal__input"> -->
-                            <div class="datepicker-container">
-                                <div class="datepciker-content">
-                                    <input type="text" class="date-input" placeholder="" id="inputdate" />
-                                    <label for="inputdate" >
-                                        <div class="labeldate">
-                                            <svg class="icon-calendar" width="20" id="Capa_2" data-name="Capa 2" viewBox="0 0 16.09 16.34">
-                                                <defs>
-                                                  <style>
-                                                    .cls-1 {
-                                                      fill: none;
-                                                      stroke: #0c2b82;
-                                                      stroke-linecap: round;
-                                                      stroke-linejoin: round;
-                                                    }
-                                                  </style>
-                                                </defs>
-                                                <g id="Capa_2-2" data-name="Capa 2">
-                                                  <path class="cls-1" d="m13.92,2.04H2.18c-.93,0-1.68.69-1.68,1.53v10.73c0,.85.75,1.53,1.68,1.53h11.74c.93,0,1.68-.69,1.68-1.53V3.57c0-.85-.75-1.53-1.68-1.53Z"/>
-                                                  <path class="cls-1" d="m11.4.5v3.07"/>
-                                                  <path class="cls-1" d="m4.69.5v3.07"/>
-                                                  <path class="cls-1" d="m.5,6.63h15.09"/>
-                                                </g>
-                                              </svg>
-                                        </div>
-                                       
-                                    </label>
-                                </div>
-                                
-                            
-                                  <div class="datepicker" hidden>
-                                    <!-- .datepicker-header -->
-                                    <div class="datepicker-header">
-                                      <button class="prev"> <svg width="12" viewBox="0 0 320 512"><path fill="#0C2B82" d="M52.7 267.3c-6.2-6.2-6.2-16.4 0-22.6l160-160c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6L86.6 256 235.3 404.7c6.2 6.2 6.2 16.4 0 22.6s-16.4 6.2-22.6 0l-160-160z"/></svg></button>
-                            
-                                      <div>
-                                        <select class="month-input">
-                                          <option>January</option>
-                                          <option>February</option>
-                                          <option>March</option>
-                                          <option>April</option>
-                                          <option>May</option>
-                                          <option>June</option>
-                                          <option>July</option>
-                                          <option>August</option>
-                                          <option>September</option>
-                                          <option>October</option>
-                                          <option>November</option>
-                                          <option>December</option>
-                                        </select>
-                                        <input type="number" class="year-input" />
-                                      </div>
-                            
-                                      <button class="next">
-                                        <svg class="arror-rigth" width="12" viewBox="0 0 320 512"><path fill="#0C2B82" d="M52.7 267.3c-6.2-6.2-6.2-16.4 0-22.6l160-160c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6L86.6 256 235.3 404.7c6.2 6.2 6.2 16.4 0 22.6s-16.4 6.2-22.6 0l-160-160z"/></svg>
-                                      </button>
-                                    </div>
-                                    <!-- /.datepicker-header -->
-                            
-                                    <!-- .days -->
-                                    <div class="days">
-                                      <span>Do</span>
-                                      <span>Lu</span>
-                                      <span>Ma</span>
-                                      <span>Mi</span>
-                                      <span>Ju</span>
-                                      <span>Vi</span>
-                                      <span>Sa</span>
-                                    </div>
-                                    <!-- /.days -->
-                            
-                                    <!-- .dates -->
-                                    <div class="dates">
-
-                                    </div>
-                                    <!-- /.dates -->
-                            
-                                    <!-- .datepicker-footer -->
-                                    <div class="datepicker-footer">
-                                      <button class="cancel">Cancel</button>
-                                      <button class="apply">Apply</button>
-                                    </div>
-                                    <!-- /.datepicker-footer -->
-                                  </div>
-                                </div>
-                        
-                        </div>
-
-                        <!-- combo empresa -->
-                        <div class="modal__combo-company">
-                            <label for=""><span class="span-name">Empresa</span> </label>
-                            <div class="select-menu">
-                                <div class="select">
-                                  <span>Elija una Empresa</span>
-                                  <i class="fas fa-angle-down"></i>
-                                </div>
-                                <div class="options-list">
-                                  <div class="option">Contratista</div>
-                                  <div class="option">Newmont</div>
-                                </div>
-                              </div>
-                            
-                            
-                        </div>
-                        <!-- combo area -->
-                        <div class="modal__combo-area">
-                            <label for=""><span class="span-name">Área de Trabajo</span> </label>
-                            <div class="select-menu">
-                                <div class="select">
-                                  <span>Elija un Área</span>
-                                  <i class="fas fa-angle-down"></i>
-                                </div>
-                                <div class="options-list">
-                                  <div class="option">Contratista</div>
-                                  <div class="option">Newmont</div>
-                                </div>
-                              </div>
-                        </div>
-                        <!-- reginemn -->
-                        <div class="modal__combo-regime">
-                            <label for=""><span class="span-name">Régimen de Trabajo</span> </label>
-                            <div class="select-menu">
-                                <div class="select">
-                                  <span>Elija un Régimen</span>
-                                  <i class="fas fa-angle-down"></i>
-                                </div>
-                                <div class="options-list">
-                                  <div class="option">10 x 10</div>
-                                  <div class="option">12 x 12</div>
-                                  <div class="option">14 x 14</div>
-                                  <div class="option">16 x 16</div>
-                                </div>
-                              </div>
-                        </div>
-                        
-                    </div>
-                    <!-- <div class="modal__combos">
-                        
-                    </div> -->
-                    <div class="modal__date">
-                        <div class="modal__date-content">
-                            <label for="" class="modal__date-title">Fechas Booking</label>
-                            <div class="modal__paragraph-content">
-                                <p class="modal__date-paragraph">Selecione una fecha Inicial</p>
-                            </div>
-                           
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal__settings">
-                    <div class="modal__radios">
-                        <div class="modal__radios-content">
-                            <label for=""><span class="span-name">Guardia</span> </label>
-                            <div class="modal__radio">
-                                <label for="yesG" class="modal__lblRa"><input type="radio" id="yesG" name="radioS" >Si</label>
-                            
-                                <label for="radioS" class="modal__lblRa"><input type="radio" name="radioS">No</label>
-                            </div>
-                            
-                           
-                        </div>
-                        <div class="modal__radios-content">
-                            <label for=""> <span class="span-name">Requiere Alojamiento</span></label>
-                            <div class="modal__radio">
-                                <label for="" class="modal__lblRa"><input type="radio" name="radioR">Si</label>
-                            
-                                <label for="" class="modal__lblRa"><input type="radio" name="radioR">No</label>
-                            </div>
-                           
-                        </div>
-                    </div>
-                    <div class="modal__checkboxes-content">
-                        <label for=""> <span class="span-name">Servicios</span></label>
-                        <div class="modal__checkboxes">
-                            <label for="" class="modal__label-checkbox"> <input type="checkbox"> <span class="span-nameS">Desayuno</span></label>
-                            <label for="" class="modal__label-checkbox"> <input type="checkbox"><span class="span-nameS">Almuerzo</span> </label>
-                            <label for="" class="modal__label-checkbox"> <input type="checkbox"><span class="span-nameS">Cena</span> </label>
-                        </div>
-                    </div>
-                    <!-- combos -->
-                    <div class="modal__comboboxes">
-                        <div class="modal__comboA">
-                            <label for=""><span class="span-name">Comedor donde Almuerza</span> </label>
-                            <div class="select-menu">
-                                <div class="select">
-                                  <span>Elija una Comedor</span>
-                                  <i class="fas fa-angle-down"></i>
-                                </div>
-                                <div class="options-list">
-                                  <div class="option">Contratista</div>
-                                  <div class="option">Newmont</div>
-                                </div>
-                              </div>
-                        </div>
-                      
-                        <div class="modal__comboB">
-                            <label for=""><span class="span-name">Campamento de Pernoche</span> </label>
-                            <div class="select-menu">
-                                <div class="select">
-                                  <span>Elija una Campamento</span>
-                                  <i class="fas fa-angle-down"></i>
-                                </div>
-                                <div class="options-list">
-                                  <div class="option">Contratista</div>
-                                  <div class="option">Newmont</div>
-                                </div>
-                              </div>
-                        </div>
-                       
-                         
-
-                        <div class="modal__comboC">
-                            <label for=""><span class="span-name">Desde (Paradero Cajamarca)</span> </label>
-                            <div class="select-menu">
-                                <div class="select">
-                                  <span>Elija un Origen</span>
-                                  <i class="fas fa-angle-down"></i>
-                                </div>
-                                <div class="options-list">
-                                  <div class="option">Contratista</div>
-                                  <div class="option">Newmont</div>
-                                </div>
-                              </div>
-                        </div>
-                      
-        
-
-                        <div class="modal__comboD">
-                            <label for=""><span class="span-name">Hacia(Punto de trabajo en mina)</span> </label>
-                            <div class="select-menu">
-                                <div class="select">
-                                  <span>Elija un Destino</span>
-                                  <i class="fas fa-angle-down"></i>
-                                </div>
-                                <div class="options-list">
-                                  <div class="option">Contratista</div>
-                                  <div class="option">Newmont</div>
-                                </div>
-                              </div>
-                        </div>
-
-
-                    </div>
-                 
-
-                    <div class="content-buttons">
-                      <button class="content-buttons__btn content-buttons__btn--bg">
-                          <svg width="20" id="Capa_2" data-name="Capa 2" viewBox="0 0 17 17">
-                          <defs>
-                            <style>
-                              .cls-10 {
-                                fill: #fff;
-                              }
-                        
-                              .cls-2 {
-                                fill: #6b7286;
-                                stroke: #6b7286;
-                                stroke-linecap: round;
-                                stroke-width: 1.5px;
-                              }
-                            </style>
-                          </defs>
-                          <g id="Capa_2-2" data-name="Capa 20">
-                            <rect class="cls-10" width="17" height="17" rx="4" ry="4"/>
-                            <path class="cls-2" d="m6,6l6,6"/>
-                            <path class="cls-2" d="m12,6l-6,6"/>
-                          </g>
-                        </svg> Cancelar</button>
-                      <button class="content-buttons__btn">
-                          <svg width="20" id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17">
-                              <defs>
-                                <style>
-                                  .cls-1 {
-                                    fill: #fff;
-                                  }
-                                </style>
-                              </defs>
-                              <g id="Capa_2-2" data-name="Capa 2">
-                                <path class="cls-1" d="m13,0H4C1.79,0,0,1.8,0,4v9c0,2.21,1.79,4,4,4h9c2.21,0,4-1.79,4-4V4c0-2.2-1.79-4-4-4Zm-.07,7.28l-4.73,4.41c-.39.37-1.03.37-1.43,0l-2.7-2.52c-.39-.37-.39-.96,0-1.33.4-.37,1.04-.37,1.43,0l1.99,1.85,4.01-3.74c.39-.37,1.03-.37,1.43,0,.39.37.39.97,0,1.33Z"/>
-                              </g>
-                            </svg>
-                          Registrar</button>
-                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <section class="load">
-      <div class="modal-load">
-        <h3 class="modal-load__title">Carga Masiva
-            <svg id="closeLoad" class="modal__close" width="26" viewBox="0 0 384 512"><path fill="#0C2B82" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
-        </h3>
-        <div class="modal-load__contentfile">
-            <button class="modal-load__download">Descargar Archivo de Carga 
-              <svg width="20" id="Capa_7" data-name="Capa 7"  viewBox="0 0 13.6 17">
-                <defs>
-                  <style>
-                    .cls-7 {
-                      fill: #0c2b82;
-                      fill-rule: evenodd;
-                    }
-                  </style>
-                </defs>
-                <g id="Capa_2-7" data-name="Capa 6">
-                  <path class="cls-7" d="m6.8,0v5.53c0,.34.13.66.37.9s.56.37.9.37h5.53v8.5c0,.45-.18.88-.5,1.2s-.75.5-1.2.5H1.7c-.45,0-.88-.18-1.2-.5-.32-.32-.5-.75-.5-1.2V1.7c0-.45.18-.88.5-1.2.32-.32.75-.5,1.2-.5h5.1Zm0,7.65c-.23,0-.44.09-.6.25-.16.16-.25.38-.25.6v2.3l-.35-.35c-.16-.15-.38-.24-.6-.24-.22,0-.44.09-.59.25-.16.16-.25.37-.25.59,0,.22.08.44.24.6l1.8,1.8c.08.08.17.14.28.18.1.04.21.06.33.06s.22-.02.33-.06c.1-.04.2-.11.28-.18l1.8-1.8c.08-.08.15-.17.19-.28.04-.1.07-.22.07-.33,0-.11-.02-.22-.06-.33-.04-.1-.11-.2-.19-.28-.08-.08-.17-.14-.28-.19-.1-.04-.22-.06-.33-.06-.11,0-.22.02-.33.07-.1.04-.2.11-.28.19l-.35.35v-2.3c0-.23-.09-.44-.25-.6-.16-.16-.38-.25-.6-.25ZM8.5.04c.32.07.62.23.85.46l3.75,3.75c.23.23.39.53.46.85h-5.06V.04Z"/>
-                </g>
-              </svg></button>
-            
-        </div>
-        <div class="modal-load__content-steps">
-            <label for="" class="modal-load__label"><span class="modal-load__step modal-load__step--one">1</span>
-            Carga de Datos
             </label>
-            <label for="" class="modal-load__label"><span class="modal-load__step modal-load__step--two">2</span>
-                Validación de Datos
-                </label>
-                <label for="" class="modal-load__label"><span class="modal-load__step">3</span>
-                    Resultados
-                    </label>
+
+            <input class="menu__sublist-input" id="subdrop" type="checkbox">
+            <ul class="menu__sublist">
+              <li class="menu__sublist-item">
+                <a href="empresas.html" class="menu__sub-link">
+                  <img class="menu__icon-boking" src="/Assets/iconos/Empresas.svg" alt="">
+                  Empresas
+                </a>
+
+              </li>
+              <li class="menu__sublist-item">
+                <img class="menu__icon-boking" src="/Assets/iconos/Áreas.svg" alt="">
+                Áreas
+              </li>
+              <li class="menu__sublist-item">
+                <img class="menu__icon-boking" src="/Assets/iconos/Régimenes.svg" alt="">
+                Régimenes
+              </li>
+              <li class="menu__sublist-item">
+                <img class="menu__icon-boking" src="/Assets/iconos/Campamentos.svg" alt="">
+                Campamentos
+              </li>
+              <li class="menu__sublist-item">
+                <img class="menu__icon-boking" src="/Assets/iconos/Comedores.svg" alt="">
+                Comedores
+              </li>
+              <li class="menu__sublist-item">
+                <img class="menu__icon-boking" src="/Assets/iconos/Destinos.svg" alt="">
+                Destinos
+              </li>
+              <li class="menu__sublist-item">
+                <img class="menu__icon-boking" src="/Assets/iconos/Usuarios.svg" alt="">
+                Usuarios
+              </li>
+              <li class="menu__sublist-item">
+                <img class="menu__icon-boking" src="/Assets/iconos/Origen _de_traslado.svg" alt="">
+                traslado
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <img class="menu__icon-boking" src="/Assets/iconos/Carga_masiva.svg" alt="">
+            <span class="menu__item-text">Carga Masiva</span>
+          </li>
+        </ul>
+
+
+
+      </div>
+
+
+
+      <div class="menu__profile">
+        <img class="menu__profile-img" src="/Assets/profile/prueba.jpg" alt="">
+
+        <span class="menu__item-text">
+          Administrador del sistema
+        </span>
+      </div>
+    </div>
+    <div class="content">
+      <div class="content__header">
+        <h3 class="content__title">Booking service</h3>
+        <div class="content__buttons">
+          <button class="content__btn" id="btnupload">
+            <svg width="20" id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17">
+
+              <g id="Capa_1-2" data-name="Capa 1">
+                <path class="content__btn-svg" fill="#0C2B82" class="cls-1"
+                  d="m9,3.63v8.06c0,.59-.45,1.06-1,1.06s-1-.47-1-1.06V3.63l-2.29,2.44c-.39.42-1.03.42-1.42,0-.39-.42-.39-1.09,0-1.5L7.29.31c.39-.42,1.03-.42,1.42,0l4,4.25c.39.42.39,1.09,0,1.5-.39.42-1.02.42-1.42,0l-2.29-2.44ZM2,11.69h4c0,1.17.9,2.13,2,2.13s2-.95,2-2.13h4c1.1,0,2,.95,2,2.13v1.06c0,1.17-.9,2.13-2,2.13H2c-1.1,0-2-.95-2-2.13v-1.06c0-1.17.9-2.13,2-2.13Zm11.5,3.45c.2,0,.39-.08.53-.23.14-.15.22-.35.22-.56s-.08-.41-.22-.56c-.14-.15-.33-.23-.53-.23s-.39.08-.53.23c-.14.15-.22.35-.22.56s.08.41.22.56c.14.15.33.23.53.23Z" />
+              </g>
+            </svg>
+            Carga Masiva</button>
+          <button class="content__btn content__btn--bg" id="register-Btn">
+            <img src="./Assets/iconos/Registrar.svg" alt="">
+            Registrar
+
+          </button>
+
         </div>
-        <div class="file-upload">
-            <!-- Drop Zone for Drag and Drop -->
-            <div class="drop-zone" id="dropZone">
-                <img id="fileIcon" class="file-icon" src="./Assets/iconos/Arrastra_aqui.svg" />
-              <span>Arrastra y suelte los archivos aqui o</span>
-          
-              <label for="fileInput" class="upload-btn">
-              
-                Selecione un Archivo
-           </label>
+      </div>
+      <div class="content-table">
+        <div class="content-table__header">
+          <div>
+            Actions
+          </div>
+        </div>
+        <table id="myTable" class="display">
+          <thead>
+            <tr>
+              <th>Column 1</th>
+              <th>Column 2</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Row 1 Data 1</td>
+              <td>Row 1 Data 2</td>
+            </tr>
+            <tr>
+              <td>Row 2 Data 1</td>
+              <td>Row 2 Data 2</td>
+            </tr>
+            <tr>
+              <td>Row 1 Data 1</td>
+              <td>Row 1 Data 2</td>
+            </tr>
+            <tr>
+              <td>Row 2 Data 1</td>
+              <td>Row 2 Data 2</td>
+            </tr>
+            <tr>
+              <td>Row 1 Data 1</td>
+              <td>Row 1 Data 2</td>
+            </tr>
+            <tr>
+              <td>Row 2 Data 1</td>
+              <td>Row 2 Data 2</td>
+            </tr>
+            <tr>
+              <td>Row 1 Data 1</td>
+              <td>Row 1 Data 2</td>
+            </tr>
+            <tr>
+              <td>Row 2 Data 1</td>
+              <td>Row 2 Data 2</td>
+            </tr>
+            <tr>
+              <td>Row 1 Data 1</td>
+              <td>Row 1 Data 2</td>
+            </tr>
+            <tr>
+              <td>Row 2 Data 1</td>
+              <td>Row 2 Data 2</td>
+            </tr>
+            <tr>
+              <td>Row 1 Data 1</td>
+              <td>Row 1 Data 2</td>
+            </tr>
+            <tr>
+              <td>Row 2 Data 1</td>
+              <td>Row 2 Data 2</td>
+            </tr>
+            <tr>
+              <td>Alo</td>
+              <td>Row 1 Data 2</td>
+            </tr>
+            <tr>
+              <td>Row 2 Data 1</td>
+              <td>Row 2 Data 2</td>
+            </tr>
+            <tr>
+              <td>Row 1 Data 1</td>
+              <td>Row 1 Data 2</td>
+            </tr>
+            <tr>
+              <td>Row 2 Data 1</td>
+              <td>Row 2 Data 2</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </section>
+  <div class="modal">
+    <div class="modal__content">
+      <div class="modal__header">
+        <h5 class="modal__title">Registro
+          <svg class="modal__close" width="20" viewBox="0 0 384 512">
+            <path fill="#0C2B82"
+              d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+          </svg>
+        </h5>
+      </div>
+      <div class="modal__body">
+        <div class="modal__form">
+          <div class="modal__inputs">
+            <!-- fotocheck - dni -->
+
+            <div class="modal__content-inputs  modal__content-primary">
+              <label for=""><span class="span-name">Fotocheck</span></label>
+              <input type="text" class="modal__input modal__input--primary">
             </div>
-          
-            <!-- Button for File Upload -->
-            <!-- <label for="fileInput" class="upload-btn">
-              
-                 Selecione un Archivo
-            </label> -->
-            
-            <input type="file" id="fileInput" accept=".xlsx,.xls,.pdf" style="display: none;" />
-          
-            <!-- Preview section -->
-            <div id="fileInfo" class="file-info"></div>
-            <span class="file-textarchive">Archivos soportados: xlsx (Excel)</span>
-            <div class="content-buttons content-buttons--carga">
-                <button class="content-buttons__btn content-buttons__btn--bg content-buttons__btn--width">
-                    <svg width="20" id="Capa_2" data-name="Capa 2" viewBox="0 0 17 17">
-                    <defs>
-                      <style>
-                        .cls-10 {
-                          fill: #fff;
-                        }
-                  
-                        .cls-2 {
-                          fill: #6b7286;
-                          stroke: #6b7286;
-                          stroke-linecap: round;
-                          stroke-width: 1.5px;
-                        }
-                      </style>
-                    </defs>
-                    <g id="Capa_2-2" data-name="Capa 20">
-                      <rect class="cls-10" width="17" height="17" rx="4" ry="4"/>
-                      <path class="cls-2" d="m6,6l6,6"/>
-                      <path class="cls-2" d="m12,6l-6,6"/>
-                    </g>
-                  </svg> Cancelar</button>
-                <button class="content-buttons__btn ">
-                    <svg width="20" id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17">
+
+
+
+
+            <div class="modal__content-inputs modal__content-primaryT">
+              <label for=""><span class="span-name">DNI</span></label>
+              <input type="text" class="modal__input modal__input--primary">
+            </div>
+
+
+
+            <!-- nombrres apellidos -->
+            <div class="modal__content-inputs modal__input--surnames">
+              <label for=""><span class="span-name">Nombres y Apellidos</span> </label>
+              <input type="text" class="modal__input">
+            </div>
+            <!-- inputdate -->
+            <div class="modal__content-inputs modal__input--date">
+              <label for="Fecha Inicial"><span class="span-name">Fecha Inicial</span> </label>
+              <!-- <input type="datetime" class="modal__input"> -->
+              <div class="datepicker-container">
+                <div class="datepciker-content">
+                  <input type="text" class="date-input" placeholder="" id="inputdate" />
+                  <label for="inputdate">
+                    <div class="labeldate">
+                      <svg class="icon-calendar" width="20" id="Capa_2" data-name="Capa 2" viewBox="0 0 16.09 16.34">
                         <defs>
                           <style>
                             .cls-1 {
-                              fill: #fff;
+                              fill: none;
+                              stroke: #0c2b82;
+                              stroke-linecap: round;
+                              stroke-linejoin: round;
                             }
                           </style>
                         </defs>
                         <g id="Capa_2-2" data-name="Capa 2">
-                          <path class="cls-1" d="m8.5,0C3.8,0,0,3.81,0,8.5s3.8,8.5,8.5,8.5,8.5-3.8,8.5-8.5S13.19,0,8.5,0Zm4.42,9.43l-3.82,3.81c-.23.24-.61.24-.85,0-.23-.23-.23-.61,0-.84l2.8-2.8h-7.05c-.33,0-.6-.27-.6-.6s.27-.6.6-.6h7.05l-2.8-2.79c-.23-.24-.23-.62,0-.85.24-.24.62-.24.85,0l3.82,3.82c.24.23.24.61,0,.85Z"/>
+                          <path class="cls-1"
+                            d="m13.92,2.04H2.18c-.93,0-1.68.69-1.68,1.53v10.73c0,.85.75,1.53,1.68,1.53h11.74c.93,0,1.68-.69,1.68-1.53V3.57c0-.85-.75-1.53-1.68-1.53Z" />
+                          <path class="cls-1" d="m11.4.5v3.07" />
+                          <path class="cls-1" d="m4.69.5v3.07" />
+                          <path class="cls-1" d="m.5,6.63h15.09" />
                         </g>
                       </svg>
-                    Registrar</button>
-               </div>
+                    </div>
+
+                  </label>
+                </div>
+
+
+                <div class="datepicker" hidden>
+                  <!-- .datepicker-header -->
+                  <div class="datepicker-header">
+                    <button class="prev"> <svg width="12" viewBox="0 0 320 512">
+                        <path fill="#0C2B82"
+                          d="M52.7 267.3c-6.2-6.2-6.2-16.4 0-22.6l160-160c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6L86.6 256 235.3 404.7c6.2 6.2 6.2 16.4 0 22.6s-16.4 6.2-22.6 0l-160-160z" />
+                      </svg></button>
+
+                    <div>
+                      <select class="month-input">
+                        <option>January</option>
+                        <option>February</option>
+                        <option>March</option>
+                        <option>April</option>
+                        <option>May</option>
+                        <option>June</option>
+                        <option>July</option>
+                        <option>August</option>
+                        <option>September</option>
+                        <option>October</option>
+                        <option>November</option>
+                        <option>December</option>
+                      </select>
+                      <input type="number" class="year-input" />
+                    </div>
+
+                    <button class="next">
+                      <svg class="arror-rigth" width="12" viewBox="0 0 320 512">
+                        <path fill="#0C2B82"
+                          d="M52.7 267.3c-6.2-6.2-6.2-16.4 0-22.6l160-160c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6L86.6 256 235.3 404.7c6.2 6.2 6.2 16.4 0 22.6s-16.4 6.2-22.6 0l-160-160z" />
+                      </svg>
+                    </button>
+                  </div>
+                  <!-- /.datepicker-header -->
+
+                  <!-- .days -->
+                  <div class="days">
+                    <span>Do</span>
+                    <span>Lu</span>
+                    <span>Ma</span>
+                    <span>Mi</span>
+                    <span>Ju</span>
+                    <span>Vi</span>
+                    <span>Sa</span>
+                  </div>
+                  <!-- /.days -->
+
+                  <!-- .dates -->
+                  <div class="dates">
+
+                  </div>
+                  <!-- /.dates -->
+
+                  <!-- .datepicker-footer -->
+                  <div class="datepicker-footer">
+                    <button class="cancel">Cancel</button>
+                    <button class="apply">Apply</button>
+                  </div>
+                  <!-- /.datepicker-footer -->
+                </div>
+              </div>
+
+            </div>
+
+            <!-- combo empresa -->
+            <div class="modal__combo-company">
+              <label for=""><span class="span-name">Empresa</span> </label>
+              <div class="select-menu">
+                <div class="select">
+                  <span>Elija una Empresa</span>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <div class="options-list">
+                  <div class="option">Contratista</div>
+                  <div class="option">Newmont</div>
+                </div>
+              </div>
+
+
+            </div>
+            <!-- combo area -->
+            <div class="modal__combo-area">
+              <label for=""><span class="span-name">Área de Trabajo</span> </label>
+              <div class="select-menu">
+                <div class="select">
+                  <span>Elija un Área</span>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <div class="options-list">
+                  <div class="option">Contratista</div>
+                  <div class="option">Newmont</div>
+                </div>
+              </div>
+            </div>
+            <!-- reginemn -->
+            <div class="modal__combo-regime">
+              <label for=""><span class="span-name">Régimen de Trabajo</span> </label>
+              <div class="select-menu">
+                <div class="select">
+                  <span>Elija un Régimen</span>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <div class="options-list">
+                  <div class="option">10 x 10</div>
+                  <div class="option">12 x 12</div>
+                  <div class="option">14 x 14</div>
+                  <div class="option">16 x 16</div>
+                </div>
+              </div>
+            </div>
+
           </div>
-          
-          
+          <!-- <div class="modal__combos">
+                        
+                    </div> -->
+          <div class="modal__date">
+            <div class="modal__date-content">
+              <label for="" class="modal__date-title">Fechas Booking</label>
+              <div class="modal__paragraph-content">
+                <p class="modal__date-paragraph">Selecione una fecha Inicial</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal__settings">
+          <div class="modal__radios">
+            <div class="modal__radios-content">
+              <label for=""><span class="span-name">Guardia</span> </label>
+              <div class="modal__radio">
+                <label for="yesG" class="modal__lblRa"><input type="radio" id="yesG" name="radioS">Si</label>
+
+                <label for="radioS" class="modal__lblRa"><input type="radio" name="radioS">No</label>
+              </div>
+
+
+            </div>
+            <div class="modal__radios-content">
+              <label for=""> <span class="span-name">Requiere Alojamiento</span></label>
+              <div class="modal__radio">
+                <label for="" class="modal__lblRa"><input type="radio" name="radioR">Si</label>
+
+                <label for="" class="modal__lblRa"><input type="radio" name="radioR">No</label>
+              </div>
+
+            </div>
+          </div>
+          <div class="modal__checkboxes-content">
+            <label for=""> <span class="span-name">Servicios</span></label>
+            <div class="modal__checkboxes">
+              <label for="" class="modal__label-checkbox"> <input type="checkbox"> <span
+                  class="span-nameS">Desayuno</span></label>
+              <label for="" class="modal__label-checkbox"> <input type="checkbox"><span
+                  class="span-nameS">Almuerzo</span> </label>
+              <label for="" class="modal__label-checkbox"> <input type="checkbox"><span class="span-nameS">Cena</span>
+              </label>
+            </div>
+          </div>
+          <!-- combos -->
+          <div class="modal__comboboxes">
+            <div class="modal__comboA">
+              <label for=""><span class="span-name">Comedor donde Almuerza</span> </label>
+              <div class="select-menu">
+                <div class="select">
+                  <span>Elija una Comedor</span>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <div class="options-list">
+                  <div class="option">Contratista</div>
+                  <div class="option">Newmont</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal__comboB">
+              <label for=""><span class="span-name">Campamento de Pernoche</span> </label>
+              <div class="select-menu">
+                <div class="select">
+                  <span>Elija una Campamento</span>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <div class="options-list">
+                  <div class="option">Contratista</div>
+                  <div class="option">Newmont</div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="modal__comboC">
+              <label for=""><span class="span-name">Desde (Paradero Cajamarca)</span> </label>
+              <div class="select-menu">
+                <div class="select">
+                  <span>Elija un Origen</span>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <div class="options-list">
+                  <div class="option">Contratista</div>
+                  <div class="option">Newmont</div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="modal__comboD">
+              <label for=""><span class="span-name">Hacia(Punto de trabajo en mina)</span> </label>
+              <div class="select-menu">
+                <div class="select">
+                  <span>Elija un Destino</span>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <div class="options-list">
+                  <div class="option">Contratista</div>
+                  <div class="option">Newmont</div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+
+          <div class="content-buttons">
+            <button class="content-buttons__btn content-buttons__btn--bg">
+              <svg width="20" id="Capa_2" data-name="Capa 2" viewBox="0 0 17 17">
+                <defs>
+                  <style>
+                    .cls-10 {
+                      fill: #fff;
+                    }
+
+                    .cls-2 {
+                      fill: #6b7286;
+                      stroke: #6b7286;
+                      stroke-linecap: round;
+                      stroke-width: 1.5px;
+                    }
+                  </style>
+                </defs>
+                <g id="Capa_2-2" data-name="Capa 20">
+                  <rect class="cls-10" width="17" height="17" rx="4" ry="4" />
+                  <path class="cls-2" d="m6,6l6,6" />
+                  <path class="cls-2" d="m12,6l-6,6" />
+                </g>
+              </svg> Cancelar</button>
+            <button class="content-buttons__btn">
+              <svg width="20" id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17">
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: #fff;
+                    }
+                  </style>
+                </defs>
+                <g id="Capa_2-2" data-name="Capa 2">
+                  <path class="cls-1"
+                    d="m13,0H4C1.79,0,0,1.8,0,4v9c0,2.21,1.79,4,4,4h9c2.21,0,4-1.79,4-4V4c0-2.2-1.79-4-4-4Zm-.07,7.28l-4.73,4.41c-.39.37-1.03.37-1.43,0l-2.7-2.52c-.39-.37-.39-.96,0-1.33.4-.37,1.04-.37,1.43,0l1.99,1.85,4.01-3.74c.39-.37,1.03-.37,1.43,0,.39.37.39.97,0,1.33Z" />
+                </g>
+              </svg>
+              Registrar</button>
+          </div>
+        </div>
       </div>
-    </section>
-    
-   <script>
-    
-    const subdrop=document.querySelector('#subdrop');
+    </div>
+  </div>
+  <section class="load">
+    <div class="modal-load">
+      <h3 class="modal-load__title">Carga Masiva
+        <svg id="closeLoad" class="modal__close" width="26" viewBox="0 0 384 512">
+          <path fill="#0C2B82"
+            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+        </svg>
+      </h3>
+      <div class="modal-load__contentfile">
+        <button class="modal-load__download">Descargar Archivo de Carga
+          <svg width="20" id="Capa_7" data-name="Capa 7" viewBox="0 0 13.6 17">
+            <defs>
+              <style>
+                .cls-7 {
+                  fill: #0c2b82;
+                  fill-rule: evenodd;
+                }
+              </style>
+            </defs>
+            <g id="Capa_2-7" data-name="Capa 6">
+              <path class="cls-7"
+                d="m6.8,0v5.53c0,.34.13.66.37.9s.56.37.9.37h5.53v8.5c0,.45-.18.88-.5,1.2s-.75.5-1.2.5H1.7c-.45,0-.88-.18-1.2-.5-.32-.32-.5-.75-.5-1.2V1.7c0-.45.18-.88.5-1.2.32-.32.75-.5,1.2-.5h5.1Zm0,7.65c-.23,0-.44.09-.6.25-.16.16-.25.38-.25.6v2.3l-.35-.35c-.16-.15-.38-.24-.6-.24-.22,0-.44.09-.59.25-.16.16-.25.37-.25.59,0,.22.08.44.24.6l1.8,1.8c.08.08.17.14.28.18.1.04.21.06.33.06s.22-.02.33-.06c.1-.04.2-.11.28-.18l1.8-1.8c.08-.08.15-.17.19-.28.04-.1.07-.22.07-.33,0-.11-.02-.22-.06-.33-.04-.1-.11-.2-.19-.28-.08-.08-.17-.14-.28-.19-.1-.04-.22-.06-.33-.06-.11,0-.22.02-.33.07-.1.04-.2.11-.28.19l-.35.35v-2.3c0-.23-.09-.44-.25-.6-.16-.16-.38-.25-.6-.25ZM8.5.04c.32.07.62.23.85.46l3.75,3.75c.23.23.39.53.46.85h-5.06V.04Z" />
+            </g>
+          </svg></button>
+
+      </div>
+      <div class="modal-load__content-steps">
+        <label for="" class="modal-load__label"><span class="modal-load__step modal-load__step--one">1</span>
+          Carga de Datos
+        </label>
+        <label for="" class="modal-load__label"><span class="modal-load__step modal-load__step--two">2</span>
+          Validación de Datos
+        </label>
+        <label for="" class="modal-load__label"><span class="modal-load__step">3</span>
+          Resultados
+        </label>
+      </div>
+      <div class="file-upload">
+        <!-- Drop Zone for Drag and Drop -->
+        <div class="drop-zone" id="dropZone">
+          <img id="fileIcon" class="file-icon" src="./Assets/iconos/Arrastra_aqui.svg" />
+          <span>Arrastra y suelte los archivos aqui o</span>
+
+          <label for="fileInput" class="upload-btn">
+
+            Selecione un Archivo
+          </label>
+        </div>
+
+        <!-- Button for File Upload -->
+        <!-- <label for="fileInput" class="upload-btn">
+              
+                 Selecione un Archivo
+            </label> -->
+
+        <input type="file" id="fileInput" accept=".xlsx,.xls,.pdf" style="display: none;" />
+
+        <!-- Preview section -->
+        <div id="fileInfo" class="file-info"></div>
+        <span class="file-textarchive">Archivos soportados: xlsx (Excel)</span>
+        <div class="content-buttons content-buttons--carga">
+          <button class="content-buttons__btn content-buttons__btn--bg content-buttons__btn--width">
+            <svg width="20" id="Capa_2" data-name="Capa 2" viewBox="0 0 17 17">
+              <defs>
+                <style>
+                  .cls-10 {
+                    fill: #fff;
+                  }
+
+                  .cls-2 {
+                    fill: #6b7286;
+                    stroke: #6b7286;
+                    stroke-linecap: round;
+                    stroke-width: 1.5px;
+                  }
+                </style>
+              </defs>
+              <g id="Capa_2-2" data-name="Capa 20">
+                <rect class="cls-10" width="17" height="17" rx="4" ry="4" />
+                <path class="cls-2" d="m6,6l6,6" />
+                <path class="cls-2" d="m12,6l-6,6" />
+              </g>
+            </svg> Cancelar</button>
+          <button class="content-buttons__btn ">
+            <svg width="20" id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17">
+              <defs>
+                <style>
+                  .cls-1 {
+                    fill: #fff;
+                  }
+                </style>
+              </defs>
+              <g id="Capa_2-2" data-name="Capa 2">
+                <path class="cls-1"
+                  d="m8.5,0C3.8,0,0,3.81,0,8.5s3.8,8.5,8.5,8.5,8.5-3.8,8.5-8.5S13.19,0,8.5,0Zm4.42,9.43l-3.82,3.81c-.23.24-.61.24-.85,0-.23-.23-.23-.61,0-.84l2.8-2.8h-7.05c-.33,0-.6-.27-.6-.6s.27-.6.6-.6h7.05l-2.8-2.79c-.23-.24-.23-.62,0-.85.24-.24.62-.24.85,0l3.82,3.82c.24.23.24.61,0,.85Z" />
+              </g>
+            </svg>
+            Registrar</button>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <script src="https://cdn.datatables.net/2.1.6/js/dataTables.js"></script>
+  <script>
+
+    $(document).ready(function () {
+      $('#myTable').DataTable();
+    });
+
+    const subdrop = document.querySelector('#subdrop');
     const items = document.querySelectorAll('.menu__item');
-    const itemAdministration=document.querySelector('.menu__item-Administration')
-    const nuevoColor='#3A68C5';
-    const baseColor='#FCAF17'
-    const contraer=document.querySelector("#contraer")
-     const registerBtn=document.querySelector('#register-Btn');
-    const contentModal=document.querySelector('.modal__content')
-    const closeModal=document.querySelector('.modal__close');
-    const modal=document.querySelector('.modal');
-    const btnUpload=document.querySelector('#btnupload')
+    const itemAdministration = document.querySelector('.menu__item-Administration')
+    const nuevoColor = '#3A68C5';
+    const baseColor = '#FCAF17'
+    const contraer = document.querySelector("#contraer")
+    const registerBtn = document.querySelector('#register-Btn');
+    const contentModal = document.querySelector('.modal__content')
+    const closeModal = document.querySelector('.modal__close');
+    const modal = document.querySelector('.modal');
+    const btnUpload = document.querySelector('#btnupload')
     console.log(btnUpload)
-    const modalload=document.querySelector('.load')
-    const closeLoad=document.querySelector('#closeLoad')
-    const contentload=document.querySelector('.modal-load')
-   // Crea un array que incluye todos los elementos de 'items' y 'itemssub' (si está definido)
-const allItems = [...items, itemAdministration].filter(Boolean); // `filter(Boolean)` elimina los valores `null` o `undefined`
-const itemssub = document.querySelectorAll('.menu__sublist-item');
-// Añade un evento de clic a cada elemento
-allItems.forEach(item => {
-  item.addEventListener('click', () => {
-    // Remueve la clase 'active' de todos los elementos
-    allItems.forEach(i => i.classList.remove('active'));
-    
-    // Añade la clase 'active' al elemento clicado
-    console.log(item)
-    item.classList.add('active');
-    itemssub.forEach(i => i.classList.remove('active'));
-    subdrop.checked=false;
-    document.documentElement.style.setProperty('--itemsMenu-ColorPrimary', baseColor);
-  });
-});
-// modal de cargar
-btnUpload.addEventListener('click', () => {
-  console.log('Upload')
-  contentload.classList.remove('active');
-  modalload.classList.add('active');  // Sin el punto antes de 'active'
-});
+    const modalload = document.querySelector('.load')
+    const closeLoad = document.querySelector('#closeLoad')
+    const contentload = document.querySelector('.modal-load')
+    // Crea un array que incluye todos los elementos de 'items' y 'itemssub' (si está definido)
+    const allItems = [...items, itemAdministration].filter(Boolean); // `filter(Boolean)` elimina los valores `null` o `undefined`
+    const itemssub = document.querySelectorAll('.menu__sublist-item');
+    // Añade un evento de clic a cada elemento
+    allItems.forEach(item => {
+      item.addEventListener('click', () => {
+        // Remueve la clase 'active' de todos los elementos
+        allItems.forEach(i => i.classList.remove('active'));
 
-closeLoad.addEventListener('click', () => {
-  contentload.classList.add('active');  // Sin el punto antes de 'active'
-  setTimeout(() => {
-    modalload.classList.remove('active');
-    }, 400); 
-});
+        // Añade la clase 'active' al elemento clicado
+        console.log(item)
+        item.classList.add('active');
+        itemssub.forEach(i => i.classList.remove('active'));
+        subdrop.checked = false;
+        document.documentElement.style.setProperty('--itemsMenu-ColorPrimary', baseColor);
+      });
+    });
+    // modal de cargar
+    btnUpload.addEventListener('click', () => {
+      console.log('Upload')
+      contentload.classList.remove('active');
+      modalload.classList.add('active');  // Sin el punto antes de 'active'
+    });
 
-contraer.addEventListener('click', () => {
-  if (contraer.checked) {
-    // Si 'contraer' está marcado, marca 'subdrop' y remueve la clase 'active' de todos los items
-    subdrop.checked = false;
+    closeLoad.addEventListener('click', () => {
+      contentload.classList.add('active');  // Sin el punto antes de 'active'
+      setTimeout(() => {
+        modalload.classList.remove('active');
+      }, 400);
+    });
 
-  
-  }
-});
-  
+    contraer.addEventListener('click', () => {
+      if (contraer.checked) {
+        // Si 'contraer' está marcado, marca 'subdrop' y remueve la clase 'active' de todos los items
+        subdrop.checked = false;
+
+
+      }
+    });
+
     itemssub.forEach(items => {
       items.addEventListener('click', () => {
         itemssub.forEach(i => i.classList.remove('active'));
@@ -676,116 +749,117 @@ contraer.addEventListener('click', () => {
       });
     });
 
-    const hiddenMenu=document.querySelector('.close-hamburger')
-    const inputmovil=document.querySelector('#input-movil');
-    hiddenMenu.addEventListener('click',()=>{
-   
-        console.log('clickkkk')
-        
-        // Desmarcar el input (si es un checkbox o radio)
-    if (inputmovil && inputmovil.type === 'checkbox') {
+    const hiddenMenu = document.querySelector('.close-hamburger')
+    const inputmovil = document.querySelector('#input-movil');
+    hiddenMenu.addEventListener('click', () => {
+
+      console.log('clickkkk')
+
+      // Desmarcar el input (si es un checkbox o radio)
+      if (inputmovil && inputmovil.type === 'checkbox') {
         inputmovil.checked = false;
-    }
+      }
     })
 
-  
-    const svgangle=document.querySelector('.menu__angle-right');
-    
-    subdrop.addEventListener('click',()=>{
-        itemssub.forEach(i => i.classList.remove('active'));
-        document.documentElement.style.setProperty('--itemsMenu-ColorPrimary', baseColor);
-        svgangle.classList.toggle('active');
-        if (subdrop && subdrop.type === 'checkbox' && contraer) {
-      contraer.checked = false;  // Marca el checkbox 'contraer' si corresponde
-    }
+
+    const svgangle = document.querySelector('.menu__angle-right');
+
+    subdrop.addEventListener('click', () => {
+      itemssub.forEach(i => i.classList.remove('active'));
+      document.documentElement.style.setProperty('--itemsMenu-ColorPrimary', baseColor);
+      svgangle.classList.toggle('active');
+      if (subdrop && subdrop.type === 'checkbox' && contraer) {
+        contraer.checked = false;  // Marca el checkbox 'contraer' si corresponde
+      }
     })
 
-    const initialPage=document.querySelector('.menu__figure');
-    initialPage.addEventListener('click',()=>{
-        console.log('hola')
-        window.location.href = 'start.html';
+    const initialPage = document.querySelector('.menu__figure');
+    initialPage.addEventListener('click', () => {
+      console.log('hola')
+      window.location.href = 'start.html';
     })
 
-   
-    let widtch=window.innerWidth;
+
+    let widtch = window.innerWidth;
     window.addEventListener('resize', () => {
-    widtch = window.innerWidth;
-});
+      widtch = window.innerWidth;
+    });
 
-    registerBtn.addEventListener('click',()=>{
-     
+    registerBtn.addEventListener('click', () => {
 
-       if(widtch>960){
+
+      if (widtch > 960) {
         contentModal.classList.add('active');
         modal.classList.add('active');
-       }else{
+      } else {
         window.location.href = 'registro.html';
-       }
-       
+      }
+
     })
 
-    closeModal.addEventListener('click',()=>{
-     
-        contentModal.classList.remove('active');
-        setTimeout(() => {
-            modal.classList.remove('active');
-    }, 500); 
- })
- const dropZone = document.getElementById('dropZone');
-const fileInput = document.getElementById('fileInput');
-const fileIcon = document.getElementById('fileIcon');
-const fileInfo = document.getElementById('fileInfo');
+    closeModal.addEventListener('click', () => {
 
-// Drag and Drop Events
-dropZone.addEventListener('dragover', (e) => {
-  e.preventDefault();
-  dropZone.classList.add('dragover');
-});
+      contentModal.classList.remove('active');
+      setTimeout(() => {
+        modal.classList.remove('active');
+      }, 500);
+    })
+    const dropZone = document.getElementById('dropZone');
+    const fileInput = document.getElementById('fileInput');
+    const fileIcon = document.getElementById('fileIcon');
+    const fileInfo = document.getElementById('fileInfo');
 
-dropZone.addEventListener('dragleave', () => {
-  dropZone.classList.remove('dragover');
-});
+    // Drag and Drop Events
+    dropZone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      dropZone.classList.add('dragover');
+    });
 
-dropZone.addEventListener('drop', (e) => {
-  e.preventDefault();
-  dropZone.classList.remove('dragover');
-  handleFiles(e.dataTransfer.files);
-});
+    dropZone.addEventListener('dragleave', () => {
+      dropZone.classList.remove('dragover');
+    });
 
-// Button Click for File Input
-fileInput.addEventListener('change', () => {
-  handleFiles(fileInput.files);
-});
+    dropZone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dropZone.classList.remove('dragover');
+      handleFiles(e.dataTransfer.files);
+    });
 
-// Handle Files Function
-function handleFiles(files) {
-  const file = files[0];
+    // Button Click for File Input
+    fileInput.addEventListener('change', () => {
+      handleFiles(fileInput.files);
+    });
 
-  if (file) {
-    const fileType = file.type;
-    const fileName = file.name;
+    // Handle Files Function
+    function handleFiles(files) {
+      const file = files[0];
 
-    // Show file info
-    fileInfo.textContent = `Uploaded: ${fileName}`;
+      if (file) {
+        const fileType = file.type;
+        const fileName = file.name;
 
-    // Update icon based on file type
-    if (fileType === 'application/pdf') {
-      fileIcon.src = 'pdf-icon.png'; // replace with your PDF icon path
-    } else if (
-      fileType ===
-        'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' ||
-      fileType === 'application/vnd.ms-excel'
-    ) {
-      fileIcon.src = './Assets/iconos/office365.png'; // replace with your Excel icon path
-    } else {
-      fileIcon.src = ''; // if it's not a supported type
+        // Show file info
+        fileInfo.textContent = `Uploaded: ${fileName}`;
+
+        // Update icon based on file type
+        if (fileType === 'application/pdf') {
+          fileIcon.src = 'pdf-icon.png'; // replace with your PDF icon path
+        } else if (
+          fileType ===
+          'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' ||
+          fileType === 'application/vnd.ms-excel'
+        ) {
+          fileIcon.src = './Assets/iconos/office365.png'; // replace with your Excel icon path
+        } else {
+          fileIcon.src = ''; // if it's not a supported type
+        }
+
+        // Display icon
+        fileIcon.style.display = 'block';
+      }
     }
 
-    // Display icon
-    fileIcon.style.display = 'block';
-  }
-}
-
-   </script>
+  </script>
 </body>
+
 </html>

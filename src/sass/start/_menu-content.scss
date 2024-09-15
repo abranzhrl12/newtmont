@@ -10,7 +10,6 @@
     background-color: #F7FAFB;
     border-radius: 1.4rem;
     padding-bottom:2.8rem;
-    overflow: hidden;
     @include m.telefonoFull {
         position: relative;
         margin-top: 0;
@@ -102,6 +101,9 @@
     box-shadow: 0 6px 12px rgba(58, 58, 58, 0.15);
     color: black;
     border:  0.2rem solid #CFD5E6;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
 
     @include m.telefonoFull {
        height: 66.5rem;

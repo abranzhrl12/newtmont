@@ -10,6 +10,7 @@
     background-color: #F7FAFB;
     border-radius: 1.4rem;
     padding-bottom:2.8rem;
+    overflow: hidden;
     @include m.telefonoFull {
         position: relative;
         margin-top: 0;
@@ -33,6 +34,7 @@
             flex-direction: column;
             
             gap: 1rem;
+            position: relative;
          
             
         }
@@ -85,9 +87,11 @@
            
         }
     }
-    &__title-subtitem{
+    &__title-sub{
      
         padding-left: 4rem;
+        font-weight: 600;
+        margin-bottom: -2rem;
         color: #071435;
      }
 }

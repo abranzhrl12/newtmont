@@ -1,0 +1,199 @@
+@use '../globales/mixins' as m;
+
+
+
+.content-table{
+    overflow: hidden;
+    height: auto;
+
+    &__header-Company{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.6rem 2rem;
+        border-bottom: .2rem solid #CFD5E6;
+        @include m.telefonoFull {
+            flex-direction: column;
+            align-items:flex-start
+        }
+    }
+    &__search {
+    
+    }
+    &__btn-add {
+        @include m.btn-style(.5rem, #0C2B82);
+      
+        
+    }
+    &__title-Company{
+        font-size: 2rem;
+        color: #0C2B82;
+    }
+   
+    
+}
+
+
+// searchInput{
+.searchInput-content{
+    display: block;
+    position: relative;
+    display: flex;    
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #fff;
+    @include m.telefonoFull {
+      
+        flex-direction: row-reverse;
+        top: 1rem;
+        right: 2rem;
+        position: absolute;
+        transition: opacity 1s;
+        opacity: 1;
+    }
+    &__input{
+    @include m.searchInputStyle(44rem,  #fff, .7rem)     ;
+    @include m.telefonoFull {
+        padding: 2rem 4rem;
+      
+    }
+    }
+    &__iconArrow{
+        
+        position: absolute;
+        align-self: flex-end;
+        top: 1rem;
+        left: 1rem;
+        cursor: pointer;
+        display: none;
+        @include m.telefonoFull {
+            display: block;
+        }
+          
+        
+    }
+    &__icon{
+       position: absolute;
+       margin-left: 1rem;
+       margin-top: 0.6rem;
+       cursor: pointer;
+       margin-right: 0;
+       pointer-events: none;
+       @include m.telefonoFull {
+        pointer-events: all;
+        margin-right: 2rem;
+       }       
+    } 
+    &__visible{
+        display: none;
+    }
+    &__visible:checked + .searchInput-content__input{
+      
+        visibility: visible;
+       
+       
+       
+    }
+    &__visible:not(:checked) ~ .searchInput-content__iconArrow{
+        @include m.telefonoFull {
+            display: none;
+        }
+    }
+    &__visible:not(:checked) ~ .searchInput-content__input{
+        @include m.telefonoFull {
+            padding-left: 2rem;
+        }
+     
+    }
+
+    &:has(.searchInput-content__icon ~ .searchInput-content__visible:checked ){
+        @include m.telefonoFull {
+            width: 92%;
+            animation: opacityAnimate .8s forwards;
+        }
+       
+    }
+    &:has(.searchInput-content__icon ~ .searchInput-content__visible:not(:checked) ){
+        width: auto;
+       
+       
+    }
+  
+    @keyframes opacityAnimate {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+   
+}
+
+
+
+
+.container {
+      width: 100%; 
+    height: inherit;
+    .table{
+        width: 100%;
+        height: 100%;
+        --linewidth: .1rem solid #CFD5E6;
+        --padingtable: 0.9rem 2rem;
+        height: inherit;
+        table-layout: auto;
+        border-collapse: separate; /* Necesario para aplicar border-radius correctamente */
+        border-spacing: 0; /* Elimina el espacio entre celdas */
+       
+        
+       
+        &__head{
+           
+        }
+        &__th{
+            border-right:var(--linewidth); /* Borde de las celdas */
+            border-bottom: var(--linewidth);
+
+            text-align: left;
+            padding: var(--padingtable);
+            background-color: #F7FAFB;
+            color: #0C2B82;
+        }
+        &__th--notline{
+            border-right: none;
+        }
+        &__td{
+            border-right:var(--linewidth); /* Borde de las celdas */
+            border-bottom: var(--linewidth); 
+            padding: var(--padingtable);
+            
+        }
+        &__td--notline{
+            border-right: none;
+          
+        }
+        &__editbtn{  
+            all: unset;
+            display: block;
+            width: 100%;
+            height: 2rem;
+            cursor: pointer;  
+        }
+        &__editbtn:hover .svg-color{
+            transition: fill .2s ease-in-out;
+            fill: #0C2B82;
+        }
+       
+    }
+    &__trhead{
+        background-color: #f2f2f2;
+    }
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+  
+}
+

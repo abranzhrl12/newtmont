@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tabs {
+  width: 100%;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.tab-button.active {
+  color: #007bff;
+}
+
+.tab-button.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #007bff;
+  border-radius: 2px;
+}
+
+.tab-content {
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.tab-panel p {
+  color: #999;
+  font-size: 18px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="tabs">
+        <div class="tab-buttons">
+          <button class="tab-button active" data-tab="empresa">Empresa</button>
+          <button class="tab-button" data-tab="area">Área</button>
+          <button class="tab-button" data-tab="regimen">Régimen</button>
+          <button class="tab-button" data-tab="campamento">Campamento</button>
+          <button class="tab-button" data-tab="servicios">Servicios</button>
+          <button class="tab-button" data-tab="comedor">Comedor</button>
+          <button class="tab-button" data-tab="destino">Destino</button>
+        </div>
+        <div class="tab-content">
+          <div class="tab-panel active" id="empresa">
+            <p>Aún no hay datos en Empresa</p>
+          </div>
+          <div class="tab-panel" id="area">
+            <p>Aún no hay datos en Área</p>
+          </div>
+          <div class="tab-panel" id="regimen">
+            <p>Aún no hay datos en Régimen</p>
+          </div>
+          <div class="tab-panel" id="campamento">
+            <p>Aún no hay datos en Campamento</p>
+          </div>
+          <div class="tab-panel" id="servicios">
+            <p>Aún no hay datos en Servicios</p>
+          </div>
+          <div class="tab-panel" id="comedor">
+            <p>Aún no hay datos en Comedor</p>
+          </div>
+          <div class="tab-panel" id="destino">
+            <p>Aún no hay datos en Destino</p>
+          </div>
+        </div>
+      </div>
+      <script>
+        document.querySelectorAll('.tab-button').forEach(button => {
+  button.addEventListener('click', () => {
+    const tab = button.dataset.tab;
+
+    // Cambiar la pestaña activa
+    document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+
+    // Cambiar el contenido mostrado
+    document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+    document.getElementById(tab).classList.add('active');
+  });
+});
+
+      </script>
+</body>
+</html>

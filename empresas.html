@@ -7,6 +7,9 @@
     <link rel="icon" href="Assets/iconos-Logo/iconoweb.png" sizes="16x16" type="image/png">
     <link rel="preload" href="public/Styles/styles.css" as="style">
     <link rel="stylesheet" href="public/Styles/styles.css">  
+    <script src="table.js" defer></script>
+    <script src="menu.js" defer></script>
+  
       
 </head>
 
@@ -114,127 +117,158 @@
          </div>
          <div class="content">
             <div class="content__header">
-                <h3 class="content__title">Booking service</h3>
+                <h3 class="content__title">Empresas</h3>
               
             </div>
             <div>
-                <h4 class="content__title-subtitem"">Gestione su Empresa</h4>
+                <h4 class="content__title-sub"">Gestione sus Empresa</h4>
             </div>
            
             <div class="content-table">
-                <div class="content-table__header">
-                    <div>
-                        Empresas
+                <div class="content-table__header-Company">
+                    <h4 class="content-table__title-Company">Empresas</h4>
+                    <div  class="searchInput-content">
+                    
+                        
+                     <label for="serchVisible" class="searchInput-content__icon">
+                       
+                        <svg   width="25" id="Capa_2" data-name="Capa 2"  viewBox="0 0 19.23 19.11">
+                            <defs>
+                              <style>
+                                .cls-11 {
+                                  fill: none;
+                                }
+                          
+                                .cls-11, .cls-14 {
+                                  stroke: #6b7386;
+                                  stroke-linecap: round;
+                                  stroke-linejoin: round;
+                                  stroke-width: 1.2px;
+                                }
+                          
+                                .cls-14 {
+                                  fill: #ebf0fa;
+                                }
+                              </style>
+                            </defs>
+                            <g id="Capa_1-2" data-name="Capa 1">
+                              <path class="cls-14" d="m8.33,15.95c4.27,0,7.73-3.44,7.73-7.67S12.59.6,8.33.6.6,4.04.6,8.27s3.46,7.67,7.73,7.67Z"/>
+                              <path class="cls-11" d="m18.63,18.51l-4.51-4.48"/>
+                            </g>
+                                            </svg>
+                     </label>  
+
+                     <input type="checkbox" id="serchVisible" class="searchInput-content__visible">
+
+                        <input class="searchInput-content__input" type="text" id="searchInput" placeholder="Buscar">
+                        <label for="serchVisible" class="searchInput-content__iconArrow">
+                            <svg  width="20" viewBox="0 0 448 512">
+                                <path fill="#6B7286" d="M4.7 244.7c-6.2 6.2-6.2 16.4 0 22.6l176 176c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L54.6 272 432 272c8.8 0 16-7.2 16-16s-7.2-16-16-16L54.6 240 203.3 91.3c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0l-176 176z"/></svg>
+                        </label>
                     </div>
-                    <div>
-                        <input type="text">
-                    </div>
-                    <div>
-                        <button>Agregar Empresa</button>
+               
+                    <div class="actions">
+                       
+            
+                        <button id="openModal" class="content-table__btn-add">
+                            <svg width="20"  viewBox="0 0 19.99 16">
+                                <path  fill="#fff" class="cls-1" d="m13.24,7.6c-1.39.81-2.24,2.29-2.24,3.9,0,3.46,3.74,5.62,6.74,3.89,1.39-.8,2.25-2.29,2.25-3.89,0-3.47-3.75-5.63-6.75-3.9Zm4.47,4.33h-1.78v1.79c0,.27-.23.5-.5.5s-.5-.23-.5-.5v-1.79h-1.79c-.28,0-.5-.22-.5-.5s.22-.5.5-.5h1.79v-1.79c0-.27.22-.5.5-.5s.5.23.5.5v1.79h1.78c.28,0,.5.22.5.5s-.22.5-.5.5Zm-5.72-4.67V1.5c0-.83-.67-1.5-1.49-1.5H1.5C.67,0,0,.67,0,1.5v13c0,.82.67,1.5,1.5,1.5h3v-2.5c0-.83.67-1.5,1.5-1.5s1.5.67,1.5,1.5v2.5h3c.47,0,.89-.22,1.16-.56-1.03-1-1.66-2.4-1.66-3.94,0-1.71.77-3.24,1.99-4.24Zm-7.99,1.24c0,.27-.23.5-.5.5h-1c-.28,0-.5-.23-.5-.5v-1c0-.28.22-.5.5-.5h1c.27,0,.5.22.5.5v1Zm0-4c0,.27-.23.5-.5.5h-1c-.28,0-.5-.23-.5-.5v-1c0-.27.22-.5.5-.5h1c.27,0,.5.23.5.5v1Zm3,4c0,.27-.23.5-.5.5h-1c-.28,0-.5-.23-.5-.5v-1c0-.28.22-.5.5-.5h1c.27,0,.5.22.5.5v1Zm0-4c0,.27-.23.5-.5.5h-1c-.28,0-.5-.23-.5-.5v-1c0-.27.22-.5.5-.5h1c.27,0,.5.23.5.5v1Zm3,4c0,.27-.23.5-.5.5h-1c-.28,0-.5-.23-.5-.5v-1c0-.28.22-.5.5-.5h1c.27,0,.5.22.5.5v1Zm0-4c0,.27-.23.5-.5.5h-1c-.28,0-.5-.23-.5-.5v-1c0-.27.22-.5.5-.5h1c.27,0,.5.23.5.5v1Z"/>
+                              
+                            </svg>
+                            Agregar Empresa</button>
                     </div>
                 </div>
-                <!-- <table   class="table-data">
-                    <thead style="padding: 0;margin: 0;">
-                        <tr class="table-data__header">
-                            <th class="table-data__th">Id</th>
-                            <th class="table-data__th">Fecha Registro</th>
-                            <th class="table-data__th">Fotocheck</th>
-                            <th class="table-data__th">DNI</th>
-                            <th class="table-data__th">Nombres y Apellidos</th>
-                            <th class="table-data__th">Área</th>
-                            <th class="table-data__th">Régimen</th>
-                            <th class="table-data__th">Origen Traslado</th>
-                            <th class="table-data__th">Destino</th>
-                            <th class="table-data__th">Comedor</th>
-                            <th class="table-data__th">Campamento</th>
-                            <th class="table-data__th">Servicio</th>
-                            <th class="table-data__th">Empresa</th>
-                            <th class="table-data__th">Guardia</th>
-                            <th class="table-data__th">Alojamiento</th>
-                            <th class="table-data__th">Fecha Reservas</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr >
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>7</td>
-                            <td>8</td>
-                            <td>9</td>
-                            <td>10</td>
-                            <td>11</td>
-                            <td>12</td>
-                            <td>13</td>
-                            <td>14</td>
-                            <td>15</td>
-                        </tr>
-                    </tbody>
-                </table> -->
+                <div class="container">             
+                    
+                    <table id="empresasTable" class="table">
+                        <thead  class="table__head">
+                            <tr class="table__trhead">
+                                <th class="table__th"></th> <!-- Cambiado de posición -->
+                                <th class="table__th">Id Empresa</th>
+                                <th class="table__th table__th--notline">Descripción Empresa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="table__td">
+                                    <button  class="edit-btn table__editbtn">
+                                        <svg  class="svg"  width="16"  viewBox="0 0 14.7 14.7">
+                                          <path  class="svg-color" fill="#6b7386" fill-rule="evenodd"  d="m9.95.46c.62-.62,1.62-.62,2.24,0l2.05,2.05c.62.62.62,1.62,0,2.24l-1.25,1.25L8.7,1.72l1.25-1.25Zm-2.37,2.37L.46,9.95c-.3.3-.46.7-.46,1.12v2.05c0,.87.71,1.58,1.58,1.58h2.05c.42,0,.82-.17,1.12-.46l7.12-7.12L7.58,2.84Z"/>
+                                        
+                                      </svg>
+                                    </button>
+                                </td>
+                                <td class="table__td">21</td>
+                                <td class="table__td table__td--notline">CONTRATISTA</td>
+                            </tr>
+                            <tr>
+                                <td class="table__td">
+                                    <button class="edit-btn table__editbtn">
+                                        <svg  class="svg"  width="16"  viewBox="0 0 14.7 14.7">
+                                            <path  class="svg-color" fill="#6b7386" fill-rule="evenodd"  d="m9.95.46c.62-.62,1.62-.62,2.24,0l2.05,2.05c.62.62.62,1.62,0,2.24l-1.25,1.25L8.7,1.72l1.25-1.25Zm-2.37,2.37L.46,9.95c-.3.3-.46.7-.46,1.12v2.05c0,.87.71,1.58,1.58,1.58h2.05c.42,0,.82-.17,1.12-.46l7.12-7.12L7.58,2.84Z"/>
+                                          
+                                        </svg>
+                                    </button>
+                                </td class="table__td">
+                                <td class="table__td"> 1</td>
+                                <td class="table__td table__td--notline">NEWMONT</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            
+                <!-- Modal -->
+                <div id="myModal" class="modal-company">
+                    <div class="modal-content modal-company__content">
+                       
+                        <h2 id="modalTitle" class="modal-company__title">Nueva Empresa
+                      
+                            <svg class="sucess-svg2 close" width="20" viewBox="0 0 384 512"><path fill="#0C2B82" d="M324.5 411.1c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L214.6 256 347.1 123.5c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L192 233.4 59.6 100.9c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6L169.4 256 36.9 388.5c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0L192 278.6 324.5 411.1z"/></svg>
+                           </h2>
+                        <form id="addEmpresaForm" class="modal-company__form">
+                            <label for="idEmpresa">Id Empresa:</label>
+                            <input type="text" id="idEmpresa" name="idEmpresa" required class="modal-company__input">
+                            <label for="descripcionEmpresa">Descripción Empresa:</label>
+                            <input type="text" id="descripcionEmpresa" name="descripcionEmpresa" required class="modal-company__input">
+                            <div class="modal-company__content-buttons">
+                                <button type="button" class="modal-company__btn modal-company__btn--bg" id="companyBtnCancel">
+                                    <svg width="20" id="Capa_2" data-name="Capa 2" viewBox="0 0 17 17">
+                                        <defs>
+                                          <style>
+                                            .cls-10 {
+                                              fill: #fff;
+                                            }
+                          
+                                            .cls-2 {
+                                              fill: #6b7286;
+                                              stroke: #6b7286;
+                                              stroke-linecap: round;
+                                              stroke-width: 1.5px;
+                                            }
+                                          </style>
+                                        </defs>
+                                        <g id="Capa_2-2" data-name="Capa 20">
+                                          <rect class="cls-10" width="17" height="17" rx="4" ry="4" />
+                                          <path class="cls-2" d="m6,6l6,6" />
+                                          <path class="cls-2" d="m12,6l-6,6" />
+                                        </g>
+                                      </svg> 
+                                    Cancelar</button>
+                                <button type="submit" id="submitBtn" class="modal-company__btn">
+                                    <svg width="20"  viewBox="0 0 19.99 16">
+                                        <path  fill="#fff" class="cls-1" d="m13.24,7.6c-1.39.81-2.24,2.29-2.24,3.9,0,3.46,3.74,5.62,6.74,3.89,1.39-.8,2.25-2.29,2.25-3.89,0-3.47-3.75-5.63-6.75-3.9Zm4.47,4.33h-1.78v1.79c0,.27-.23.5-.5.5s-.5-.23-.5-.5v-1.79h-1.79c-.28,0-.5-.22-.5-.5s.22-.5.5-.5h1.79v-1.79c0-.27.22-.5.5-.5s.5.23.5.5v1.79h1.78c.28,0,.5.22.5.5s-.22.5-.5.5Zm-5.72-4.67V1.5c0-.83-.67-1.5-1.49-1.5H1.5C.67,0,0,.67,0,1.5v13c0,.82.67,1.5,1.5,1.5h3v-2.5c0-.83.67-1.5,1.5-1.5s1.5.67,1.5,1.5v2.5h3c.47,0,.89-.22,1.16-.56-1.03-1-1.66-2.4-1.66-3.94,0-1.71.77-3.24,1.99-4.24Zm-7.99,1.24c0,.27-.23.5-.5.5h-1c-.28,0-.5-.23-.5-.5v-1c0-.28.22-.5.5-.5h1c.27,0,.5.22.5.5v1Zm0-4c0,.27-.23.5-.5.5h-1c-.28,0-.5-.23-.5-.5v-1c0-.27.22-.5.5-.5h1c.27,0,.5.23.5.5v1Zm3,4c0,.27-.23.5-.5.5h-1c-.28,0-.5-.23-.5-.5v-1c0-.28.22-.5.5-.5h1c.27,0,.5.22.5.5v1Zm0-4c0,.27-.23.5-.5.5h-1c-.28,0-.5-.23-.5-.5v-1c0-.27.22-.5.5-.5h1c.27,0,.5.23.5.5v1Zm3,4c0,.27-.23.5-.5.5h-1c-.28,0-.5-.23-.5-.5v-1c0-.28.22-.5.5-.5h1c.27,0,.5.22.5.5v1Zm0-4c0,.27-.23.5-.5.5h-1c-.28,0-.5-.23-.5-.5v-1c0-.27.22-.5.5-.5h1c.27,0,.5.23.5.5v1Z"/>
+                                      
+                                    </svg>
+                                    Agregar una Empresa</button>
+                            </div>
+                           
+                        </form>
+                    </div>
+                </div>
             </div>
          </div>
 
     </section>
-   <script>
-    
-    const subdrop=document.querySelector('#subdrop');
-    const items = document.querySelectorAll('.menu__item');
-    const itemAdministration=document.querySelector('.menu__item-Administration')
-    const nuevoColor='#3A68C5';
-    const baseColor='#FCAF17'
-   // Crea un array que incluye todos los elementos de 'items' y 'itemssub' (si está definido)
-const allItems = [...items, itemAdministration].filter(Boolean); // `filter(Boolean)` elimina los valores `null` o `undefined`
 
-// Añade un evento de clic a cada elemento
-allItems.forEach(item => {
-  item.addEventListener('click', () => {
-    // Remueve la clase 'active' de todos los elementos
-    allItems.forEach(i => i.classList.remove('active'));
-    
-    // Añade la clase 'active' al elemento clicado
-    console.log(item)
-    item.classList.add('active');
-  });
-});
-
-    const itemssub = document.querySelectorAll('.menu__sublist-item');
-    itemssub.forEach(items => {
-      items.addEventListener('click', () => {
-        itemssub.forEach(i => i.classList.remove('active'));
-        document.documentElement.style.setProperty('--itemsMenu-ColorPrimary', nuevoColor);
-        items.classList.toggle('active');
-
-      });
-    });
-
-    const hiddenMenu=document.querySelector('.close-hamburger')
-    const inputmovil=document.querySelector('#input-movil');
-    hiddenMenu.addEventListener('click',()=>{
-   
-        console.log('clickkkk')
-        
-        // Desmarcar el input (si es un checkbox o radio)
-    if (inputmovil && inputmovil.type === 'checkbox') {
-        inputmovil.checked = false;
-    }
-    })
-
-  
-    const svgangle=document.querySelector('.menu__angle-right');
-    
-    subdrop.addEventListener('click',()=>{
-        itemssub.forEach(i => i.classList.remove('active'));
-        document.documentElement.style.setProperty('--itemsMenu-ColorPrimary', baseColor);
-        svgangle.classList.toggle('active');
-    })
-    const initialPage=document.querySelector('.menu__figure');
-    initialPage.addEventListener('click',()=>{
-        console.log('hola')
-        window.location.href = 'start.html';
-    })
-   </script>
 </body>
 </html>

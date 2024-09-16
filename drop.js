@@ -2,7 +2,7 @@ const dropZone = document.getElementById('dropZone');
 const fileInput = document.getElementById('fileInput');
 const fileIcon = document.getElementById('fileIcon');
 const fileInfo = document.getElementById('fileInfo');
-
+const btnUpload = document.querySelector('#btnupload')
 // Drag and Drop Events
 dropZone.addEventListener('dragover', (e) => {
   e.preventDefault();
@@ -52,3 +52,18 @@ function handleFiles(files) {
     fileIcon.style.display = 'block';
   }
 }
+
+
+    // modal de cargar
+    btnUpload.addEventListener('click', () => {
+   
+      contentload.classList.remove('active');
+      modalload.classList.add('active');  // Sin el punto antes de 'active'
+    });
+
+    closeLoad.addEventListener('click', () => {
+      contentload.classList.add('active');  // Sin el punto antes de 'active'
+      setTimeout(() => {
+        modalload.classList.remove('active');
+      }, 400);
+    });

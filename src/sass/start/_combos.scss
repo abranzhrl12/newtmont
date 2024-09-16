@@ -1,67 +1,76 @@
-  @use '../globales/mixins' as m;
-      .select{
-        background-color: #F7FAFB;
-        padding: 0.7rem 20px;
-        color: #6B7286;
-        outline: 1px solid #CFD5E6;
-        font-weight: 500;
-        font-size: 1.4rem;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        @include m.desktopFull {
-          padding: 0.8rem 0.6rem;
-          font-size: 1rem;
-      }
-      }
-      
-      .options-list{
-        position: absolute;
-        width: 200px;
-        background-color: #F7FAFB;
-        border-radius: 6px;
-        margin-top: 1px;
-        padding: 0 20px;
-        max-height: 80px;
-   
-        overflow-y: auto;
-        transition: .1s linear .1s;
-        height: 0;
-        box-shadow: 0 6px 12px rgba(58, 58, 58, 0.15);
-      }
-      
-      .option{
-        padding: 8px 0;
-        font-weight: 500;
-        font-size: 14px;
-        transition: .3s ease-in-out;
-      }
-      
-      .option:hover,
-      .option.selected{
-        color: #00a8ff;
-      }
-      
-      .options-list::-webkit-scrollbar{
-        width: 4px;
-        background-color: #eee;
-      }
-      
-      .options-list::-webkit-scrollbar-thumb{
-        background-color: #00a8ff;
-      }
-      
-      .options-list.active{
-        height: 180px;
-      }
+@use "../globales/mixins" as m;
+.select {
+  background-color: #f7fafb;
+  padding: 0.7rem 20px;
+  color: #6b7286;
+  outline: 1px solid #cfd5e6;
+  font-weight: 500;
+  font-size: 1.4rem;
+  border-radius: 5px; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-      :is(.modal__combo-company,.modal__combo-area,.modal__combo-regime){
-        display: flex;
-        flex-direction: column;
-        gap: 0.4rem;
-        @include m.desktopFull {
-          gap: 0.6rem;
-        }
-      }
- 
+  @include m.desktopFull {
+    padding: 0.8rem 0.6rem;
+    font-size: 1rem;
+  }
+
+  @include m.telefonoFull{
+  
+  }
+}
+
+.options-list {
+  position: absolute;
+  width: 200px;
+  background-color: #f7fafb;
+  border-radius: 6px;
+  margin-top: 1px;
+  padding: 0 20px;
+  max-height: 80px;
+
+  overflow-y: auto;
+  transition: 0.1s linear 0.1s;
+  height: 0;
+  box-shadow: 0 6px 12px rgba(58, 58, 58, 0.15);
+}
+
+.option {
+  padding: 8px 0;
+  font-weight: 500;
+  font-size: 14px;
+  transition: 0.3s ease-in-out;
+}
+
+.option:hover,
+.option.selected {
+  color: #00a8ff;
+}
+
+.options-list::-webkit-scrollbar {
+  width: 4px;
+  background-color: #eee;
+}
+
+.options-list::-webkit-scrollbar-thumb {
+  background-color: #00a8ff;
+}
+
+.options-list.active {
+  height: 180px;
+}
+
+:is(.modal__combo-company, .modal__combo-area, .modal__combo-regime) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  @include m.desktopFull {
+    gap: 0.6rem;
+  }
+
+  @include m.telefonoFull {
+    gap: 0rem;
+  }
+}

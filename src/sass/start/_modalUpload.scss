@@ -32,7 +32,10 @@
     }
   
     @include m.telefonoFull {
-        width: 86%;
+       scale: .8;
+    }
+    @include m.telefonom {
+        scale: .7;
     }
     &__title{
         padding: 2rem 3.5rem;
@@ -107,10 +110,10 @@
     top: 0rem;
     left: 4rem;
     @include m.telefonoFull {
-        content: " - - - - - - - -";
+        content: " - - - - - - - - - - - - - -";  
     }
     @include m.telefonom {
-        content: " - - - - - - - ";
+        content: " - - - - - - - - - - - - - -";
     }
     }
     &__step--two{
@@ -128,10 +131,10 @@
     top: 0rem;
     left: 3.9rem;
     @include m.telefonoFull {
-        content: " - - - - - - - -";   
+        content: " - - - - - - - - - - - - - -";   
     }
     @include m.telefonom {
-        content: " - - - - - - -"; 
+        content: " - - - - - - - - - - - - - -"; 
     }
     }
     &__label{

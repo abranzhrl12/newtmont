@@ -22,10 +22,15 @@ dashboard.addEventListener('click',()=>{
   
 }
 
-const booking=document.querySelector('#bookingservice');
+try {
+  const booking=document.querySelector('#bookingservice');
 booking.addEventListener('click',()=>{
   window.location.href = 'start.html';
 })
+
+} catch (error) {
+  
+}
 
 
 // Añade un evento de clic a cada elemento

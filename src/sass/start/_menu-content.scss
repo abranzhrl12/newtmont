@@ -23,6 +23,7 @@
         position: relative;
         margin-top: 0;
         margin-bottom: 0;
+        margin-left: 0;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
         height: calc(150vh - 8.7rem);
@@ -64,9 +65,13 @@
     &__buttons{
         display: flex;
         gap: 3rem;
-        
+       
         @include m.telefonoFull {
+            width: 100%;
+            padding: 0;
+           
            gap: 2rem;
+           
             
         }
     }
@@ -83,8 +88,10 @@
         justify-content: center;
         align-items: center;
         gap: 1rem;
+        
         @include m.telefonoFull {
-            width: 13rem;   
+            width: 100%;  
+            padding: 1rem 0; 
         }
         &--bg{
             background-color: #0C2B82;

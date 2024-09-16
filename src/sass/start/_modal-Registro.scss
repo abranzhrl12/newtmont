@@ -75,7 +75,7 @@
   &__divicion {
     height: 100%;
     border: 0.1rem solid #cfd5e6;
-
+   
     @include m.tabletM {
       border: none;
     }
@@ -84,6 +84,7 @@
   &__inputs {
     width: 100%;
     display: grid;
+    
     grid-template-columns: repeat(
       3,
       30.5%
@@ -123,17 +124,18 @@
 
     border-radius: 0.4rem;
     outline: 1px solid #cfd5e6;
-
+  
     @include m.desktopFull {
       padding: 0.4rem 0.4rem;
     }
   }
 
   &__content-inputs {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    // gap: 0.4rem;
-
+    gap: 0.8rem;
+    
     @include m.telefonoFull {
       gap: 0;
     }
@@ -145,8 +147,10 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+   
     @include m.desktopFull {
       gap: 0.5rem;
+     
     }
     @include m.telefonoFull {
       grid-area: combo;
@@ -154,7 +158,10 @@
   }
 
   &__date {
+
+    width: 100%;
     height: 20rem;
+    
     @include m.telefonoFull {
     }
   }
@@ -224,15 +231,10 @@
   &__radio {
     display: flex;
     gap: 1.8rem;
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: 500;
 
-    * {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0.5rem;
-    }
+ 
 
     @include m.telefonoFull {
       gap: 1.5rem;
@@ -245,7 +247,7 @@
     font-size: 1rem;
 
     gap: 2rem;
-
+    font-size: 1.5rem;
     input[type="checkbox"] {
       /* Estilos básicos del checkbox */
       appearance: none; /* Remueve el estilo predeterminado */
@@ -289,6 +291,7 @@
   }
   // Comboboxes
   &__comboboxes {
+  
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
@@ -296,7 +299,7 @@
       "comboA comboB"
       "comboC comboD";
     gap: 1rem 2.5rem;
-
+    
     @include m.telefonoFull {
       display: grid;
       grid-template-columns: 80%; /* Dos columnas de igual tamaño */
@@ -318,10 +321,12 @@
   }
 
   &__comboC {
+    
     grid-area: comboC;
   }
 
   &__comboD {
+   
     grid-area: comboD;
   }
 }
@@ -365,14 +370,15 @@
 
 //
 .span-name {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: #071435;
   padding: 0;
   margin: 0;
   text-wrap: nowrap;
+ 
   @include m.desktopFull {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -417,8 +423,9 @@
 }
 
 .datepicker-container {
-  width: 70%;
+  width: 100%;
   @include m.tabletM {
     width: 100%;
   }
 }
+

@@ -7,12 +7,13 @@
     display: flex;
     flex-shrink: 0;
     gap: 2rem;
+   
     @include m.telefonoFull {
         margin-bottom: 0;
       padding: 2rem 0;
     }
     &--carga{
-        padding: 0 3rem;
+        padding: 0 2rem;
     }
     &__btn{
         all: unset;  

@@ -1,11 +1,15 @@
+@use '../globales/mixins' as m;
 // .datepicker-container {
 //   width: 70%; 
 // }
 .date-input {
+  
   // padding: 10px;
   font-size: 1.2rem;
   border-radius: 5px;
   border: 1px solid #eee;
+ 
+  
 }
 
 /* datepicker styles */
@@ -17,13 +21,16 @@
 
 .datepicker {
   position: absolute;
-  top: 100%;
+  top: 59%;
   z-index: 100;
   margin-top: 2px;
   background: #fff;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 6px 12px rgba(58, 58, 58, 0.15);
+  @include m.telefonoFull {
+    top: 38%;
+  }
 }
 
 .datepicker button {

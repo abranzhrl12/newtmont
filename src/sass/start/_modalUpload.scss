@@ -23,7 +23,7 @@
     border-radius: .8rem;
     animation: startUpload .4s forwards;
     @include m.telefonoFull {
-        width: 93%;
+        width: 86%;
     }
     &__title{
         padding: 2rem 3.5rem;
@@ -55,6 +55,7 @@
         color: #0C2B82;
         font-weight: 700;
         font-size: 1.8rem;
+        
        
     }
     &__content-steps{
@@ -68,6 +69,7 @@
         @include m.telefonoFull {
             width: 100%;
             padding: 2.5rem 1rem 2.5rem 1rem;
+            font-size: 1.4rem;
         }
     }
     &__step{
@@ -98,6 +100,9 @@
     @include m.telefonoFull {
         content: " - - - - - - - -";
     }
+    @include m.telefonom {
+        content: " - - - - - - - ";
+    }
     }
     &__step--two{
         // margin-left: -0.4rem;
@@ -115,6 +120,9 @@
     left: 4.1rem;
     @include m.telefonoFull {
         content: " - - - - - - - -";   
+    }
+    @include m.telefonom {
+        content: " - - - - - - -"; 
     }
     }
     &__label{

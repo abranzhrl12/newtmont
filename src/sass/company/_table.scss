@@ -12,9 +12,11 @@
         align-items: center;
         padding: 1.6rem 2rem;
         border-bottom: .2rem solid #CFD5E6;
+        
         @include m.telefonoFull {
             flex-direction: column;
-            align-items:flex-start
+            align-items:flex-start;
+            padding: 1rem 2rem
         }
     }
     &__search {
@@ -22,7 +24,8 @@
     }
     &__btn-add {
         @include m.btn-style(.5rem, #0C2B82);
-      
+        margin-top: 1.8rem;
+       
         
     }
     &__title-Company{
@@ -36,14 +39,16 @@
 
 // searchInput{
 .searchInput-content{
+    
     display: block;
     position: relative;
     display: flex;    
     justify-content: flex-start;
     align-items: center;
     background-color: #fff;
+    
     @include m.telefonoFull {
-      
+        width: 100%;
         flex-direction: row-reverse;
         top: 1rem;
         right: 2rem;
@@ -54,6 +59,7 @@
     &__input{
     @include m.searchInputStyle(44rem,  #fff, .7rem)     ;
     @include m.telefonoFull {
+       
         padding: 2rem 4rem;
       
     }
@@ -66,6 +72,7 @@
         left: 1rem;
         cursor: pointer;
         display: none;
+       
         @include m.telefonoFull {
             display: block;
         }
@@ -76,10 +83,13 @@
        position: absolute;
        margin-left: 1rem;
        margin-top: 0.6rem;
+      
        cursor: pointer;
        margin-right: 0;
        pointer-events: none;
        @include m.telefonoFull {
+        position: absolute;
+        right: 0;
         pointer-events: all;
         margin-right: 2rem;
        }       
@@ -88,7 +98,7 @@
         display: none;
     }
     &__visible:checked + .searchInput-content__input{
-      
+        
         visibility: visible;
        
        
@@ -100,21 +110,26 @@
         }
     }
     &__visible:not(:checked) ~ .searchInput-content__input{
+       
         @include m.telefonoFull {
             padding-left: 2rem;
+            
         }
      
     }
 
     &:has(.searchInput-content__icon ~ .searchInput-content__visible:checked ){
+        display: block;
+     
         @include m.telefonoFull {
-            width: 92%;
+            width: 92.5%;
             animation: opacityAnimate .8s forwards;
         }
        
     }
     &:has(.searchInput-content__icon ~ .searchInput-content__visible:not(:checked) ){
         width: auto;
+       
        
        
     }

@@ -12,6 +12,9 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="date.js" defer></script>
   <script src="menu.js" defer></script>
+  <!-- <script src="combos.js" defer></script> -->
+ 
+  
 </head>
 <body>
 <section class="menu">
@@ -118,31 +121,20 @@
      <div class="content">
         <div class="content__header">
           <h3 class="content__title">Dashboard</h3>
-          <!-- <div class="content__buttons">
-            <button class="content__btn" id="btnupload">
-              <svg width="20" id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17">
-  
-                <g id="Capa_1-2" data-name="Capa 1">
-                  <path class="content__btn-svg" fill="#0C2B82" class="cls-1"
-                    d="m9,3.63v8.06c0,.59-.45,1.06-1,1.06s-1-.47-1-1.06V3.63l-2.29,2.44c-.39.42-1.03.42-1.42,0-.39-.42-.39-1.09,0-1.5L7.29.31c.39-.42,1.03-.42,1.42,0l4,4.25c.39.42.39,1.09,0,1.5-.39.42-1.02.42-1.42,0l-2.29-2.44ZM2,11.69h4c0,1.17.9,2.13,2,2.13s2-.95,2-2.13h4c1.1,0,2,.95,2,2.13v1.06c0,1.17-.9,2.13-2,2.13H2c-1.1,0-2-.95-2-2.13v-1.06c0-1.17.9-2.13,2-2.13Zm11.5,3.45c.2,0,.39-.08.53-.23.14-.15.22-.35.22-.56s-.08-.41-.22-.56c-.14-.15-.33-.23-.53-.23s-.39.08-.53.23c-.14.15-.22.35-.22.56s.08.41.22.56c.14.15.33.23.53.23Z" />
-                </g>
-              </svg>
-              Carga Masiva</button>
-            <button class="content__btn content__btn--bg" id="register-Btn">
-              <img src="./Assets/iconos/Registrar.svg" alt="">
-              Registrar
-  
-            </button>
-  
-          </div> -->
+       
         </div>
         <!-- aqui lo nuevo -->
-         <div class="content__global">
+         <div class="global">
 
         
         <div class="filters">
-            <h3 class="filters__title">Filtros</h3>
+            <h3 class="filters__title">Filtros 
+                <label for="filtersHidden"><svg class="filters__arrow" width="22" viewBox="0 0 448 512"> <path d="M212.7 363.3c6.2 6.2 16.4 6.2 22.6 0l160-160c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L224 329.4 75.3 180.7c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6l160 160z"/></svg></label>
+                
+            </h3>
+            <input type="checkbox" id="filtersHidden">
             <div class="filters__content">
+                <div class="filters__contentAll">
                <div class="filters__content-items">
                 Fecha Inicial
                     <!-- <input type="datetime" class="modal__input"> -->
@@ -365,58 +357,61 @@
                     </div>
                   </div>
                </div>
-               <div class="filters__content-items">
-                Régimen
-                <div class="select-menu">
-                    <div class="select">
-                      <span>Elija una Empresa</span>
-                      <i class="fas fa-angle-down"></i>
-                    </div>
-                    <div class="options-list">
-                      <div class="option">Contratista</div>
-                      <div class="option">Newmont</div>
-                    </div>
-                  </div>
-               </div>
-               <div class="filters__content-items">
-                Campamento
-                <div class="select-menu">
-                    <div class="select">
-                      <span>Elija una Empresa</span>
-                      <i class="fas fa-angle-down"></i>
-                    </div>
-                    <div class="options-list">
-                      <div class="option">Contratista</div>
-                      <div class="option">Newmont</div>
-                    </div>
-                  </div>
-               </div>
-               <div class="filters__content-items">
-                Servicio
-                <div class="select-menu">
-                    <div class="select">
-                      <span>Elija una Empresa</span>
-                      <i class="fas fa-angle-down"></i>
-                    </div>
-                    <div class="options-list">
-                      <div class="option">Contratista</div>
-                      <div class="option">Newmont</div>
-                    </div>
-                  </div>
-               </div>
-               <div class="filters__content-items">
-                Comedor
-                <div class="select-menu">
-                    <div class="select">
-                      <span>Elija una Empresa</span>
-                      <i class="fas fa-angle-down"></i>
-                    </div>
-                    <div class="options-list">
-                      <div class="option">Contratista</div>
-                      <div class="option">Newmont</div>
-                    </div>
-                  </div>
-               </div>
+            </div>
+            <div class="filters__contentAll">
+                <div class="filters__content-items">
+                    Régimen
+                    <div class="select-menu">
+                        <div class="select">
+                          <span>Elija una Empresa</span>
+                          <i class="fas fa-angle-down"></i>
+                        </div>
+                        <div class="options-list">
+                          <div class="option">Contratista</div>
+                          <div class="option">Newmont</div>
+                        </div>
+                      </div>
+                   </div>
+                   <div class="filters__content-items">
+                    Campamento
+                    <div class="select-menu">
+                        <div class="select">
+                          <span>Elija una Empresa</span>
+                          <i class="fas fa-angle-down"></i>
+                        </div>
+                        <div class="options-list">
+                          <div class="option">Contratista</div>
+                          <div class="option">Newmont</div>
+                        </div>
+                      </div>
+                   </div>
+                   <div class="filters__content-items">
+                    Servicio
+                    <div class="select-menu">
+                        <div class="select">
+                          <span>Elija una Empresa</span>
+                          <i class="fas fa-angle-down"></i>
+                        </div>
+                        <div class="options-list">
+                          <div class="option">Contratista</div>
+                          <div class="option">Newmont</div>
+                        </div>
+                      </div>
+                   </div>
+                   <div class="filters__content-items">
+                    Comedor
+                    <div class="select-menu">
+                        <div class="select">
+                          <span>Elija una Empresa</span>
+                          <i class="fas fa-angle-down"></i>
+                        </div>
+                        <div class="options-list">
+                          <div class="option">Contratista</div>
+                          <div class="option">Newmont</div>
+                        </div>
+                      </div>
+                   </div>
+            </div>
                <div class="filters__content-items">
                 Destino
                 <div class="select-menu">
@@ -465,12 +460,159 @@
                 <p>Aún no hay datos en Destino</p>
               </div>
             </div>
+            <div class="comboActions">
+                <div class="select-menu comboActions--width">
+                    <div class="select" id="selecActions">
+                        <span>Actions</span>
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                    <div class="options-list" id="actionsList">
+                        <!-- Opciones dinámicas aquí -->
+                    </div>
+                </div>
+            </div>
+            
+            
+            <table id="dataTable" class="datable-dash">
+                <thead class="datable-dash__head">
+                    <tr >
+                        <th>Empresa</th>
+                        <th>Fecha</th>
+                        <th>Nro. de Personas</th>
+                    </tr>
+                </thead>
+                <tbody class="datable-dash__body">
+                    <!-- Dynamic rows will be added here -->
+                </tbody>
+            </table>
+            <div class="content-Data">
+               
+                       
+                    <svg   width="25" id="Capa_2" data-name="Capa 2"  viewBox="0 0 19.23 19.11">
+                        <defs>
+                          <style>
+                            .cls-11 {
+                              fill: none;
+                            }
+                      
+                            .cls-11, .cls-14 {
+                              stroke: #6b7386;
+                              stroke-linecap: round;
+                              stroke-linejoin: round;
+                              stroke-width: 1.2px;
+                            }
+                      
+                            .cls-14 {
+                              fill: #ebf0fa;
+                            }
+                          </style>
+                        </defs>
+                        <g id="Capa_1-2" data-name="Capa 1">
+                          <path class="cls-14" d="m8.33,15.95c4.27,0,7.73-3.44,7.73-7.67S12.59.6,8.33.6.6,4.04.6,8.27s3.46,7.67,7.73,7.67Z"/>
+                          <path class="cls-11" d="m18.63,18.51l-4.51-4.48"/>
+                        </g>
+                                        </svg>
+             
+                    <p>Aun no hay datos</p>
+            </div>
           </div>
         </div>
       </div>
 </section>
     
-  
+<script>
+
+// modal
+
+
+
+
+
+    document.querySelectorAll('.tab-button').forEach(button => {
+button.addEventListener('click', () => {
+const tab = button.dataset.tab;
+
+// Cambiar la pestaña activa
+document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+button.classList.add('active');
+
+// Cambiar el contenido mostrado
+document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+document.getElementById(tab).classList.add('active');
+});
+});
+
+  </script>
+  <script>
+    
+   
+// Simulate data from the database (data dynamic)
+  // Datos simulados (ejemplo similar a la base de datos)
+  const data = [
+        { empresa: "CONTRATISTA", fecha: "01/08/2024", numeroPersonas: 238 },
+        { empresa: "NEWMONT", fecha: "01/08/2024", numeroPersonas: 238 },
+       
+        
+    ];
+
+    // Referencias a los elementos HTML
+    const select = document.querySelector("#selecActions");
+    const optionsList = document.querySelector("#actionsList");
+    const dataTable = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
+
+    // Función para llenar el combobox con datos dinámicos
+    function populateComboBox() {
+        data.forEach((item, index) => {
+            const optionDiv = document.createElement('div');
+            optionDiv.classList.add('option');
+            optionDiv.textContent = item.empresa; // Coloca el nombre de la empresa en el combobox
+            optionDiv.setAttribute('data-index', index); // Guarda el índice del item
+
+            // Añadir evento al hacer clic en la opción
+            optionDiv.addEventListener('click', () => {
+                select.querySelector("span").textContent = item.empresa; // Muestra la empresa seleccionada
+                optionsList.classList.remove('active'); // Cierra el combobox
+                select.querySelector(".fa-angle-down").classList.toggle("fa-angle-up");
+                populateTable(index); // Actualiza la tabla con la empresa seleccionada
+            });
+
+            optionsList.appendChild(optionDiv); // Agrega la opción al menú de opciones
+        });
+    }
+
+    // Función para alternar el desplegable de opciones
+    select.addEventListener("click", () => {
+        optionsList.classList.toggle("active");
+        select.querySelector(".fa-angle-down").classList.toggle("fa-angle-up");
+    });
+
+   
+function populateTable(selectedIndex = null) {
+    dataTable.innerHTML = ''; // Limpia las filas existentes
+
+    // Si no hay selección (selectedIndex es null), muestra todos los datos
+    const itemsToShow = selectedIndex === null ? data : [data[selectedIndex]];
+
+    // Itera sobre los datos a mostrar (todos o solo el seleccionado)
+    itemsToShow.forEach(item => {
+        const row = dataTable.insertRow(); // Crea una nueva fila
+
+        // Crea y llena las celdas
+        const cellEmpresa = row.insertCell(0);
+        const cellFecha = row.insertCell(1);
+        const cellPersonas = row.insertCell(2);
+
+        cellEmpresa.textContent = item.empresa;
+        cellFecha.textContent = item.fecha;
+        cellPersonas.textContent = item.numeroPersonas;
+    });
+}
+populateComboBox();
+populateTable();
+    // Inicializa el combobox dinámico con las opciones del array
+
+</script>
+
   
 </body>
 </html>

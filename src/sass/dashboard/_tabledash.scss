@@ -1,0 +1,42 @@
+.datable-dash{
+    width: 100%;
+    border-collapse: collapse;
+   &__head{
+    background-color: #F7FAFB;
+    color: #0C2B82;
+   }
+   &__body{
+        color: #071435;
+   }
+   display: none;
+}
+
+table, th, td {
+    border: 1px solid #CFD5E6;
+    text-align: left;
+    padding: 8px;
+    
+}
+
+
+select {
+    padding: 6px;
+    font-size: 16px;
+}
+
+.actions {
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+.comboActions{
+    border-top: 0.1rem solid #CFD5E6;
+    padding: 2rem;
+    &--width{
+        width: 20rem;
+        color: black;
+    }
+
+}

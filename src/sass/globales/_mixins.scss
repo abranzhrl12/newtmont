@@ -61,6 +61,14 @@
       @content;
     }
   }
+
+
+  @mixin desktopMediun {
+    @media (max-width: v.$desktop-mediun) {
+      @content;
+    }
+  }
+  
   
   /* Mixin para escritorios grandes */
   @mixin desktopFull {

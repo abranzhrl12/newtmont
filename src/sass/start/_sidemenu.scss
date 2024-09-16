@@ -4,7 +4,7 @@
     width: 100%;
     height: 100vh;
     display: flex;
-
+    
 
     @include m.telefonoFull {
        
@@ -51,15 +51,17 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 28rem;
+        width: 26rem;
         max-width: 28rem;
         transition: max-width .5s;
         --display-item:block;
         font-size: 1.6rem;
        
+       
         @include m.desktopFull {
-            width: 23rem;
+            width: 22rem;
             font-size: 1.35rem;
+           
         }
         @include m.telefonoFull {
             width: 100%;

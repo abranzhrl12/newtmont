@@ -1,0 +1,52 @@
+@use '../globales/mixins' as m;
+.filters{
+    width: 27.7rem;
+    height: 100%;
+    color: #071435;
+    border-radius: .8rem;
+    border: 1px solid #CFD5E6;
+    background-color: white;
+    margin-left: 2rem;
+;
+    @include m.desktopFull {
+        width: 23rem;
+        border-radius: 0;
+        border-top-left-radius: .8rem;
+        border-bottom-left-radius: .8rem;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        scrollbar-color:    #445C9E #0C2B82;
+         scrollbar-width:thin; 
+    }
+    &__title{
+        padding: 1.8rem;
+        color: #0C2B82;
+        border-bottom: 1px solid #CFD5E6;
+        @include m.desktopFull {
+            padding: 1.2rem 1.8rem;
+            font-size: 1.6rem;
+        }
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0.5rem 1.5rem;
+        @include m.desktopFull {
+            gap: unset;
+            gap: 0.5rem;
+           
+            
+        }
+       
+    }
+    &__content-items{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        @include m.desktopFull {
+            gap: 0.5rem;
+            font-size: 1.3rem;
+        }
+    }
+}

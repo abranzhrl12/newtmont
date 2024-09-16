@@ -11,8 +11,21 @@ const allItems = [...items, itemAdministration].filter(Boolean); // `filter(Bool
 const itemssub = document.querySelectorAll('.menu__sublist-item');
 
 
+try {
+  const dashboard=document.querySelector('#dashboard')
 
+dashboard.addEventListener('click',()=>{
+  window.location.href = 'dashboard.html';
+})
 
+} catch (error) {
+  
+}
+
+const booking=document.querySelector('#bookingservice');
+booking.addEventListener('click',()=>{
+  window.location.href = 'start.html';
+})
 
 
 // Añade un evento de clic a cada elemento

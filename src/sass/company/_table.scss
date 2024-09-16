@@ -5,6 +5,7 @@
 .content-table{
     overflow: hidden;
     height: auto;
+    // outline: 1px solid red;
 
     &__header-Company{
         display: flex;
@@ -12,7 +13,8 @@
         align-items: center;
         padding: 1.6rem 2rem;
         border-bottom: .2rem solid #CFD5E6;
-        
+        margin: 0;
+        padding: 0 2rem;
         @include m.telefonoFull {
             flex-direction: column;
             align-items:flex-start;

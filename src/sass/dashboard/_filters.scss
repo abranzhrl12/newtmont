@@ -2,21 +2,28 @@
 .filters{
     width: 27.7rem;
     height: 100%;
+
     color: #071435;
     border-radius: .8rem;
     border: 1px solid #CFD5E6;
     background-color: white;
     margin-left: 2rem;
-
+   
+    @include m.desktopFullHD {
+       
+        height: 84.5%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        scrollbar-color:    #445C9E #0C2B82;
+         scrollbar-width:thin;
+         
+    }
     @include m.desktopFull {
         width: 23rem;
         border-radius: 0;
         border-top-left-radius: .8rem;
         border-bottom-left-radius: .8rem;
-        overflow-y: scroll;
-        overflow-x: hidden;
-        scrollbar-color:    #445C9E #0C2B82;
-         scrollbar-width:thin; 
+        
     }
     @include m.desktopMediun {
         width: 95.5%;

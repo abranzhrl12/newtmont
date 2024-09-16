@@ -6,6 +6,9 @@
     background-color: #fff;
     border: .1rem solid #CFD5E6;
     margin-right: 2rem;
+    @include m.desktopFullHD {
+      height: 84.5%;
+    }
     @include m.desktopMediun {
      width: 95.5%;
      margin: 0 auto;

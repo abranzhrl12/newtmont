@@ -22,6 +22,15 @@
     background-color: white;
     border-radius: .8rem;
     animation: startUpload .4s forwards;
+    @include m.desktopFullHD {
+       
+        scale: .9;
+    }
+    @include m.desktopFull {
+       scale: .8;
+       
+    }
+  
     @include m.telefonoFull {
         width: 86%;
     }
@@ -64,7 +73,7 @@
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
-       
+        
         color: #6B7286;
         @include m.telefonoFull {
             width: 100%;
@@ -73,9 +82,9 @@
         }
     }
     &__step{
-        outline: 1px solid #6B7286;
-        width: 3.8rem;
-        height: 3.8rem;
+        outline: .1rem solid #6B7286;
+        width: 3.5rem;
+        height: 3.5rem;
         border-radius: 50%;
         display: flex;
         justify-content: center;
@@ -85,18 +94,18 @@
       
     }
     &__step--one{
-        margin-right: -.4rem;
+        margin-right: 1rem;
     }
     &__step--one::after{
         content: " - - - - - - - - - - - - ";
-        font-size: 2rem;
+        font-size: 2.1rem;
 
     height: 0.2rem;
 
     display: block;
     position: absolute;
-    top: .2rem;
-    left: 4.2rem;
+    top: 0rem;
+    left: 4rem;
     @include m.telefonoFull {
         content: " - - - - - - - -";
     }
@@ -116,8 +125,8 @@
 
     display: block;
     position: absolute;
-    top: .2rem;
-    left: 4.1rem;
+    top: 0rem;
+    left: 3.9rem;
     @include m.telefonoFull {
         content: " - - - - - - - -";   
     }

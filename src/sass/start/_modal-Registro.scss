@@ -13,6 +13,13 @@
     // overflow: hidden;
     z-index: 50;
     animation: endModal 0.4s forwards;
+    @include m.desktopFull {
+     
+     scale: .9;
+     
+  }
+
+
     @include m.telefonoFull {
       height: auto;
     }

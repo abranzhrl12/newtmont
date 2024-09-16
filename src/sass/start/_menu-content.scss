@@ -10,7 +10,8 @@
     background-color: #F7FAFB;
     border-radius: 1.4rem;
     padding-bottom:2.3rem;
-    overflow: hidden;
+    // overflow: hidden;
+  
     @include m.desktopFull {
         margin: 1.1rem;
         margin-right: 1.1rem;
@@ -56,7 +57,12 @@
     &__title{
         font-weight: 700;
         font-size: 2.3rem;
+      
         @include m.telefonoFull {
+            padding: 1rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             font-size: 1.8rem;
             margin-left: -2.2rem;
             align-self: flex-start;
@@ -65,7 +71,7 @@
     &__buttons{
         display: flex;
         gap: 3rem;
-       
+        
         @include m.telefonoFull {
             width: 100%;
             padding: 0;
@@ -119,6 +125,7 @@
 .content-table{
     width: calc(100% - 6rem);
     height: calc(100% - 10rem) ;
+    
     margin: 2rem auto ;
     border-radius: 1.5rem;
     background-color: white;
@@ -127,6 +134,7 @@
     border:  0.2rem solid #CFD5E6;
     overflow-y: scroll;
     overflow-x: hidden;
+   
     @include m.desktopFull {
        
     }

@@ -14,7 +14,7 @@
   .drop-zone {
     width: 47rem;
     height: auto;
-    padding: 3rem 0;
+    padding: 2.5rem 0;
     border: 2px solid #CFD5E6;
     color: #6B7286;
     border-radius: .6rem;
@@ -27,7 +27,7 @@
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
     @include m.telefonoFull{
       width: 90%;
       padding: 2rem;
@@ -76,4 +76,6 @@
     padding: 0 0 0 3rem;
     align-self: flex-start;
     color: #071435;
+    display: flex;
+    gap: 1rem;
   }

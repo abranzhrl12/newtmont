@@ -9,6 +9,8 @@ const itemAdministration = document.querySelector('.menu__item-Administration')
 // Crea un array que incluye todos los elementos de 'items' y 'itemssub' (si está definido)
 const allItems = [...items, itemAdministration].filter(Boolean); // `filter(Boolean)` elimina los valores `null` o `undefined`
 const itemssub = document.querySelectorAll('.menu__sublist-item');
+const itemsTextAll=document.querySelectorAll('.menu__item-text')
+
 
 
 try {
@@ -47,13 +49,30 @@ allItems.forEach(item => {
     document.documentElement.style.setProperty('--itemsMenu-ColorPrimary', baseColor);
   });
 });
+let check = 10;
+
+subdrop.addEventListener('click', (event) => {
+  // Detiene la propagación del evento a los elementos padres
+  event.stopPropagation();
+  
+  // Alterna el estado del checkbox y la variable 'check'
+  subdrop.checked = check % 2 === 0;
+  subdrop.classList.toggle('active', check % 2 === 0);
+  check++;
+});
 
 contraer.addEventListener('click', () => {
   if (contraer.checked) {
     // Si 'contraer' está marcado, marca 'subdrop' y remueve la clase 'active' de todos los items
     subdrop.checked = false;
+    itemsTextAll.forEach(item =>{
+      item.classList.add('active')
+    })
 
-
+  }else{
+    itemsTextAll.forEach(itemT =>{
+      itemT.classList.remove('active')
+    })
   }
 });
 
@@ -86,6 +105,9 @@ subdrop.addEventListener('click', () => {
   document.documentElement.style.setProperty('--itemsMenu-ColorPrimary', baseColor);
   svgangle.classList.toggle('active');
   if (subdrop && subdrop.type === 'checkbox' && contraer) {
+    itemsTextAll.forEach(itemT =>{
+      itemT.classList.remove('active')
+    })
     contraer.checked = false;  // Marca el checkbox 'contraer' si corresponde
   }
 })

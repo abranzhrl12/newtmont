@@ -5,7 +5,7 @@
     height: 100vh;
     display: flex;
     
-
+    overflow: hidden;
     @include m.telefonoFull {
        
         flex-direction: column;
@@ -28,13 +28,17 @@
     }
    }
    &__side:has(.menu__sublist-input:checked){
-    @include m.desktopFull {
-        width: 28rem;
+    @include m.desktopFullHD {
+        width: 28.5rem;
         overflow-y: scroll;
         overflow-x: hidden;
-        scrollbar-color: transparent transparent ;
+        scrollbar-color: #fff transparent ;
         
-         scrollbar-width:none; 
+         scrollbar-width:thin; 
+    }
+    @include m.desktopFull {
+        width: 28rem;
+       
     
     }
 
@@ -51,13 +55,13 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 26rem;
+        width: 27rem;
         max-width: 28rem;
         transition: max-width .5s;
         --display-item:block;
         font-size: 1.6rem;
        
-       
+     
         @include m.desktopFull {
             width: 22rem;
             font-size: 1.35rem;
@@ -106,6 +110,12 @@
         display: flex;
 
         max-width: 8rem;
+        @include m.desktopFull {
+            max-width: 6rem;
+        }
+        @include m.telefonoFull {
+            display: none;
+        }
      
     }
     &__labelicono{
@@ -188,7 +198,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-       
     }
     &__angle-right{
         margin-left: 1rem;
@@ -230,7 +239,7 @@
         max-height: 0;
         overflow: hidden;
         opacity: 0;
-        transition: max-height 0.4s ease, opacity  0.3s ease, visibility 0.4s ease,padding 0.3s;
+        transition: max-height 0.4s ease, opacity  0.4s ease, visibility 0.45s ease,padding 0.4s,margin .4s ;
         width: 90%;
         margin: 0 auto;
         margin-top: -2rem;
@@ -251,13 +260,21 @@
         color: white;
     }
     &__profile{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       gap: 2rem; 
         @include m.telefonoFull {
             display: none
         };
+    }
+    &__profile-content{
+        
+        display: flex;
+        gap: 2rem;
+    }
+    &__item-text--wrap{
+        text-wrap: wrap;      
     }
     &__profile-img{
         width: 3rem;
@@ -265,6 +282,27 @@
         aspect-ratio: 1/1;
         border-radius: 50%;
         object-fit: cover;
+        
+    }
+    &__profile-label{
+        display: block;
+        // margin-left: .2rem;
+        // width: 100%;
+        display: flex;
+        gap: 2rem;
+        margin-left: -1.6rem;
+        cursor: pointer;
+      
+      
+    }
+    &__profile-logout{
+        width: 2.8rem;
+        height: 2.5rem;
+       
+    }
+    &__item-text--pd{
+        display: block;
+        margin-top: -0.2srem;
     }
 }
 #subdrop:checked + .menu__sublist{
@@ -290,8 +328,14 @@ background-color: var(--itemsMenu-ColorPrimary);
 
 
 #contraer:checked ~ .menu__list .menu__item .menu__item-text {
-display: none;
+// display: none;
 }
+.menu__item-text.active{
+
+display: none;
+
+}
+
 #contraer:checked ~ .menu__list .menu__item .menu__icon-boking {
     transform: scale(1.2);
   }

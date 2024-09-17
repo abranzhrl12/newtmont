@@ -81,14 +81,15 @@
   }
   
   button {
+    all: unset;
     padding: 5px 10px;
-    border: 1px solid #ddd;
-    background-color: #f2f2f2;
+    // border: 1px solid #ddd;
+    // background-color: #f2f2f2;
     cursor: pointer;
   }
   
   button:disabled {
-    background-color: #e0e0e0;
+    // background-color: #e0e0e0;
     cursor: not-allowed;
   }
   #dataTable td{

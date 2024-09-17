@@ -1,9 +1,63 @@
 
+
+// 
+// async function fetchData() {
+//     try {
+//       const response = await fetch('URL_DE_TU_API');
+//       const data = await response.json();
+//       return data;
+//     } catch (error) {
+//       console.error('Error fetching data:', error);
+//       return [];
+//     }
+//   }
+
+
+// let data = []; // Inicialmente vacío
+
+// // Obtener datos de la base de datos
+// fetchData().then(fetchedData => {
+//   data = fetchedData; // Actualizar el array de datos
+//   filterTable(); // Actualizar la tabla con los nuevos datos
+// });
+
+  
+
+
+// function createEditableRow(item) {
+//     const row = document.createElement("tr");
+  
+//     // Columna de edición
+//     const editCell = document.createElement("td");
+//     const editIcon = document.createElement("span");
+//     editIcon.classList.add("edit-icon");
+//     editIcon.innerHTML = "&#9998;"; // Icono de lápiz
+//     editIcon.style.cursor = "pointer";
+//     editIcon.addEventListener("click", () => toggleEditMode(row, item, editIcon));
+//     editCell.appendChild(editIcon);
+//     row.appendChild(editCell);
+  
+//     // Añadir las celdas de datos
+//     const columns = ['id', 'fechaRegistro', 'fotocheck', 'dni', 'nombres', 'area', 'regimen', 'origen', 'destino', 'comedor', 'campamento', 'servicio', 'empresa', 'guardia', 'alojamiento', 'fechaReservada'];
+    
+//     columns.forEach((col) => {
+//       const cell = document.createElement("td");
+//       cell.textContent = item[col] || ''; // Asegúrate de que la propiedad exista
+//       cell.setAttribute("data-key", col);
+//       row.appendChild(cell);
+//     });
+  
+//     return row;
+//   }
+  
+
+
 const empresas = ["NEWMONT", "GOLDMINING", "ABC MINING", "XYZ EXPLORATION"];
 const areas = ["MEDIO AMBIENTE", "SEGURIDAD", "ADMINISTRACIÓN", "LOGÍSTICA"];
 const regimenes = ["10x10", "5x5", "14x7"];
 const servicios = ["Desayuno", "Almuerzo", "Cena", "Desayuno-Almuerzo-Cena"];
 const campamentos = ["KM37", "KM38", "La Oroya"];
+
 
 const data = Array.from({ length: 300 }, (_, i) => ({
   id: 71316 + i,

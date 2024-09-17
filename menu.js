@@ -11,6 +11,35 @@ const allItems = [...items, itemAdministration].filter(Boolean); // `filter(Bool
 const itemssub = document.querySelectorAll('.menu__sublist-item');
 const itemsTextAll=document.querySelectorAll('.menu__item-text')
 
+const areas=document.querySelectorAll('#Areas')
+const regimenes=document.querySelectorAll('#Regimenes')
+const comedores=document.querySelectorAll('#Comedores')
+const destinos=document.querySelectorAll('#Destinos')
+const traslado=document.querySelectorAll('#Traslado')
+
+
+areas.addEventListener('click',()=>{
+  window.location.href='Areas.html'
+})
+
+regimenes.addEventListener('click',()=>{
+  window.location.href='Regimens.html'
+})
+
+comedores.addEventListener('click',()=>{
+  window.location.href='Comedor.html'
+})
+
+destinos.addEventListener('click',()=>{
+  window.location.href='destinos.html'
+})
+traslado.addEventListener('click',()=>{
+  window.location.href='traslado.html'
+})
+
+
+
+
 
 
 try {

@@ -11,11 +11,14 @@
     background-color: #F7FAFB;
     border-radius: 1.4rem;
     padding-bottom:2.3rem;
-    overflow: scroll;
-        scrollbar-color: #000 #fff ;
+    --with:28rem;
+    // overflow: auto;
+    //     scrollbar-color: #000 #fff ;
         
-    scrollbar-width:thin; 
-
+    // scrollbar-width:thin; 
+    @include m.desktopFullHD {
+        // width: calc(100% - var(--with));
+    }
     @include m.desktopFull {
      
         margin: 1.1rem;
@@ -143,21 +146,21 @@
 
 .content-table{
     width: calc(100% - 6rem);
-    height: calc(100% - 10rem) ;
-    
+    height: calc(100% - 10rem) ;  
     margin: 2rem auto ;
     border-radius: 1.5rem;
     background-color: white;
     box-shadow: 0 6px 12px rgba(58, 58, 58, 0.15);
     color: black;
     border:  0.2rem solid #CFD5E6;
- 
-   
+
+    // overflow: scroll;
     @include m.desktopFull {
-       
+        // overflow: scroll;
     }
 
     @include m.telefonoFull {
+        
        height: 66.5rem;
     }
     @include m.telefono {
@@ -178,7 +181,7 @@
 
 .table-data{
    
-  
+    // overflow: scroll;
 background-color: orange;
   
 &__header{

@@ -54,7 +54,7 @@
               d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
           </svg>
 
-          <li class="menu__item" id="bookingservice">
+          <li class="menu__item active" id="bookingservice">
             <img class="menu__icon-boking" src="/Assets/iconos/Booking_service.svg" alt="">
             <span class="menu__item-text">Booking Service</span>
           </li>
@@ -125,7 +125,7 @@
       </div>
 
 
-
+<!-- menu profile -->
       <div class="menu__profile">
         <div class="menu__profile-content">
           <img class="menu__profile-img" src="/Assets/profile/prueba.jpg" alt="">
@@ -141,8 +141,11 @@
             
           <span class="menu__item-text menu__item-text--pd">Cerrar Sesión</span></label>
       </div>
+
+      <!--  -->
     </div>
     <div class="content">
+      <!-- header conent -->
       <div class="content__header">
         <h3 class="content__title">Booking service</h3>
         <div class="content__buttons">
@@ -163,47 +166,63 @@
 
         </div>
       </div>
+      <!--  -->
       <div class="content-table">
-        <div class="content-table__header">
+        <!-- <div class="content-table__header">
           <div>
             Actions
           </div>
-        </div>
+        </div> -->
         <div class="container">
           <!-- Combo box para seleccionar una empresa -->
-          <div class="select-menu">
+          <!-- <div class="select-menu">
             <div class="selecttd" id="selectDatabla">
               <span>Elija una Empresa</span>
               <i class="fas fa-angle-down"></i>
             </div>
             <div class="options-list">
-              <!-- Las opciones serán generadas dinámicamente -->
+              
             </div>
-          </div>
+          </div> -->
         
           <!-- Combo box para mostrar el número de registros por página -->
-          <div class="pagination-options">
-            <label for="numRecords">Mostrar</label>
-            <select id="numRecords">
-              <option value="10">10</option>
-              <option value="25">25</option>
-              <option value="50">50</option>
-              <option value="100">100</option>
-            </select>
-            <span>por página</span>
-          </div>
-        
-          <!-- Campo de filtro -->
-          <div class="filter-section">
-            <label for="search">Buscar por nombre o DNI:</label>
-            <input type="text" id="search" placeholder="Buscar...">
-          </div>
-        
+           <div class="container__header">
+           
+            
+            <div class="select-menu">
+              <div class="select">
+                <span>   Actions       </span>
+                <i class="fas fa-angle-down"></i>
+              </div>
+              <div class="options-list">
+                <div class="option">10 x 10</div>
+                <div class="option">12 x 12</div>
+                <div class="option">14 x 14</div>
+                <div class="option">16 x 16</div>
+              </div>
+            </div>
+            <!-- Campo de filtro -->
+            <div class="filter-section">
+              <label for="search"></label>
+              <input type="text" id="searchdatastart" placeholder="Buscar...">
+            </div>
+            <div class="pagination-options">
+              <label for="numRecords">Mostrar</label>
+              <select id="numRecords">
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+              </select>
+              <span>por página</span>
+            </div>
+           </div>
+         
           <!-- Tabla -->
           <table id="dataTable">
               <thead>
                 <tr>
-                  <th>Editar</th> <!-- Nueva columna de editar -->
+                  <th>    </th> <!-- Nueva columna de editar -->
                   <th>Id Booking</th>
                   <th>Fecha Registro</th>
                   <th>Fotocheck</th>
@@ -236,336 +255,8 @@
           </div>
         </div>
         
-        <!-- <table id="myTable" class="display">
-          <thead>
-            <tr>
-              <th>Column 1</th>
-              <th>Column 2</th>
-              <th>Column 2</th>
-              <th>Column 2</th>
-              <th>Column 2</th>
-              <th>Column 2</th>
-              <th>Column 2</th>
-              <th>Column 1</th>
-              <th>Column 2</th>
-              <th>Column 2</th>
-              <th>Column 2</th>
-              <th>Column 2</th>
-              <th>Column 2</th>
-              <th>Column 2</th>
-              <th>Column 2</th>
-              <th>Column 2</th>
-              <th>Column 17</th>
-         
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-            </tr>
-            <tr>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-            </tr>
-            <tr>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-            </tr>
-            <tr>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-            </tr>
-            <tr>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-            </tr>
-            <tr>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-            </tr>
-            <tr>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-            </tr>
-            <tr>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-            </tr>
-            <tr>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-            </tr>
-            <tr>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-            </tr>
-            <tr>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-            </tr>
-            <tr>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-            </tr>
-            <tr>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-            </tr>
-            <tr>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-            </tr>
-            <tr>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-            </tr>
-            <tr>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 1</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-              <td>Row 1 Data 2</td>
-            </tr>
-          </tbody>
-        </table> -->
+      
+      
       </div>
     </div>
 
@@ -705,15 +396,15 @@
 
             <!-- combo empresa -->
             <div class="modal__combo-company">
-              <label for=""><span class="span-name">Empresa</span> </label>
+              <label for=""><span class="span-name">Empresa</span></label>
               <div class="select-menu">
-                <div class="selectE">
+                <div class="select" id="selectE">
                   <span>Elija una Empresa</span>
                   <i class="fas fa-angle-down"></i>
                 </div>
-                <div class="options-listE">
-                  <div class="option">Contratista</div>
-                  <div class="option">Newmont</div>
+                <div class="options-list options-listE">
+                  <div class="option option-E">Contratista</div>
+                  <div class="option option-E">Newmont</div>
                 </div>
               </div>
 
@@ -723,13 +414,13 @@
             <div class="modal__combo-area">
               <label for=""><span class="span-name">Área de Trabajo</span> </label>
               <div class="select-menu">
-                <div class="select">
+                <div class="select" id="selectA">
                   <span>Elija un Área</span>
                   <i class="fas fa-angle-down"></i>
                 </div>
-                <div class="options-list">
-                  <div class="option">Contratista</div>
-                  <div class="option">Newmont</div>
+                <div class="options-list options-listA">
+                  <div class="option option-A">Contratista</div>
+                  <div class="option option-A">Newmont</div>
                 </div>
               </div>
             </div>
@@ -774,8 +465,6 @@
 
                 <label for="radioS" class="modal__lblRa"><input type="radio" name="radioS">No</label>
               </div>
-
-
             </div>
             <div class="modal__radios-content">
               <label for=""> <span class="span-name">Requiere Alojamiento</span></label>
@@ -907,6 +596,9 @@
       </div>
     </div>
   </div>
+
+
+
   <section class="load">
     <div class="modal-load">
       <h3 class="modal-load__title">Carga Masiva
@@ -1014,16 +706,40 @@
     </div>
   </section>
 
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
-  <script src="https://cdn.datatables.net/2.1.6/js/dataTables.js"></script>
+  
   <script>
 
-    $(document).ready(function () {
-      $('#myTable').DataTable({
-        searching: false // Deshabilita el filtro
-      });
-    });
+  
+// script.js
+
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.querySelector('#dataTable');
+  let isDragging = false;
+  let startX;
+  let scrollLeft;
+
+  container.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      startX = e.pageX - container.offsetLeft;
+      scrollLeft = container.scrollLeft;
+  });
+
+  container.addEventListener('mouseleave', () => {
+      isDragging = false;
+  });
+
+  container.addEventListener('mouseup', () => {
+      isDragging = false;
+  });
+
+  container.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      e.preventDefault();
+      const x = e.pageX - container.offsetLeft;
+      const walk = (x - startX) * 2; // Ajusta la velocidad del desplazamiento
+      container.scrollLeft = scrollLeft - walk;
+  });
+});
 
   </script>
 </body>

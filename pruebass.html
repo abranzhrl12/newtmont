@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="combos.js" defer></script>
+    <!-- <script src="combos.js" defer></script> -->
+    <script src="datatablestar.js" defer></script>
     <style>
 .container {
   width: 100%;
@@ -128,7 +129,26 @@ button:disabled {
       </div>
       
       <script>
-
+        const select = document.querySelector(".select");
+        const options_list = document.querySelector(".options-list");
+        const options = document.querySelectorAll(".option");
+        
+        //show & hide options list
+        select.addEventListener("click", () => {
+          options_list.classList.toggle("active");
+          selectE.querySelector(".fa-angle-down").classList.toggle("fa-angle-up");
+        });
+        
+        //select option
+        options.forEach((option) => {
+          option.addEventListener("click", () => {
+            options.forEach((option) => {option.classList.remove('selected')});
+            select.querySelector("span").innerHTML = option.innerHTML;
+            option.classList.add("selectedE");
+            options_list.classList.toggle("active");
+            select.querySelector(".fa-angle-down").classList.toggle("fa-angle-up");
+          });
+        });
       </script>
 </body>
 </html>

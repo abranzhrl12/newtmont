@@ -1,6 +1,6 @@
 
 
-// 
+
 // async function fetchData() {
 //     try {
 //       const response = await fetch('URL_DE_TU_API');
@@ -90,7 +90,10 @@ function createEditableRow(item) {
   const editCell = document.createElement("td");
   const editIcon = document.createElement("span");
   editIcon.classList.add("edit-icon");
-  editIcon.innerHTML = "&#9998;"; // Icono de lápiz (puedes usar FontAwesome o similar)
+  editIcon.innerHTML = ` <svg  class="svg"  width="16"  viewBox="0 0 14.7 14.7">
+                                          <path  class="svg-color" fill="#6b7386" fill-rule="evenodd"  d="m9.95.46c.62-.62,1.62-.62,2.24,0l2.05,2.05c.62.62.62,1.62,0,2.24l-1.25,1.25L8.7,1.72l1.25-1.25Zm-2.37,2.37L.46,9.95c-.3.3-.46.7-.46,1.12v2.05c0,.87.71,1.58,1.58,1.58h2.05c.42,0,.82-.17,1.12-.46l7.12-7.12L7.58,2.84Z"/>
+                                        
+                                      </svg>`; // Icono de lápiz (puedes usar FontAwesome o similar)
   editIcon.style.cursor = "pointer";
   editIcon.addEventListener("click", () => toggleEditMode(row, item, editIcon));
   editCell.appendChild(editIcon);
@@ -113,7 +116,10 @@ function toggleEditMode(row, item, editIcon) {
   if (isEditing) {
     // Guardar los cambios y volver al modo de visualización
     row.classList.remove("editing");
-    editIcon.innerHTML = "&#9998;"; // Volver al icono de lápiz
+    editIcon.innerHTML = ` <svg  class="svg"  width="16"  viewBox="0 0 14.7 14.7">
+                                          <path  class="svg-color" fill="#6b7386" fill-rule="evenodd"  d="m9.95.46c.62-.62,1.62-.62,2.24,0l2.05,2.05c.62.62.62,1.62,0,2.24l-1.25,1.25L8.7,1.72l1.25-1.25Zm-2.37,2.37L.46,9.95c-.3.3-.46.7-.46,1.12v2.05c0,.87.71,1.58,1.58,1.58h2.05c.42,0,.82-.17,1.12-.46l7.12-7.12L7.58,2.84Z"/>
+                                        
+                                      </svg>`; // Volver al icono de lápiz
 
     row.querySelectorAll("td[data-key]").forEach((cell) => {
       const input = cell.querySelector("input");
@@ -127,7 +133,10 @@ function toggleEditMode(row, item, editIcon) {
   } else {
     // Cambiar al modo de edición
     row.classList.add("editing");
-    editIcon.innerHTML = "&#10004;"; // Cambiar a icono de check
+    editIcon.innerHTML = ` <svg  class="svg"  width="16"  viewBox="0 0 14.7 14.7">
+                                          <path  class="svg-color" fill="#6b7386" fill-rule="evenodd"  d="m9.95.46c.62-.62,1.62-.62,2.24,0l2.05,2.05c.62.62.62,1.62,0,2.24l-1.25,1.25L8.7,1.72l1.25-1.25Zm-2.37,2.37L.46,9.95c-.3.3-.46.7-.46,1.12v2.05c0,.87.71,1.58,1.58,1.58h2.05c.42,0,.82-.17,1.12-.46l7.12-7.12L7.58,2.84Z"/>
+                                        
+                                      </svg>`; // Cambiar a icono de check
 
     row.querySelectorAll("td[data-key]").forEach((cell) => {
       const key = cell.getAttribute("data-key");
@@ -154,23 +163,32 @@ empresas.forEach((empresa, index) => {
   selectMenu.appendChild(optionDiv);
 });
 
-const select = document.querySelector("#selectDatabla");
+try {
+  const select = document.querySelector("#selectDatabla");
 const optionsList = document.querySelector(".options-list");
 const options = document.querySelectorAll(".option");
 
 select.addEventListener("click", () => {
   optionsList.classList.toggle("active");
 });
+} catch (error) {
+  
+}
 
-options.forEach((option) => {
-  option.addEventListener("click", () => {
-    options.forEach((opt) => opt.classList.remove('selected'));
-    select.querySelector("span").textContent = option.textContent;
-    option.classList.add("selected");
-    optionsList.classList.toggle("active");
-    filterTable();
+try {
+  options.forEach((option) => {
+    option.addEventListener("click", () => {
+      options.forEach((opt) => opt.classList.remove('selected'));
+      select.querySelector("span").textContent = option.textContent;
+      option.classList.add("selected");
+      optionsList.classList.toggle("active");
+      filterTable();
+    });
   });
-});
+} catch (error) {
+  
+}
+
 
 // Actualizar tabla y botones de paginación
 function populateTable(dataToDisplay) {
@@ -221,7 +239,7 @@ function paginateTable() {
 
 // Filtro y paginación
 function filterTable() {
-  const searchQuery = document.getElementById("search").value.toLowerCase();
+  const searchQuery = document.getElementById("searchdatastart").value.toLowerCase();
   const selectedEmpresa = document.querySelector(".select .selected")?.textContent;
 
   filteredData = data;
@@ -247,7 +265,7 @@ document.getElementById("numRecords").addEventListener("change", (e) => {
 });
 
 // Manejador para el campo de búsqueda
-document.getElementById("search").addEventListener("input", filterTable);
+document.getElementById("searchdatastart").addEventListener("input", filterTable);
 
 // Manejadores para los botones de paginación
 document.getElementById("prevPage").addEventListener("click", () => {

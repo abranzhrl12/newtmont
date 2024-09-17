@@ -11,18 +11,18 @@ const allItems = [...items, itemAdministration].filter(Boolean); // `filter(Bool
 const itemssub = document.querySelectorAll('.menu__sublist-item');
 const itemsTextAll=document.querySelectorAll('.menu__item-text')
 
-const areas=document.querySelectorAll('#Areas')
-const regimenes=document.querySelectorAll('#Regimenes')
-const comedores=document.querySelectorAll('#Comedores')
-const destinos=document.querySelectorAll('#Destinos')
-const traslado=document.querySelectorAll('#Traslado')
+ const areasPage=document.querySelector('#Areas')
+ const regimenesPage=document.querySelector('#Regimenes')
+ const comedores=document.querySelector('#Comedores')
+ const destinos=document.querySelector('#Destinos')
+ const traslado=document.querySelector('#Traslado')
 
 
-areas.addEventListener('click',()=>{
+areasPage.addEventListener('click',()=>{
   window.location.href='Areas.html'
 })
 
-regimenes.addEventListener('click',()=>{
+regimenesPage.addEventListener('click',()=>{
   window.location.href='Regimens.html'
 })
 
@@ -33,6 +33,8 @@ comedores.addEventListener('click',()=>{
 destinos.addEventListener('click',()=>{
   window.location.href='destinos.html'
 })
+
+
 traslado.addEventListener('click',()=>{
   window.location.href='traslado.html'
 })

@@ -5,7 +5,8 @@
     width: 100%;
     height: 100vh;
     display: flex;
-    
+    overflow: hidden;
+
     // overflow: hidden;
     @include m.tabletM {
         flex-direction: column
@@ -114,6 +115,11 @@
          }
         
     }
+    // &__side:has(#contraer:checked ) + .content {
+    //     width: calc(100% - 2rem);
+       
+    //     background-color: red;
+    // }
     &__side:has(#contraer:checked){
         display: flex;
 
@@ -357,7 +363,7 @@ background-color: var(--itemsMenu-ColorPrimary);
 
 
 #contraer:checked ~ .menu__list .menu__item .menu__item-text {
-// display: none;
+
 }
 .menu__item-text.active{
 

@@ -1,21 +1,21 @@
 
 //combo empresas
-const select = document.querySelector(".select");
-const options_list = document.querySelector(".options-list");
-const options = document.querySelectorAll(".option");
+const selectE = document.querySelector(".selectE");
+const options_list = document.querySelector(".options-listE");
+const optionsE = document.querySelectorAll(".optionE");
 
 //show & hide options list
-select.addEventListener("click", () => {
+selectE.addEventListener("click", () => {
   options_list.classList.toggle("active");
-  select.querySelector(".fa-angle-down").classList.toggle("fa-angle-up");
+  selectE.querySelector(".fa-angle-down").classList.toggle("fa-angle-up");
 });
 
 //select option
-options.forEach((option) => {
+optionsE.forEach((option) => {
   option.addEventListener("click", () => {
-    options.forEach((option) => {option.classList.remove('selected')});
-    select.querySelector("span").innerHTML = option.innerHTML;
-    option.classList.add("selected");
+    optionsE.forEach((option) => {option.classList.remove('selectedE')});
+    selectE.querySelector("span").innerHTML = option.innerHTML;
+    option.classList.add("selectedE");
     options_list.classList.toggle("active");
     select.querySelector(".fa-angle-down").classList.toggle("fa-angle-up");
   });

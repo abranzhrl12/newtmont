@@ -18,6 +18,7 @@
   <script src="result.js" defer></script>
   <script src="modalRegister.js" defer></script>
   <script src="menu.js" defer></script>
+  <script src="datatablestar.js" defer></script>
 </head>
 
 <body>
@@ -168,6 +169,73 @@
             Actions
           </div>
         </div>
+        <div class="container">
+          <!-- Combo box para seleccionar una empresa -->
+          <div class="select-menu">
+            <div class="selecttd" id="selectDatabla">
+              <span>Elija una Empresa</span>
+              <i class="fas fa-angle-down"></i>
+            </div>
+            <div class="options-list">
+              <!-- Las opciones serán generadas dinámicamente -->
+            </div>
+          </div>
+        
+          <!-- Combo box para mostrar el número de registros por página -->
+          <div class="pagination-options">
+            <label for="numRecords">Mostrar</label>
+            <select id="numRecords">
+              <option value="10">10</option>
+              <option value="25">25</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+            </select>
+            <span>por página</span>
+          </div>
+        
+          <!-- Campo de filtro -->
+          <div class="filter-section">
+            <label for="search">Buscar por nombre o DNI:</label>
+            <input type="text" id="search" placeholder="Buscar...">
+          </div>
+        
+          <!-- Tabla -->
+          <table id="dataTable">
+              <thead>
+                <tr>
+                  <th>Editar</th> <!-- Nueva columna de editar -->
+                  <th>Id Booking</th>
+                  <th>Fecha Registro</th>
+                  <th>Fotocheck</th>
+                  <th>DNI</th>
+                  <th>Nombres y Apellidos</th>
+                  <th>Área</th>
+                  <th>Régimen</th>
+                  <th>Origen Traslado</th>
+                  <th>Destino</th>
+                  <th>Comedor</th>
+                  <th>Campamento</th>
+                  <th>Servicio</th>
+                  <th>Empresa</th>
+                  <th>Guardia</th>
+                  <th>Alojamiento</th>
+                  <th>Fechas Reservadas</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Las filas se generarán dinámicamente con JavaScript -->
+              </tbody>
+            </table>
+            
+          <!-- Botones de paginación -->
+          <div class="pagination-controls">
+            <button id="prevPage" disabled>Anterior</button>
+            <input type="number" id="pageInput" value="1" min="1" style="width: 50px;">
+            <span id="currentPage">1</span> / <span id="totalPages"></span>
+            <button id="nextPage" disabled>Siguiente</button>
+          </div>
+        </div>
+        
         <!-- <table id="myTable" class="display">
           <thead>
             <tr>
@@ -639,11 +707,11 @@
             <div class="modal__combo-company">
               <label for=""><span class="span-name">Empresa</span> </label>
               <div class="select-menu">
-                <div class="select">
+                <div class="selectE">
                   <span>Elija una Empresa</span>
                   <i class="fas fa-angle-down"></i>
                 </div>
-                <div class="options-list">
+                <div class="options-listE">
                   <div class="option">Contratista</div>
                   <div class="option">Newmont</div>
                 </div>

@@ -1,3 +1,4 @@
+@use '../globales/mixins' as m;
 .modalM{
     width: 100%;
     height: auto;
@@ -7,9 +8,12 @@
 
     border-radius: 0.8rem;
     background-color: white;
+    @include m.telefonoFull {
+        padding-bottom: 4.5rem;
+    }
     &__contentM{
      
-        background-color: red!important;
+        
     }
     &__title{
         color: #FCAF17;

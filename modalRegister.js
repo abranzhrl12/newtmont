@@ -13,7 +13,7 @@ window.addEventListener('resize', () => {
 registerBtn.addEventListener('click', () => {
 
 
-  if (widtch > 960) {
+  if (widtch > 749) {
     contentModal.classList.add('active');
     modal.classList.add('active');
   } else {

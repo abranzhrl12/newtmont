@@ -1,6 +1,7 @@
 @use '../globales/mixins' as m;
 .content{
     width: 100%;
+
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
@@ -10,9 +11,13 @@
     background-color: #F7FAFB;
     border-radius: 1.4rem;
     padding-bottom:2.3rem;
-    // overflow: hidden;
-  
+    overflow: scroll;
+        scrollbar-color: #000 #fff ;
+        
+    scrollbar-width:thin; 
+
     @include m.desktopFull {
+     
         margin: 1.1rem;
         margin-right: 1.1rem;
         margin-bottom: 1.1rem;
@@ -20,14 +25,28 @@
         gap: 1.5rem;
        
     }
-    @include m.telefonoFull {
+    @include m.tabletM {
+        // width: calc(100% - 14.6rem);
+       
         position: relative;
         margin-top: 0;
         margin-bottom: 0;
         margin-left: 0;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
-        height: calc(150vh - 8.7rem);
+        height: 90.5vh; 
+    }
+    @include m.telefonoFull {
+        overflow: hidden;
+        // width: calc(100% - 30rem);
+        position: relative;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        height: 90.5vh;
+        // height: calc(150vh - 8.7rem);
        
        
     }
@@ -132,8 +151,7 @@
     box-shadow: 0 6px 12px rgba(58, 58, 58, 0.15);
     color: black;
     border:  0.2rem solid #CFD5E6;
-    overflow-y: scroll;
-    overflow-x: hidden;
+ 
    
     @include m.desktopFull {
        

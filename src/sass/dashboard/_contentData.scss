@@ -8,6 +8,7 @@
     align-items: center;
     gap: 0.5rem;
     color: #6B7286;
+    display: none;
     @include m.desktopMediun {
         height: 15%;
       

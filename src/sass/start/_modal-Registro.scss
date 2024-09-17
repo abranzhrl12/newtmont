@@ -19,7 +19,10 @@
      
   }
 
-
+  @include m.tabletM {
+    width: 130%;
+    scale: .75;
+  }
     @include m.telefonoFull {
       height: auto;
     }

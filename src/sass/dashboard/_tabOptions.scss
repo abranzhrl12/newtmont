@@ -70,6 +70,9 @@
     justify-content: center;
     align-items: center;
     border-bottom: .1rem solid #CFD5E6;
+    @include m.desktopFullHD {
+      height: 56%;
+    }
     @include m.desktopMediun {
       height: 54.5%;
     }

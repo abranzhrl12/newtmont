@@ -34,6 +34,9 @@
        
         overflow: hidden;
     }
+    @include m.tabletM {
+        display: none;
+    }
     @include m.telefonoFull {
         display: none;
     }

@@ -1,6 +1,7 @@
 .datable-dash{
     width: 100%;
     border-collapse: collapse;
+   
    &__head{
     background-color: #F7FAFB;
     color: #0C2B82;
@@ -8,7 +9,7 @@
    &__body{
         color: #071435;
    }
-   display: none;
+//    
 }
 
 table, th, td {

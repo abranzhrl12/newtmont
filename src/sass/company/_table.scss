@@ -8,6 +8,7 @@
     // outline: 1px solid red;
 
     &__header-Company{
+     
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -18,21 +19,24 @@
         @include m.telefonoFull {
             flex-direction: column;
             align-items:flex-start;
-            padding: 1rem 2rem
+            gap: 1rem;
+            padding: 1rem 2rem 0rem 2rem;
         }
     }
     &__search {
     
     }
     &__btn-add {
-        @include m.btn-style(.5rem, #0C2B82);
         margin-top: 1.8rem;
+        @include m.btn-style(.5rem, #0C2B82);
+    
        
         
     }
     &__title-Company{
         font-size: 2rem;
         color: #0C2B82;
+        
     }
    
     
@@ -41,7 +45,7 @@
 
 // searchInput{
 .searchInput-content{
-    
+   
     display: block;
     position: relative;
     display: flex;    
@@ -59,7 +63,10 @@
         opacity: 1;
     }
     &__input{
-    @include m.searchInputStyle(44rem,  #fff, .7rem)     ;
+    @include m.searchInputStyle(44rem,  #fff, .7rem);
+        @include m.telefonoFull {
+            margin-top: 0.8rem;
+        }
     @include m.telefonoFull {
        
         padding: 2rem 4rem;
@@ -76,6 +83,7 @@
         display: none;
        
         @include m.telefonoFull {
+            margin-top: 0.8rem;
             display: block;
         }
           
@@ -90,6 +98,7 @@
        margin-right: 0;
        pointer-events: none;
        @include m.telefonoFull {
+        margin-top: 1.6rem;
         position: absolute;
         right: 0;
         pointer-events: all;

@@ -1,30 +1,29 @@
 @use '../globales/mixins' as m;
 .content{
     width: 100%;
-
+    height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 2.4rem;
-    margin-top: 1.5rem;
-    margin-right: 1.5rem;
-    margin-bottom: 1.5rem;
+    gap: 2.4rem; 
     background-color: #F7FAFB;
     border-radius: 1.4rem;
-    padding-bottom:2.3rem;
-    --with:28rem;
-    // overflow: auto;
-    //     scrollbar-color: #000 #fff ;
-        
-    // scrollbar-width:thin; 
+ 
+    // padding-bottom:2.4rem;
+    // --with:24rem;
+   
+
     @include m.desktopFullHD {
+        overflow: auto;
+        scrollbar-width: none;
+    //    width: 90%;
         // width: calc(100% - var(--with));
     }
     @include m.desktopFull {
-     
-        margin: 1.1rem;
-        margin-right: 1.1rem;
-        margin-bottom: 1.1rem;
-        padding-bottom: 1.8rem;
+        overflow: hidden;
+        // margin: 1.1rem;
+        // margin-right: 1.1rem;
+        // margin-bottom: 1.1rem;
+        // padding-bottom: 1.8rem;
         gap: 1.5rem;
        
     }
@@ -63,9 +62,11 @@
         align-items: center;
         border-bottom: 2px solid #CFD5E6;
         border-top-left-radius: 1.4rem;
-        border-top-right-radius: 1.4rem;  
+        border-top-right-radius: 1.4rem;
+   
         @include m.desktopFull {
             padding: 1.3rem 3.5rem;
+            
         }
         @include m.telefonoFull {
             flex-direction: column;
@@ -79,7 +80,9 @@
     &__title{
         font-weight: 700;
         font-size: 2.3rem;
-      
+        @include m.desktopFull {
+            font-size: 2.1rem;
+        }
         @include m.telefonoFull {
             padding: 1rem 0;
             display: flex;
@@ -116,7 +119,11 @@
         justify-content: center;
         align-items: center;
         gap: 1rem;
-        
+        @include m.desktopFull {
+            width: 18rem;
+            padding: 0.8rem 1.8rem;
+            font-size: 1.5rem;
+        }
         @include m.telefonoFull {
             width: 100%;  
             padding: 1rem 0; 
@@ -145,20 +152,38 @@
 }
 
 .content-table{
-    width: calc(100% - 6rem);
-    height: calc(100% - 10rem) ;  
-    margin: 2rem auto ;
+
+    margin: 0 auto;
+    width: calc(100% - 5rem);
+    height: calc(100% - 13.6rem); 
+    // height: 80%;
     border-radius: 1.5rem;
     background-color: white;
     box-shadow: 0 6px 12px rgba(58, 58, 58, 0.15);
     color: black;
     border:  0.2rem solid #CFD5E6;
-
+    // margin: 1rem auto;
     // overflow: scroll;
-    @include m.desktopFull {
-        // overflow: scroll;
+    @include m.desktopFullHD {
+       
+        // height: calc(100% - 15.4rem);
+        // height: calc(100% - 15vh);
+        margin-top: .1rem;
+
     }
 
+    @include m.desktopFullm {
+        // height: calc(100% - 15.8rem);
+    //   background-color: blue;
+        // height: calc(100% - 13vh);
+    }
+    @include m.desktopFull {
+        height: calc(100% - 10.6rem); 
+    }
+    // @include m.desktopFullm {
+      
+    //     height: calc(100% - 15rem);
+    // }
     @include m.telefonoFull {
         
        height: 66.5rem;

@@ -22,245 +22,255 @@
 </head>
 
 <body>
-  <section class="menu">
-    <div class="menu__side">
-      <div class="menu__side-content">
-        <label class="menu__labelicono" for="contraer">
-
-
-          <div class="menu__icon-arrow">
-
-            <img src="/Assets/iconos/angle-left.svg" alt="">
-
-          </div>
-        </label>
-
-        <input id="contraer" type="checkbox">
-        <!-- <img width="190" src="./Assets/iconos-Logo/aaaa-gigapixel-standard v2-1x.png" alt=""> -->
-        <div class="menu__figure">
-
-        </div>
-        <label for="input-movil">
-          <svg class="menu__icon-hamburger" width="20" viewBox="0 0 448 512">
-            <path fill="#ffffff"
-              d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
-          </svg>
-        </label>
-        <input id="input-movil" type="checkbox">
-
-        <ul class="menu__list">
-          <svg class="close-hamburger" width="20" viewBox="0 0 384 512">
-            <path fill="#ffffff"
-              d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
-          </svg>
-
-          <li class="menu__item active" id="bookingservice">
-            <img class="menu__icon-boking" src="/Assets/iconos/Booking_service.svg" alt="">
-            <span class="menu__item-text">Booking Service</span>
-          </li>
-          <li class="menu__item" id="dashboard">
-            <img class="menu__icon-boking" src="/Assets/iconos/Dashboard.svg" alt="">
-            <span class="menu__item-text">Dashboard</span>
-          </li>
-          <li class=" menu__item--sub">
-            <label class="menu__item-Administration" for="subdrop">
-              <img class="menu__icon-boking" src="/Assets/iconos/Administración.svg" alt="">
-              <span class="menu__item-text">
-                Administración
-                <svg class="menu__angle-right" width="10" viewBox="0 0 320 512">
-                  <path fill="#ffffff"
-                    d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
-                </svg>
-              </span>
-
-            </label>
-
-            <input class="menu__sublist-input" id="subdrop" type="checkbox">
-            <ul class="menu__sublist">
-              <li class="menu__sublist-item">
-                <a href="empresas.html" class="menu__sub-link">
-                  <img class="menu__icon-boking" src="/Assets/iconos/Empresas.svg" alt="">
-                  Empresas
-                </a>
-
-              </li>
-              <li class="menu__sublist-item" id="Areas">
-                <img class="menu__icon-boking" src="/Assets/iconos/Áreas.svg" alt="">
-                Áreas
-              </li>
-              <li class="menu__sublist-item" id="Regimenes">
-                <img class="menu__icon-boking" src="/Assets/iconos/Régimenes.svg" alt="">
-                Régimenes
-              </li>
-              <li class="menu__sublist-item">
-                <img class="menu__icon-boking" src="/Assets/iconos/Campamentos.svg" alt="">
-                Campamentos
-              </li>
-              <li class="menu__sublist-item"   id="Comedores">
-                <img class="menu__icon-boking" src="/Assets/iconos/Comedores.svg" alt="">
-                Comedores
-              </li>
-              <li class="menu__sublist-item" id="Destinos">
-                <img class="menu__icon-boking" src="/Assets/iconos/Destinos.svg" alt="">
-                Destinos
-              </li>
-              <li class="menu__sublist-item">
-                <img class="menu__icon-boking" src="/Assets/iconos/Usuarios.svg" alt="">
-                Usuarios
-              </li>
-              <li class="menu__sublist-item" id="Traslado">
-                <img class="menu__icon-boking" src="/Assets/iconos/Origen _de_traslado.svg" alt="">
-                traslado
-              </li>
-            </ul>
-          </li>
-          <li class="menu__item">
-            <img class="menu__icon-boking" src="/Assets/iconos/Carga_masiva.svg" alt="">
-            <span class="menu__item-text">Carga Masiva</span>
-          </li>
-        </ul>
-
-
-
-      </div>
-
-
-<!-- menu profile -->
-      <div class="menu__profile">
-        <div class="menu__profile-content">
-          <img class="menu__profile-img" src="/Assets/profile/prueba.jpg" alt="">
-
-          <span class="menu__item-text menu__item-text--wrap">
-            Administrador del sistema
-          </span>
-        </div>
-        <label for="" class="menu__profile-label"> 
-          <svg class="menu__profile-logout" width="26" height="17" viewBox="0 0 22 17" fill="none" >
-            <path d="M3.30883 7.67802L10.6577 7.67802C11.1937 7.67802 11.6267 8.08313 11.6267 8.58456C11.6267 9.08598 11.1937 9.49109 10.6577 9.49109L3.30883 9.49109L5.53137 11.5705C5.90987 11.9246 5.90987 12.4996 5.53137 12.8538C5.15287 13.2079 4.53819 13.2079 4.15969 12.8538L0.283873 9.22763C-0.0946249 8.87351 -0.0946249 8.29843 0.283873 7.94432L4.15969 4.31819C4.53819 3.96407 5.15287 3.96407 5.53137 4.31819C5.90987 4.6723 5.90987 5.24738 5.53137 5.6015L3.30883 7.67802ZM10.6577 15.1869L10.6577 10.3976C11.7266 10.3976 12.5957 9.58458 12.5957 8.58456C12.5957 7.58454 11.7266 6.77149 10.6577 6.77149L10.6577 1.81307C10.6577 0.813046 11.5268 8.75043e-07 12.5957 8.28321e-07L20.0621 5.01953e-07C21.131 4.55231e-07 22 0.813045 22 1.81306L22 15.1869C22 16.187 21.131 17 20.0621 17L12.5957 17C11.5268 17 10.6577 16.1869 10.6577 15.1869Z" fill="white"/>
-            </svg>
-            
-          <span class="menu__item-text menu__item-text--pd">Cerrar Sesión</span></label>
-      </div>
-
-      <!--  -->
-    </div>
-    <div class="content">
-      <!-- header conent -->
-      <div class="content__header">
-        <h3 class="content__title">Booking service</h3>
-        <div class="content__buttons">
-          <button class="content__btn" id="btnupload">
-            <svg width="20" id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17">
-
-              <g id="Capa_1-2" data-name="Capa 1">
-                <path class="content__btn-svg" fill="#0C2B82" class="cls-1"
-                  d="m9,3.63v8.06c0,.59-.45,1.06-1,1.06s-1-.47-1-1.06V3.63l-2.29,2.44c-.39.42-1.03.42-1.42,0-.39-.42-.39-1.09,0-1.5L7.29.31c.39-.42,1.03-.42,1.42,0l4,4.25c.39.42.39,1.09,0,1.5-.39.42-1.02.42-1.42,0l-2.29-2.44ZM2,11.69h4c0,1.17.9,2.13,2,2.13s2-.95,2-2.13h4c1.1,0,2,.95,2,2.13v1.06c0,1.17-.9,2.13-2,2.13H2c-1.1,0-2-.95-2-2.13v-1.06c0-1.17.9-2.13,2-2.13Zm11.5,3.45c.2,0,.39-.08.53-.23.14-.15.22-.35.22-.56s-.08-.41-.22-.56c-.14-.15-.33-.23-.53-.23s-.39.08-.53.23c-.14.15-.22.35-.22.56s.08.41.22.56c.14.15.33.23.53.23Z" />
-              </g>
-            </svg>
-            Carga Masiva</button>
-          <button class="content__btn content__btn--bg" id="register-Btn">
-            <img src="./Assets/iconos/Registrar.svg" alt="">
-            Registrar
-
-          </button>
-
-        </div>
-      </div>
-      <!--  -->
-      <div class="content-table">
-        <!-- <div class="content-table__header">
-          <div>
-            Actions
-          </div>
-        </div> -->
-        <div class="container">
-          <!-- Combo box para seleccionar una empresa -->
-          <!-- <div class="select-menu">
-            <div class="selecttd" id="selectDatabla">
-              <span>Elija una Empresa</span>
-              <i class="fas fa-angle-down"></i>
+  <main class="main">
+    <section class="menu">
+      <div class="menu__side">
+        <div class="menu__side-content">
+          <label class="menu__labelicono" for="contraer">
+  
+  
+            <div class="menu__icon-arrow">
+  
+              <img src="/Assets/iconos/angle-left.svg" alt="">
+  
             </div>
-            <div class="options-list">
+          </label>
+  
+          <input id="contraer" type="checkbox">
+          <!-- <img width="190" src="./Assets/iconos-Logo/aaaa-gigapixel-standard v2-1x.png" alt=""> -->
+          <div class="menu__figure">
+  
+          </div>
+          <label for="input-movil">
+            <svg class="menu__icon-hamburger" width="20" viewBox="0 0 448 512">
+              <path fill="#ffffff"
+                d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
+            </svg>
+          </label>
+          <input id="input-movil" type="checkbox">
+  
+          <ul class="menu__list">
+            <svg class="close-hamburger" width="20" viewBox="0 0 384 512">
+              <path fill="#ffffff"
+                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+            </svg>
+  
+            <li class="menu__item active" id="bookingservice">
+              <img class="menu__icon-boking" src="/Assets/iconos/Booking_service.svg" alt="">
+              <span class="menu__item-text">Booking Service</span>
+            </li>
+            <li class="menu__item" id="dashboard">
+              <img class="menu__icon-boking" src="/Assets/iconos/Dashboard.svg" alt="">
+              <span class="menu__item-text">Dashboard</span>
+            </li>
+            <li class=" menu__item--sub">
+              <label class="menu__item-Administration" for="subdrop">
+                <img class="menu__icon-boking" src="/Assets/iconos/Administración.svg" alt="">
+                <span class="menu__item-text">
+                  Administración
+                  <svg class="menu__angle-right" width="10" viewBox="0 0 320 512">
+                    <path fill="#ffffff"
+                      d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+                  </svg>
+                </span>
+  
+              </label>
+  
+              <input class="menu__sublist-input" id="subdrop" type="checkbox">
+              <ul class="menu__sublist">
+                <li class="menu__sublist-item" id="Empresas">
+                 
+                    <img class="menu__icon-boking" src="/Assets/iconos/Empresas.svg" alt="">
+                    Empresas
+                 
+  
+                </li>
+                <li class="menu__sublist-item" id="Areas">
+                  <img class="menu__icon-boking" src="/Assets/iconos/Áreas.svg" alt="">
+                  Áreas
+                </li>
+                <li class="menu__sublist-item" id="Regimenes">
+                  <img class="menu__icon-boking" src="/Assets/iconos/Régimenes.svg" alt="">
+                  Régimenes
+                </li>
+                <li class="menu__sublist-item">
+                  <img class="menu__icon-boking" src="/Assets/iconos/Campamentos.svg" alt="">
+                  Campamentos
+                </li>
+                <li class="menu__sublist-item"   id="Comedores">
+                  <img class="menu__icon-boking" src="/Assets/iconos/Comedores.svg" alt="">
+                  Comedores
+                </li>
+                <li class="menu__sublist-item" id="Destinos">
+                  <img class="menu__icon-boking" src="/Assets/iconos/Destinos.svg" alt="">
+                  Destinos
+                </li>
+                <li class="menu__sublist-item" id="Usuarios">
+                  <img class="menu__icon-boking" src="/Assets/iconos/Usuarios.svg" alt="">
+                  Usuarios
+                </li>
+                <li class="menu__sublist-item" id="Traslado">
+                  <img class="menu__icon-boking" src="/Assets/iconos/Origen _de_traslado.svg" alt="">
+                  traslado
+                </li>
+              </ul>
+            </li>
+            <li class="menu__item">
+              <img class="menu__icon-boking" src="/Assets/iconos/Carga_masiva.svg" alt="">
+              <span class="menu__item-text">Carga Masiva</span>
+            </li>
+          </ul>
+  
+  
+  
+        </div>
+  
+  
+  <!-- menu profile -->
+        <div class="menu__profile">
+          <div class="menu__profile-content">
+            <img class="menu__profile-img" src="/Assets/profile/anime-girl-avatar-free-vector.webp" alt="">
+  
+            <span class="menu__item-text menu__item-text--wrap">
+              Administrador del sistema
+            </span>
+          </div>
+          <label for="" class="menu__profile-label"> 
+            <svg class="menu__profile-logout" width="26" height="17" viewBox="0 0 22 17" fill="none" >
+              <path d="M3.30883 7.67802L10.6577 7.67802C11.1937 7.67802 11.6267 8.08313 11.6267 8.58456C11.6267 9.08598 11.1937 9.49109 10.6577 9.49109L3.30883 9.49109L5.53137 11.5705C5.90987 11.9246 5.90987 12.4996 5.53137 12.8538C5.15287 13.2079 4.53819 13.2079 4.15969 12.8538L0.283873 9.22763C-0.0946249 8.87351 -0.0946249 8.29843 0.283873 7.94432L4.15969 4.31819C4.53819 3.96407 5.15287 3.96407 5.53137 4.31819C5.90987 4.6723 5.90987 5.24738 5.53137 5.6015L3.30883 7.67802ZM10.6577 15.1869L10.6577 10.3976C11.7266 10.3976 12.5957 9.58458 12.5957 8.58456C12.5957 7.58454 11.7266 6.77149 10.6577 6.77149L10.6577 1.81307C10.6577 0.813046 11.5268 8.75043e-07 12.5957 8.28321e-07L20.0621 5.01953e-07C21.131 4.55231e-07 22 0.813045 22 1.81306L22 15.1869C22 16.187 21.131 17 20.0621 17L12.5957 17C11.5268 17 10.6577 16.1869 10.6577 15.1869Z" fill="white"/>
+              </svg>
               
+            <span class="menu__item-text menu__item-text--pd">Cerrar Sesión</span></label>
+        </div>
+  
+        <!--  -->
+      </div>
+      <div class="content">
+        <!-- header conent -->
+        <div class="content__header">
+          <h3 class="content__title">Booking service</h3>
+          <div class="content__buttons">
+            <button class="content__btn" id="btnupload">
+              <svg width="20" id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17">
+  
+                <g id="Capa_1-2" data-name="Capa 1">
+                  <path class="content__btn-svg" fill="#0C2B82" class="cls-1"
+                    d="m9,3.63v8.06c0,.59-.45,1.06-1,1.06s-1-.47-1-1.06V3.63l-2.29,2.44c-.39.42-1.03.42-1.42,0-.39-.42-.39-1.09,0-1.5L7.29.31c.39-.42,1.03-.42,1.42,0l4,4.25c.39.42.39,1.09,0,1.5-.39.42-1.02.42-1.42,0l-2.29-2.44ZM2,11.69h4c0,1.17.9,2.13,2,2.13s2-.95,2-2.13h4c1.1,0,2,.95,2,2.13v1.06c0,1.17-.9,2.13-2,2.13H2c-1.1,0-2-.95-2-2.13v-1.06c0-1.17.9-2.13,2-2.13Zm11.5,3.45c.2,0,.39-.08.53-.23.14-.15.22-.35.22-.56s-.08-.41-.22-.56c-.14-.15-.33-.23-.53-.23s-.39.08-.53.23c-.14.15-.22.35-.22.56s.08.41.22.56c.14.15.33.23.53.23Z" />
+                </g>
+              </svg>
+              Carga Masiva</button>
+            <button class="content__btn content__btn--bg" id="register-Btn">
+              <img src="./Assets/iconos/Registrar.svg" alt="">
+              Registrar
+  
+            </button>
+  
+          </div>
+        </div>
+        <!--  -->
+        <div class="content-table">
+          <!-- <div class="content-table__header">
+            <div>
+              Actions
             </div>
           </div> -->
-        
-          <!-- Combo box para mostrar el número de registros por página -->
-           <div class="container__header">
-           
-            
-            <div class="select-menu">
-              <div class="select">
-                <span>   Actions       </span>
+          <div class="container">
+            <!-- Combo box para seleccionar una empresa -->
+            <!-- <div class="select-menu">
+              <div class="selecttd" id="selectDatabla">
+                <span>Elija una Empresa</span>
                 <i class="fas fa-angle-down"></i>
               </div>
               <div class="options-list">
-                <div class="option">10 x 10</div>
-                <div class="option">12 x 12</div>
-                <div class="option">14 x 14</div>
-                <div class="option">16 x 16</div>
+                
               </div>
+            </div> -->
+          
+            <!-- Combo box para mostrar el número de registros por página -->
+             <div class="container__header">
+             
+              
+              <div class="select-menu container__header-actions">
+                <div class="select">
+                  <span>   Actions       </span>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <div class="options-list">
+                  <div class="option">10 x 10</div>
+                  <div class="option">12 x 12</div>
+                  <div class="option">14 x 14</div>
+                  <div class="option">16 x 16</div>
+                </div>
+              </div>
+              <!-- Campo de filtro -->
+              <div class="filter-section">
+                <label for="search"></label>
+                <input type="text" id="searchdatastart" placeholder="Buscar...">
+              </div>
+              <div class="pagination-options">
+                <label for="numRecords">Mostrar</label>
+                <select id="numRecords">
+                  <option value="10">10</option>
+                  <option value="25">25</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                </select>
+                <span>por página</span>
+              </div>
+             </div>
+           
+            <!-- Tabla -->
+            <table id="dataTable">
+                <thead>
+                  <tr>
+                    <th>    </th> <!-- Nueva columna de editar -->
+                    <th>Id Booking</th>
+                    <th>Fecha Registro</th>
+                    <th>Fotocheck</th>
+                    <th>DNI</th>
+                    <th>Nombres y Apellidos</th>
+                    <th>Área</th>
+                    <th>Régimen</th>
+                    <th>Origen Traslado</th>
+                    <th>Destino</th>
+                    <th>Comedor</th>
+                    <th>Campamento</th>
+                    <th>Servicio</th>
+                    <th>Empresa</th>
+                    <th>Guardia</th>
+                    <th>Alojamiento</th>
+                    <th>Fechas Reservadas</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Las filas se generarán dinámicamente con JavaScript -->
+                </tbody>
+              </table>
+              
+            <!-- Botones de paginación -->
+            <div class="pagination-controls">
+              <span id="currentPage">1</span> - <span id="totalPages"></span>
+              <button id="prevPage" disabled><svg width="19" height="6" viewBox="0 0 19 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.193575 3L5.19357 0.113249V5.88675L0.193575 3ZM18.8242 3.5H4.69357V2.5H18.8242V3.5Z" fill="#6B7286"/>
+                </svg>
+                </button>
+              <input type="number" id="pageInput" value="1" min="1" style="width: 50px;">
+             
+              <button id="nextPage" disabled><svg width="20" height="6" viewBox="0 0 20 6" fill="none" >
+                <path d="M19.115 3L14.115 0.113249V5.88675L19.115 3ZM0.484375 3.5H14.615V2.5H0.484375V3.5Z" fill="#0C2B82"/>
+                </svg>
+                </button>
             </div>
-            <!-- Campo de filtro -->
-            <div class="filter-section">
-              <label for="search"></label>
-              <input type="text" id="searchdatastart" placeholder="Buscar...">
-            </div>
-            <div class="pagination-options">
-              <label for="numRecords">Mostrar</label>
-              <select id="numRecords">
-                <option value="10">10</option>
-                <option value="25">25</option>
-                <option value="50">50</option>
-                <option value="100">100</option>
-              </select>
-              <span>por página</span>
-            </div>
-           </div>
-         
-          <!-- Tabla -->
-          <table id="dataTable">
-              <thead>
-                <tr>
-                  <th>    </th> <!-- Nueva columna de editar -->
-                  <th>Id Booking</th>
-                  <th>Fecha Registro</th>
-                  <th>Fotocheck</th>
-                  <th>DNI</th>
-                  <th>Nombres y Apellidos</th>
-                  <th>Área</th>
-                  <th>Régimen</th>
-                  <th>Origen Traslado</th>
-                  <th>Destino</th>
-                  <th>Comedor</th>
-                  <th>Campamento</th>
-                  <th>Servicio</th>
-                  <th>Empresa</th>
-                  <th>Guardia</th>
-                  <th>Alojamiento</th>
-                  <th>Fechas Reservadas</th>
-                </tr>
-              </thead>
-              <tbody>
-                <!-- Las filas se generarán dinámicamente con JavaScript -->
-              </tbody>
-            </table>
-            
-          <!-- Botones de paginación -->
-          <div class="pagination-controls">
-            <button id="prevPage" disabled>Anterior</button>
-            <input type="number" id="pageInput" value="1" min="1" style="width: 50px;">
-            <span id="currentPage">1</span> / <span id="totalPages"></span>
-            <button id="nextPage" disabled>Siguiente</button>
           </div>
-        </div>
+          
         
-      
-      
+        
+        </div>
       </div>
-    </div>
+  
+    </section>
+  </main>
 
-  </section>
   <div class="modal">
     <div class="modal__content">
       <div class="modal__header">

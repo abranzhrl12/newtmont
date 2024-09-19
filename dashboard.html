@@ -17,369 +17,342 @@
   
 </head>
 <body>
-<section class="menu">
-  <div class="menu__side">
-    <div class="menu__side-content">
-      <label class="menu__labelicono" for="contraer">
-
-
-        <div class="menu__icon-arrow">
-
-          <img src="/Assets/iconos/angle-left.svg" alt="">
-
-        </div>
-      </label>
-
-      <input id="contraer" type="checkbox">
-      <!-- <img width="190" src="./Assets/iconos-Logo/aaaa-gigapixel-standard v2-1x.png" alt=""> -->
-      <div class="menu__figure">
-
-      </div>
-      <label for="input-movil">
-        <svg class="menu__icon-hamburger" width="20" viewBox="0 0 448 512">
-          <path fill="#ffffff"
-            d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
-        </svg>
-      </label>
-      <input id="input-movil" type="checkbox">
-
-      <ul class="menu__list">
-        <svg class="close-hamburger" width="20" viewBox="0 0 384 512">
-          <path fill="#ffffff"
-            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
-        </svg>
-
-        <li class="menu__item" id="bookingservice">
-          <img class="menu__icon-boking" src="/Assets/iconos/Booking_service.svg" alt="">
-          <span class="menu__item-text">Booking Service</span>
-        </li>
-        <li class="menu__item active" id="dashboard">
-          <img class="menu__icon-boking" src="/Assets/iconos/Dashboard.svg" alt="">
-          <span class="menu__item-text">Dashboard</span>
-        </li>
-        <li class=" menu__item--sub">
-          <label class="menu__item-Administration" for="subdrop">
-            <img class="menu__icon-boking" src="/Assets/iconos/Administración.svg" alt="">
-            <span class="menu__item-text">
-              Administración
-              <svg class="menu__angle-right" width="10" viewBox="0 0 320 512">
-                <path fill="#ffffff"
-                  d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
-              </svg>
-            </span>
-
+  <main class="main">
+    <section class="menu">
+      <div class="menu__side">
+        <div class="menu__side-content">
+          <label class="menu__labelicono" for="contraer">
+    
+    
+            <div class="menu__icon-arrow">
+    
+              <img src="/Assets/iconos/angle-left.svg" alt="">
+    
+            </div>
           </label>
-
-          <input class="menu__sublist-input" id="subdrop" type="checkbox">
-          <ul class="menu__sublist">
-            <li class="menu__sublist-item">
-              <a href="empresas.html" class="menu__sub-link">
-                <img class="menu__icon-boking" src="/Assets/iconos/Empresas.svg" alt="">
-                Empresas
-              </a>
-
+    
+          <input id="contraer" type="checkbox">
+          <!-- <img width="190" src="./Assets/iconos-Logo/aaaa-gigapixel-standard v2-1x.png" alt=""> -->
+          <div class="menu__figure">
+    
+          </div>
+          <label for="input-movil">
+            <svg class="menu__icon-hamburger" width="20" viewBox="0 0 448 512">
+              <path fill="#ffffff"
+                d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
+            </svg>
+          </label>
+          <input id="input-movil" type="checkbox">
+    
+          <ul class="menu__list">
+            <svg class="close-hamburger" width="20" viewBox="0 0 384 512">
+              <path fill="#ffffff"
+                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+            </svg>
+    
+            <li class="menu__item" id="bookingservice">
+              <img class="menu__icon-boking" src="/Assets/iconos/Booking_service.svg" alt="">
+              <span class="menu__item-text">Booking Service</span>
             </li>
-            <li class="menu__sublist-item" id="Areas">
-              <img class="menu__icon-boking" src="/Assets/iconos/Áreas.svg" alt="">
-              Áreas
+            <li class="menu__item active" id="dashboard">
+              <img class="menu__icon-boking" src="/Assets/iconos/Dashboard.svg" alt="">
+              <span class="menu__item-text">Dashboard</span>
             </li>
-            <li class="menu__sublist-item" id="Regimenes">
-              <img class="menu__icon-boking" src="/Assets/iconos/Régimenes.svg" alt="">
-              Régimenes
+            <li class=" menu__item--sub">
+              <label class="menu__item-Administration" for="subdrop">
+                <img class="menu__icon-boking" src="/Assets/iconos/Administración.svg" alt="">
+                <span class="menu__item-text">
+                  Administración
+                  <svg class="menu__angle-right" width="10" viewBox="0 0 320 512">
+                    <path fill="#ffffff"
+                      d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+                  </svg>
+                </span>
+    
+              </label>
+    
+              <input class="menu__sublist-input" id="subdrop" type="checkbox">
+              <ul class="menu__sublist">
+                <li class="menu__sublist-item" id="Empresas">
+                
+                    <img class="menu__icon-boking" src="/Assets/iconos/Empresas.svg" alt="">
+                    Empresas
+                 
+    
+                </li>
+                <li class="menu__sublist-item" id="Areas">
+                  <img class="menu__icon-boking" src="/Assets/iconos/Áreas.svg" alt="">
+                  Áreas
+                </li>
+                <li class="menu__sublist-item" id="Regimenes">
+                  <img class="menu__icon-boking" src="/Assets/iconos/Régimenes.svg" alt="">
+                  Régimenes
+                </li>
+                <li class="menu__sublist-item">
+                  <img class="menu__icon-boking" src="/Assets/iconos/Campamentos.svg" alt="">
+                  Campamentos
+                </li>
+                <li class="menu__sublist-item"   id="Comedores">
+                  <img class="menu__icon-boking" src="/Assets/iconos/Comedores.svg" alt="">
+                  Comedores
+                </li>
+                <li class="menu__sublist-item" id="Destinos">
+                  <img class="menu__icon-boking" src="/Assets/iconos/Destinos.svg" alt="">
+                  Destinos
+                </li>
+                <li class="menu__sublist-item" id="Usuarios">
+                  <img class="menu__icon-boking" src="/Assets/iconos/Usuarios.svg" alt="">
+                  Usuarios
+                </li>
+                <li class="menu__sublist-item" id="Traslado">
+                  <img class="menu__icon-boking" src="/Assets/iconos/Origen _de_traslado.svg" alt="">
+                  traslado
+                </li>
+              </ul>
             </li>
-            <li class="menu__sublist-item">
-              <img class="menu__icon-boking" src="/Assets/iconos/Campamentos.svg" alt="">
-              Campamentos
-            </li>
-            <li class="menu__sublist-item"   id="Comedores">
-              <img class="menu__icon-boking" src="/Assets/iconos/Comedores.svg" alt="">
-              Comedores
-            </li>
-            <li class="menu__sublist-item" id="Destinos">
-              <img class="menu__icon-boking" src="/Assets/iconos/Destinos.svg" alt="">
-              Destinos
-            </li>
-            <li class="menu__sublist-item">
-              <img class="menu__icon-boking" src="/Assets/iconos/Usuarios.svg" alt="">
-              Usuarios
-            </li>
-            <li class="menu__sublist-item" id="Traslado">
-              <img class="menu__icon-boking" src="/Assets/iconos/Origen _de_traslado.svg" alt="">
-              traslado
+            <li class="menu__item">
+              <img class="menu__icon-boking" src="/Assets/iconos/Carga_masiva.svg" alt="">
+              <span class="menu__item-text">Carga Masiva</span>
             </li>
           </ul>
-        </li>
-        <li class="menu__item">
-          <img class="menu__icon-boking" src="/Assets/iconos/Carga_masiva.svg" alt="">
-          <span class="menu__item-text">Carga Masiva</span>
-        </li>
-      </ul>
-
-
-
-    </div>
-
-
-
-    <div class="menu__profile">
-      <div class="menu__profile-content">
-        <img class="menu__profile-img" src="/Assets/profile/prueba.jpg" alt="">
-
-        <span class="menu__item-text menu__item-text--wrap">
-          Administrador del sistema
-        </span>
+    
+    
+    
+        </div>
+    
+    
+    
+        <div class="menu__profile">
+          <div class="menu__profile-content">
+            <img class="menu__profile-img" src="/Assets/profile/prueba.jpg" alt="">
+    
+            <span class="menu__item-text menu__item-text--wrap">
+              Administrador del sistema
+            </span>
+          </div>
+          <label for="" class="menu__profile-label"> 
+            <svg class="menu__profile-logout" width="26" height="17" viewBox="0 0 22 17" fill="none" >
+              <path d="M3.30883 7.67802L10.6577 7.67802C11.1937 7.67802 11.6267 8.08313 11.6267 8.58456C11.6267 9.08598 11.1937 9.49109 10.6577 9.49109L3.30883 9.49109L5.53137 11.5705C5.90987 11.9246 5.90987 12.4996 5.53137 12.8538C5.15287 13.2079 4.53819 13.2079 4.15969 12.8538L0.283873 9.22763C-0.0946249 8.87351 -0.0946249 8.29843 0.283873 7.94432L4.15969 4.31819C4.53819 3.96407 5.15287 3.96407 5.53137 4.31819C5.90987 4.6723 5.90987 5.24738 5.53137 5.6015L3.30883 7.67802ZM10.6577 15.1869L10.6577 10.3976C11.7266 10.3976 12.5957 9.58458 12.5957 8.58456C12.5957 7.58454 11.7266 6.77149 10.6577 6.77149L10.6577 1.81307C10.6577 0.813046 11.5268 8.75043e-07 12.5957 8.28321e-07L20.0621 5.01953e-07C21.131 4.55231e-07 22 0.813045 22 1.81306L22 15.1869C22 16.187 21.131 17 20.0621 17L12.5957 17C11.5268 17 10.6577 16.1869 10.6577 15.1869Z" fill="white"/>
+              </svg>
+              
+            <span class="menu__item-text menu__item-text--pd">Cerrar Sesión</span></label>
+        </div>
       </div>
-      <label for="" class="menu__profile-label"> 
-        <svg class="menu__profile-logout" width="26" height="17" viewBox="0 0 22 17" fill="none" >
-          <path d="M3.30883 7.67802L10.6577 7.67802C11.1937 7.67802 11.6267 8.08313 11.6267 8.58456C11.6267 9.08598 11.1937 9.49109 10.6577 9.49109L3.30883 9.49109L5.53137 11.5705C5.90987 11.9246 5.90987 12.4996 5.53137 12.8538C5.15287 13.2079 4.53819 13.2079 4.15969 12.8538L0.283873 9.22763C-0.0946249 8.87351 -0.0946249 8.29843 0.283873 7.94432L4.15969 4.31819C4.53819 3.96407 5.15287 3.96407 5.53137 4.31819C5.90987 4.6723 5.90987 5.24738 5.53137 5.6015L3.30883 7.67802ZM10.6577 15.1869L10.6577 10.3976C11.7266 10.3976 12.5957 9.58458 12.5957 8.58456C12.5957 7.58454 11.7266 6.77149 10.6577 6.77149L10.6577 1.81307C10.6577 0.813046 11.5268 8.75043e-07 12.5957 8.28321e-07L20.0621 5.01953e-07C21.131 4.55231e-07 22 0.813045 22 1.81306L22 15.1869C22 16.187 21.131 17 20.0621 17L12.5957 17C11.5268 17 10.6577 16.1869 10.6577 15.1869Z" fill="white"/>
-          </svg>
+         <div class="content">
+            <div class="content__header">
+              <h3 class="content__title">Dashboard</h3>
+           
+            </div>
+            <!-- aqui lo nuevo -->
+             <div class="global">
+    
+            
+            <div class="filters">
+                <h3 class="filters__title">Filtros 
+                    <label for="filtersHidden"><svg class="filters__arrow" width="22" viewBox="0 0 448 512"> <path d="M212.7 363.3c6.2 6.2 16.4 6.2 22.6 0l160-160c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L224 329.4 75.3 180.7c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6l160 160z"/></svg></label>
+                    
+                </h3>
+                <input type="checkbox" id="filtersHidden">
+                <div class="filters__content">
+                    <div class="filters__contentAll">
+                   <div class="filters__content-items">
+                    Fecha Inicial
+                        <!-- <input type="datetime" class="modal__input"> -->
+                        <div class="datepicker-container">
+                          <div class="datepciker-content">
+                            <input type="text" class="date-input" placeholder="" id="inputdate" />
+                            <label for="inputdate">
+                              <div class="labeldate">
+                                <svg class="icon-calendar" width="20" id="Capa_2" data-name="Capa 2" viewBox="0 0 16.09 16.34">
+                                  <defs>
+                                    <style>
+                                      .cls-1 {
+                                        fill: none;
+                                        stroke: #0c2b82;
+                                        stroke-linecap: round;
+                                        stroke-linejoin: round;
+                                      }
+                                    </style>
+                                  </defs>
+                                  <g id="Capa_2-2" data-name="Capa 2">
+                                    <path class="cls-1"
+                                      d="m13.92,2.04H2.18c-.93,0-1.68.69-1.68,1.53v10.73c0,.85.75,1.53,1.68,1.53h11.74c.93,0,1.68-.69,1.68-1.53V3.57c0-.85-.75-1.53-1.68-1.53Z" />
+                                    <path class="cls-1" d="m11.4.5v3.07" />
+                                    <path class="cls-1" d="m4.69.5v3.07" />
+                                    <path class="cls-1" d="m.5,6.63h15.09" />
+                                  </g>
+                                </svg>
+                              </div>
           
-        <span class="menu__item-text menu__item-text--pd">Cerrar Sesión</span></label>
-    </div>
-  </div>
-     <div class="content">
-        <div class="content__header">
-          <h3 class="content__title">Dashboard</h3>
-       
-        </div>
-        <!-- aqui lo nuevo -->
-         <div class="global">
-
-        
-        <div class="filters">
-            <h3 class="filters__title">Filtros 
-                <label for="filtersHidden"><svg class="filters__arrow" width="22" viewBox="0 0 448 512"> <path d="M212.7 363.3c6.2 6.2 16.4 6.2 22.6 0l160-160c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L224 329.4 75.3 180.7c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6l160 160z"/></svg></label>
-                
-            </h3>
-            <input type="checkbox" id="filtersHidden">
-            <div class="filters__content">
-                <div class="filters__contentAll">
-               <div class="filters__content-items">
-                Fecha Inicial
-                    <!-- <input type="datetime" class="modal__input"> -->
-                    <div class="datepicker-container">
-                      <div class="datepciker-content">
-                        <input type="text" class="date-input" placeholder="" id="inputdate" />
-                        <label for="inputdate">
-                          <div class="labeldate">
-                            <svg class="icon-calendar" width="20" id="Capa_2" data-name="Capa 2" viewBox="0 0 16.09 16.34">
-                              <defs>
-                                <style>
-                                  .cls-1 {
-                                    fill: none;
-                                    stroke: #0c2b82;
-                                    stroke-linecap: round;
-                                    stroke-linejoin: round;
-                                  }
-                                </style>
-                              </defs>
-                              <g id="Capa_2-2" data-name="Capa 2">
-                                <path class="cls-1"
-                                  d="m13.92,2.04H2.18c-.93,0-1.68.69-1.68,1.53v10.73c0,.85.75,1.53,1.68,1.53h11.74c.93,0,1.68-.69,1.68-1.53V3.57c0-.85-.75-1.53-1.68-1.53Z" />
-                                <path class="cls-1" d="m11.4.5v3.07" />
-                                <path class="cls-1" d="m4.69.5v3.07" />
-                                <path class="cls-1" d="m.5,6.63h15.09" />
-                              </g>
-                            </svg>
+                            </label>
                           </div>
-      
-                        </label>
-                      </div>
-      
-      
-                      <div class="datepicker" hidden>
-                        <!-- .datepicker-header -->
-                        <div class="datepicker-header">
-                          <button class="prev"> <svg width="12" viewBox="0 0 320 512">
-                              <path fill="#0C2B82"
-                                d="M52.7 267.3c-6.2-6.2-6.2-16.4 0-22.6l160-160c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6L86.6 256 235.3 404.7c6.2 6.2 6.2 16.4 0 22.6s-16.4 6.2-22.6 0l-160-160z" />
-                            </svg></button>
-      
-                          <div>
-                            <select class="month-input">
-                              <option>January</option>
-                              <option>February</option>
-                              <option>March</option>
-                              <option>April</option>
-                              <option>May</option>
-                              <option>June</option>
-                              <option>July</option>
-                              <option>August</option>
-                              <option>September</option>
-                              <option>October</option>
-                              <option>November</option>
-                              <option>December</option>
-                            </select>
-                            <input type="number" class="year-input" />
+          
+          
+                          <div class="datepicker" hidden>
+                            <!-- .datepicker-header -->
+                            <div class="datepicker-header">
+                              <button class="prev"> <svg width="12" viewBox="0 0 320 512">
+                                  <path fill="#0C2B82"
+                                    d="M52.7 267.3c-6.2-6.2-6.2-16.4 0-22.6l160-160c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6L86.6 256 235.3 404.7c6.2 6.2 6.2 16.4 0 22.6s-16.4 6.2-22.6 0l-160-160z" />
+                                </svg></button>
+          
+                              <div>
+                                <select class="month-input">
+                                  <option>January</option>
+                                  <option>February</option>
+                                  <option>March</option>
+                                  <option>April</option>
+                                  <option>May</option>
+                                  <option>June</option>
+                                  <option>July</option>
+                                  <option>August</option>
+                                  <option>September</option>
+                                  <option>October</option>
+                                  <option>November</option>
+                                  <option>December</option>
+                                </select>
+                                <input type="number" class="year-input" />
+                              </div>
+          
+                              <button class="next">
+                                <svg class="arror-rigth" width="12" viewBox="0 0 320 512">
+                                  <path fill="#0C2B82"
+                                    d="M52.7 267.3c-6.2-6.2-6.2-16.4 0-22.6l160-160c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6L86.6 256 235.3 404.7c6.2 6.2 6.2 16.4 0 22.6s-16.4 6.2-22.6 0l-160-160z" />
+                                </svg>
+                              </button>
+                            </div>
+                            <!-- /.datepicker-header -->
+          
+                            <!-- .days -->
+                            <div class="days">
+                              <span>Do</span>
+                              <span>Lu</span>
+                              <span>Ma</span>
+                              <span>Mi</span>
+                              <span>Ju</span>
+                              <span>Vi</span>
+                              <span>Sa</span>
+                            </div>
+                            <!-- /.days -->
+          
+                            <!-- .dates -->
+                            <div class="dates">
+          
+                            </div>
+                            <!-- /.dates -->
+          
+                            <!-- .datepicker-footer -->
+                            <div class="datepicker-footer">
+                              <button class="cancel">Cancel</button>
+                              <button class="apply">Apply</button>
+                            </div>
+                            <!-- /.datepicker-footer -->
                           </div>
-      
-                          <button class="next">
-                            <svg class="arror-rigth" width="12" viewBox="0 0 320 512">
-                              <path fill="#0C2B82"
-                                d="M52.7 267.3c-6.2-6.2-6.2-16.4 0-22.6l160-160c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6L86.6 256 235.3 404.7c6.2 6.2 6.2 16.4 0 22.6s-16.4 6.2-22.6 0l-160-160z" />
-                            </svg>
-                          </button>
                         </div>
-                        <!-- /.datepicker-header -->
-      
-                        <!-- .days -->
-                        <div class="days">
-                          <span>Do</span>
-                          <span>Lu</span>
-                          <span>Ma</span>
-                          <span>Mi</span>
-                          <span>Ju</span>
-                          <span>Vi</span>
-                          <span>Sa</span>
-                        </div>
-                        <!-- /.days -->
-      
-                        <!-- .dates -->
-                        <div class="dates">
-      
-                        </div>
-                        <!-- /.dates -->
-      
-                        <!-- .datepicker-footer -->
-                        <div class="datepicker-footer">
-                          <button class="cancel">Cancel</button>
-                          <button class="apply">Apply</button>
-                        </div>
-                        <!-- /.datepicker-footer -->
-                      </div>
-                    </div>
-      
-               </div>
-               <div class="filters__content-items">
-                Fecha Final
-               
+          
+                   </div>
+                   <div class="filters__content-items">
+                    Fecha Final
                    
-                    <!-- <input type="datetime" class="modal__input"> -->
-                    <div class="datepicker-container">
-                      <div class="datepciker-content">
-                        <input type="text" class="date-input" placeholder="" id="inputdate" />
-                        <label for="inputdate">
-                          <div class="labeldate">
-                            <svg class="icon-calendar" width="20" id="Capa_2" data-name="Capa 2" viewBox="0 0 16.09 16.34">
-                              <defs>
-                                <style>
-                                  .cls-1 {
-                                    fill: none;
-                                    stroke: #0c2b82;
-                                    stroke-linecap: round;
-                                    stroke-linejoin: round;
-                                  }
-                                </style>
-                              </defs>
-                              <g id="Capa_2-2" data-name="Capa 2">
-                                <path class="cls-1"
-                                  d="m13.92,2.04H2.18c-.93,0-1.68.69-1.68,1.53v10.73c0,.85.75,1.53,1.68,1.53h11.74c.93,0,1.68-.69,1.68-1.53V3.57c0-.85-.75-1.53-1.68-1.53Z" />
-                                <path class="cls-1" d="m11.4.5v3.07" />
-                                <path class="cls-1" d="m4.69.5v3.07" />
-                                <path class="cls-1" d="m.5,6.63h15.09" />
-                              </g>
-                            </svg>
+                       
+                        <!-- <input type="datetime" class="modal__input"> -->
+                        <div class="datepicker-container">
+                          <div class="datepciker-content">
+                            <input type="text" class="date-input" placeholder="" id="inputdate" />
+                            <label for="inputdate">
+                              <div class="labeldate">
+                                <svg class="icon-calendar" width="20" id="Capa_2" data-name="Capa 2" viewBox="0 0 16.09 16.34">
+                                  <defs>
+                                    <style>
+                                      .cls-1 {
+                                        fill: none;
+                                        stroke: #0c2b82;
+                                        stroke-linecap: round;
+                                        stroke-linejoin: round;
+                                      }
+                                    </style>
+                                  </defs>
+                                  <g id="Capa_2-2" data-name="Capa 2">
+                                    <path class="cls-1"
+                                      d="m13.92,2.04H2.18c-.93,0-1.68.69-1.68,1.53v10.73c0,.85.75,1.53,1.68,1.53h11.74c.93,0,1.68-.69,1.68-1.53V3.57c0-.85-.75-1.53-1.68-1.53Z" />
+                                    <path class="cls-1" d="m11.4.5v3.07" />
+                                    <path class="cls-1" d="m4.69.5v3.07" />
+                                    <path class="cls-1" d="m.5,6.63h15.09" />
+                                  </g>
+                                </svg>
+                              </div>
+          
+                            </label>
                           </div>
-      
-                        </label>
-                      </div>
-      
-      
-                      <div class="datepicker" hidden>
-                        <!-- .datepicker-header -->
-                        <div class="datepicker-header">
-                          <button class="prev"> <svg width="12" viewBox="0 0 320 512">
-                              <path fill="#0C2B82"
-                                d="M52.7 267.3c-6.2-6.2-6.2-16.4 0-22.6l160-160c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6L86.6 256 235.3 404.7c6.2 6.2 6.2 16.4 0 22.6s-16.4 6.2-22.6 0l-160-160z" />
-                            </svg></button>
-      
-                          <div>
-                            <select class="month-input">
-                              <option>January</option>
-                              <option>February</option>
-                              <option>March</option>
-                              <option>April</option>
-                              <option>May</option>
-                              <option>June</option>
-                              <option>July</option>
-                              <option>August</option>
-                              <option>September</option>
-                              <option>October</option>
-                              <option>November</option>
-                              <option>December</option>
-                            </select>
-                            <input type="number" class="year-input" />
+          
+          
+                          <div class="datepicker" hidden>
+                            <!-- .datepicker-header -->
+                            <div class="datepicker-header">
+                              <button class="prev"> <svg width="12" viewBox="0 0 320 512">
+                                  <path fill="#0C2B82"
+                                    d="M52.7 267.3c-6.2-6.2-6.2-16.4 0-22.6l160-160c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6L86.6 256 235.3 404.7c6.2 6.2 6.2 16.4 0 22.6s-16.4 6.2-22.6 0l-160-160z" />
+                                </svg></button>
+          
+                              <div>
+                                <select class="month-input">
+                                  <option>January</option>
+                                  <option>February</option>
+                                  <option>March</option>
+                                  <option>April</option>
+                                  <option>May</option>
+                                  <option>June</option>
+                                  <option>July</option>
+                                  <option>August</option>
+                                  <option>September</option>
+                                  <option>October</option>
+                                  <option>November</option>
+                                  <option>December</option>
+                                </select>
+                                <input type="number" class="year-input" />
+                              </div>
+          
+                              <button class="next">
+                                <svg class="arror-rigth" width="12" viewBox="0 0 320 512">
+                                  <path fill="#0C2B82"
+                                    d="M52.7 267.3c-6.2-6.2-6.2-16.4 0-22.6l160-160c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6L86.6 256 235.3 404.7c6.2 6.2 6.2 16.4 0 22.6s-16.4 6.2-22.6 0l-160-160z" />
+                                </svg>
+                              </button>
+                            </div>
+                            <!-- /.datepicker-header -->
+          
+                            <!-- .days -->
+                            <div class="days">
+                              <span>Do</span>
+                              <span>Lu</span>
+                              <span>Ma</span>
+                              <span>Mi</span>
+                              <span>Ju</span>
+                              <span>Vi</span>
+                              <span>Sa</span>
+                            </div>
+                            <!-- /.days -->
+          
+                            <!-- .dates -->
+                            <div class="dates">
+          
+                            </div>
+                            <!-- /.dates -->
+          
+                            <!-- .datepicker-footer -->
+                            <div class="datepicker-footer">
+                              <button class="cancel">Cancel</button>
+                              <button class="apply">Apply</button>
+                            </div>
+                            <!-- /.datepicker-footer -->
                           </div>
-      
-                          <button class="next">
-                            <svg class="arror-rigth" width="12" viewBox="0 0 320 512">
-                              <path fill="#0C2B82"
-                                d="M52.7 267.3c-6.2-6.2-6.2-16.4 0-22.6l160-160c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6L86.6 256 235.3 404.7c6.2 6.2 6.2 16.4 0 22.6s-16.4 6.2-22.6 0l-160-160z" />
-                            </svg>
-                          </button>
                         </div>
-                        <!-- /.datepicker-header -->
-      
-                        <!-- .days -->
-                        <div class="days">
-                          <span>Do</span>
-                          <span>Lu</span>
-                          <span>Ma</span>
-                          <span>Mi</span>
-                          <span>Ju</span>
-                          <span>Vi</span>
-                          <span>Sa</span>
-                        </div>
-                        <!-- /.days -->
-      
-                        <!-- .dates -->
-                        <div class="dates">
-      
-                        </div>
-                        <!-- /.dates -->
-      
-                        <!-- .datepicker-footer -->
-                        <div class="datepicker-footer">
-                          <button class="cancel">Cancel</button>
-                          <button class="apply">Apply</button>
-                        </div>
-                        <!-- /.datepicker-footer -->
-                      </div>
-                    </div>
-        
-      
-               </div>
-
-               <div class="filters__content-items">
-                Empresa
-                <div class="select-menu">
-                    <div class="select">
-                      <span>Elija una Empresa</span>
-                      <i class="fas fa-angle-down"></i>
-                    </div>
-                    <div class="options-list">
-                      <div class="option">Contratista</div>
-                      <div class="option">Newmont</div>
-                    </div>
-                  </div>
-               </div>
-               <div class="filters__content-items">
-                Área
-                <div class="select-menu">
-                    <div class="select">
-                      <span>Elija una Empresa</span>
-                      <i class="fas fa-angle-down"></i>
-                    </div>
-                    <div class="options-list">
-                      <div class="option">Contratista</div>
-                      <div class="option">Newmont</div>
-                    </div>
-                  </div>
-               </div>
-            </div>
-            <div class="filters__contentAll">
-                <div class="filters__content-items">
-                    Régimen
+            
+          
+                   </div>
+    
+                   <div class="filters__content-items">
+                    Empresa
                     <div class="select-menu">
                         <div class="select">
                           <span>Elija una Empresa</span>
@@ -392,7 +365,7 @@
                       </div>
                    </div>
                    <div class="filters__content-items">
-                    Campamento
+                    Área
                     <div class="select-menu">
                         <div class="select">
                           <span>Elija una Empresa</span>
@@ -404,8 +377,63 @@
                         </div>
                       </div>
                    </div>
+                </div>
+                <div class="filters__contentAll">
+                    <div class="filters__content-items">
+                        Régimen
+                        <div class="select-menu">
+                            <div class="select">
+                              <span>Elija una Empresa</span>
+                              <i class="fas fa-angle-down"></i>
+                            </div>
+                            <div class="options-list">
+                              <div class="option">Contratista</div>
+                              <div class="option">Newmont</div>
+                            </div>
+                          </div>
+                       </div>
+                       <div class="filters__content-items">
+                        Campamento
+                        <div class="select-menu">
+                            <div class="select">
+                              <span>Elija una Empresa</span>
+                              <i class="fas fa-angle-down"></i>
+                            </div>
+                            <div class="options-list">
+                              <div class="option">Contratista</div>
+                              <div class="option">Newmont</div>
+                            </div>
+                          </div>
+                       </div>
+                       <div class="filters__content-items">
+                        Servicio
+                        <div class="select-menu">
+                            <div class="select">
+                              <span>Elija una Empresa</span>
+                              <i class="fas fa-angle-down"></i>
+                            </div>
+                            <div class="options-list">
+                              <div class="option">Contratista</div>
+                              <div class="option">Newmont</div>
+                            </div>
+                          </div>
+                       </div>
+                       <div class="filters__content-items">
+                        Comedor
+                        <div class="select-menu">
+                            <div class="select">
+                              <span>Elija una Empresa</span>
+                              <i class="fas fa-angle-down"></i>
+                            </div>
+                            <div class="options-list">
+                              <div class="option">Contratista</div>
+                              <div class="option">Newmont</div>
+                            </div>
+                          </div>
+                       </div>
+                </div>
                    <div class="filters__content-items">
-                    Servicio
+                    Destino
                     <div class="select-menu">
                         <div class="select">
                           <span>Elija una Empresa</span>
@@ -417,127 +445,75 @@
                         </div>
                       </div>
                    </div>
-                   <div class="filters__content-items">
-                    Comedor
-                    <div class="select-menu">
-                        <div class="select">
-                          <span>Elija una Empresa</span>
-                          <i class="fas fa-angle-down"></i>
-                        </div>
-                        <div class="options-list">
-                          <div class="option">Contratista</div>
-                          <div class="option">Newmont</div>
-                        </div>
-                      </div>
-                   </div>
-            </div>
-               <div class="filters__content-items">
-                Destino
-                <div class="select-menu">
-                    <div class="select">
-                      <span>Elija una Empresa</span>
-                      <i class="fas fa-angle-down"></i>
-                    </div>
-                    <div class="options-list">
-                      <div class="option">Contratista</div>
-                      <div class="option">Newmont</div>
-                    </div>
-                  </div>
-               </div>
-            </div>
-        </div>
-        <div class="tabs">
-            <div class="tab-buttons">
-              <button class="tab-button active" data-tab="empresa">Empresa</button>
-              <button class="tab-button" data-tab="area">Área</button>
-              <button class="tab-button" data-tab="regimen">Régimen</button>
-              <button class="tab-button" data-tab="campamento">Campamento</button>
-              <button class="tab-button" data-tab="servicios">Servicios</button>
-              <button class="tab-button" data-tab="comedor">Comedor</button>
-              <button class="tab-button" data-tab="destino">Destino</button>
-            </div>
-            <div class="tab-content">
-              <div class="tab-panel active" id="empresa">
-                <p>Aún no hay datos en Empresa</p>
-              </div>
-              <div class="tab-panel" id="area">
-                <p>Aún no hay datos en Área</p>
-              </div>
-              <div class="tab-panel" id="regimen">
-                <p>Aún no hay datos en Régimen</p>
-              </div>
-              <div class="tab-panel" id="campamento">
-                <p>Aún no hay datos en Campamento</p>
-              </div>
-              <div class="tab-panel" id="servicios">
-                <p>Aún no hay datos en Servicios</p>
-              </div>
-              <div class="tab-panel" id="comedor">
-                <p>Aún no hay datos en Comedor</p>
-              </div>
-              <div class="tab-panel" id="destino">
-                <p>Aún no hay datos en Destino</p>
-              </div>
-            </div>
-            <div class="comboActions">
-                <div class="select-menu comboActions--width">
-                    <div class="select" id="selecActions">
-                        <span>Actions</span>
-                        <i class="fas fa-angle-down"></i>
-                    </div>
-                    <div class="options-list" id="actionsList">
-                        <!-- Opciones dinámicas aquí -->
-                    </div>
                 </div>
             </div>
-            
-            
-            <table id="dataTable" class="datable-dash">
-                <thead class="datable-dash__head">
-                    <tr >
-                        <th>Empresa</th>
-                        <th>Fecha</th>
-                        <th>Nro. de Personas</th>
-                    </tr>
-                </thead>
-                <tbody class="datable-dash__body">
-                    <!-- Dynamic rows will be added here -->
-                </tbody>
-            </table>
-            <!-- <div class="content-Data">
+            <div class="tabs">
+                <div class="tab-buttons">
+                  <button class="tab-button active" data-tab="empresa">Empresa</button>
+                  <button class="tab-button" data-tab="area">Área</button>
+                  <button class="tab-button" data-tab="regimen">Régimen</button>
+                  <button class="tab-button" data-tab="campamento">Campamento</button>
+                  <button class="tab-button" data-tab="servicios">Servicios</button>
+                  <button class="tab-button" data-tab="comedor">Comedor</button>
+                  <button class="tab-button" data-tab="destino">Destino</button>
+                </div>
+                <div class="tab-content">
+                  <div class="tab-panel active" id="empresa">
+                    <p>Aún no hay datos en Empresa</p>
+                  </div>
+                  <div class="tab-panel" id="area">
+                    <p>Aún no hay datos en Área</p>
+                  </div>
+                  <div class="tab-panel" id="regimen">
+                    <p>Aún no hay datos en Régimen</p>
+                  </div>
+                  <div class="tab-panel" id="campamento">
+                    <p>Aún no hay datos en Campamento</p>
+                  </div>
+                  <div class="tab-panel" id="servicios">
+                    <p>Aún no hay datos en Servicios</p>
+                  </div>
+                  <div class="tab-panel" id="comedor">
+                    <p>Aún no hay datos en Comedor</p>
+                  </div>
+                  <div class="tab-panel" id="destino">
+                    <p>Aún no hay datos en Destino</p>
+                  </div>
+                </div>
+                <div class="comboActions">
+                    <div class="select-menu comboActions--width">
+                        <div class="select" id="selecActions">
+                            <span>Actions</span>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                        <div class="options-list" id="actionsList">
+                            <!-- Opciones dinámicas aquí -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container-tabledashboard">
+                  <table id="dataTabledashboard" class="datable-dash">
+                    <thead class="datable-dash__head">
+                        <tr >
+                            <th>Empresa</th>
+                            <th>Fecha</th>
+                            <th>Nro. de Personas</th>
+                        </tr>
+                    </thead>
+                    <tbody class="datable-dash__body">
+                        <!-- Dynamic rows will be added here -->
+                    </tbody>
+                </table>
+                </div>
+                
                
-                       
-                    <svg   width="25" id="Capa_2" data-name="Capa 2"  viewBox="0 0 19.23 19.11">
-                        <defs>
-                          <style>
-                            .cls-11 {
-                              fill: none;
-                            }
-                      
-                            .cls-11, .cls-14 {
-                              stroke: #6b7386;
-                              stroke-linecap: round;
-                              stroke-linejoin: round;
-                              stroke-width: 1.2px;
-                            }
-                      
-                            .cls-14 {
-                              fill: #ebf0fa;
-                            }
-                          </style>
-                        </defs>
-                        <g id="Capa_1-2" data-name="Capa 1">
-                          <path class="cls-14" d="m8.33,15.95c4.27,0,7.73-3.44,7.73-7.67S12.59.6,8.33.6.6,4.04.6,8.27s3.46,7.67,7.73,7.67Z"/>
-                          <path class="cls-11" d="m18.63,18.51l-4.51-4.48"/>
-                        </g>
-                                        </svg>
-             
-                    <p>Aun no hay datos</p>
-            </div> -->
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-</section>
+    </section>
+  </main>
+
     
 <script>
 
@@ -570,6 +546,7 @@ document.getElementById(tab).classList.add('active');
   const data = [
         { empresa: "CONTRATISTA", fecha: "01/08/2024", numeroPersonas: 238 },
         { empresa: "NEWMONT", fecha: "01/08/2024", numeroPersonas: 238 },
+      
        
         
     ];
@@ -577,7 +554,7 @@ document.getElementById(tab).classList.add('active');
     // Referencias a los elementos HTML
     const select = document.querySelector("#selecActions");
     const optionsList = document.querySelector("#actionsList");
-    const dataTable = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
+    const dataTable = document.getElementById('dataTabledashboard').getElementsByTagName('tbody')[0];
 
     // Función para llenar el combobox con datos dinámicos
     function populateComboBox() {

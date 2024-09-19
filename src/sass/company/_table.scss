@@ -3,21 +3,23 @@
 
 
 .content-table{
-    // overflow: hidden;
-    // height: auto;
-    overflow: hidden;
-    // scale: .9;
-    // outline: 1px solid red;
-
+    margin-bottom: 0;
+  
+    @include m.desktopFullHD {
+        margin-bottom: 2rem;
+    }
+     @include m.desktopFull {
+        margin-bottom: 2rem;
+     }
     &__header-Company{
-     
+        
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1.6rem 2rem;
+      
         border-bottom: .2rem solid #CFD5E6;
         margin: 0;
-        padding: 0 2rem;
+        padding: 1.3rem 2rem;
         @include m.telefonoFull {
             flex-direction: column;
             align-items:flex-start;
@@ -25,25 +27,43 @@
             padding: 1rem 2rem 0rem 2rem;
         }
     }
+    &__btnE{
+
+    }
+    
     &__search {
     
     }
     &__btn-add {
-        margin-top: 1.8rem;
+     
+        // margin-top: 1.8rem;
         @include m.btn-style(.5rem, #0C2B82);
-    
+        // margin-top:1rem;
+       
        
         
     }
+    
     &__title-Company{
         font-size: 2rem;
+      
         color: #0C2B82;
+        @include m.desktopFull {
+            font-size: 1.7rem;
+        }
         
     }
    
     
 }
-
+.content__title-sub{
+    margin-top: -1rem;
+    @include m.desktopFull {
+        margin-top: 0.3rem;
+        margin-bottom: 0.3rem;
+    }
+    
+}
 
 // searchInput{
 .searchInput-content{
@@ -54,7 +74,7 @@
     justify-content: flex-start;
     align-items: center;
     background-color: #fff;
-    
+  
     @include m.telefonoFull {
         width: 100%;
         flex-direction: row-reverse;
@@ -174,8 +194,7 @@
         border-collapse: separate; /* Necesario para aplicar border-radius correctamente */
         border-spacing: 0; /* Elimina el espacio entre celdas */
        
-        
-       
+      
         &__head{
 
             
@@ -189,6 +208,7 @@
             padding: var(--padingtable);
             background-color: #F7FAFB;
             color: #0C2B82;
+         
         }
         &__th--notline{
             border-right: none;
@@ -197,7 +217,7 @@
             border-right:var(--linewidth); /* Borde de las celdas */
             border-bottom: var(--linewidth); 
             padding: var(--padingtable);
-            
+           
         }
         &__td--notline{
             border-right: none;
@@ -221,9 +241,18 @@
     }
 }
 
-.actions {
-    display: flex;
-    justify-content: space-between;
-  
+
+#empresasTable{
+    height: fit-content;
 }
 
+.content-tableCompany{
+    height: 84%;
+}
+#idEmpresa{
+    width: 40%;
+}
+
+.sucess-svg2{
+    cursor: pointer;
+}

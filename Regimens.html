@@ -1,285 +1,321 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Newmont</title>
-    <link rel="icon" href="Assets/iconos-Logo/iconoweb.png" sizes="16x16" type="image/png">
-    <link rel="preload" href="public/Styles/styles.css" as="style">
-    <link rel="stylesheet" href="public/Styles/styles.css">  
-    <script src="regimens.js" defer></script>
-    <script src="menu.js" defer></script>
- 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newmont</title>
+  <link rel="icon" href="Assets/iconos-Logo/iconoweb.png" sizes="16x16" type="image/png">
+  <link rel="preload" href="public/Styles/styles.css" as="style">
+  <link rel="stylesheet" href="public/Styles/styles.css">
+  <script src="regimens.js" defer></script>
+  <script src="menu.js" defer></script>
+
 </head>
 
 <body>
-    <section class="menu">  
-        <div class="menu__side">
-            <div class="menu__side-content">  
-                <label class="menu__labelicono" for="contraer">
-                    
-                  
-                    <div class="menu__icon-arrow">
-                     
-                        <img  src="/Assets/iconos/angle-left.svg" alt="">
-        
-                </div>
-                </label>
-               
-                <input id="contraer"  type="checkbox">
-                  <!-- <img width="190" src="./Assets/iconos-Logo/aaaa-gigapixel-standard v2-1x.png" alt=""> -->
-                <div class="menu__figure">
-                  
-                    
-                </div>
-                <label for="input-movil">
-                    <svg class="menu__icon-hamburger " width="20"  viewBox="0 0 448 512"><path fill="#ffffff" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
-                </label>
-                <input id="input-movil" type="checkbox">
-                                
-                <ul class="menu__list">
-                   <svg class="close-hamburger close" width="20" viewBox="0 0 384 512"><path fill="#ffffff" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
-                   
-                    <li  class="menu__item" id="bookingservice"> 
-                        <img class="menu__icon-boking" src="/Assets/iconos/Booking_service.svg" alt="">
-                       <span class="menu__item-text">Booking Service</span> 
-                    </li>
-                    <li class="menu__item" id="dashboard"> 
-                        <img class="menu__icon-boking" src="/Assets/iconos/Dashboard.svg" alt="">
-                      <span class="menu__item-text">Dashboard</span>  
-                    </li>
-                    <li  class=" menu__item--sub"> 
-                        <label class="menu__item-Administration" for="subdrop">
-                            <img class="menu__icon-boking" src="/Assets/iconos/Administración.svg" alt="">
-                            <span class="menu__item-text"> 
-                                Administración
-                                <svg class="menu__angle-right" width="10" viewBox="0 0 320 512"><path fill="#ffffff" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
-                             </span>
-                          
-                        </label>          
-                      
-                        <input class="menu__sublist-input" id="subdrop" type="checkbox" checked>
-                        <ul class="menu__sublist">
-                            <li class="menu__sublist-item">
-                              <a href="empresas.html" class="menu__sub-link">
-                                <img class="menu__icon-boking" src="/Assets/iconos/Empresas.svg" alt="">
-                                Empresas
-                              </a>
-              
-                            </li>
-                            <li class="menu__sublist-item" id="Areas">
-                              <img class="menu__icon-boking" src="/Assets/iconos/Áreas.svg" alt="">
-                              Áreas
-                            </li>
-                            <li class="menu__sublist-item" id="Regimenes">
-                              <img class="menu__icon-boking" src="/Assets/iconos/Régimenes.svg" alt="">
-                              Régimenes
-                            </li>
-                            <li class="menu__sublist-item">
-                              <img class="menu__icon-boking" src="/Assets/iconos/Campamentos.svg" alt="">
-                              Campamentos
-                            </li>
-                            <li class="menu__sublist-item"   id="Comedores">
-                              <img class="menu__icon-boking" src="/Assets/iconos/Comedores.svg" alt="">
-                              Comedores
-                            </li>
-                            <li class="menu__sublist-item" id="Destinos">
-                              <img class="menu__icon-boking" src="/Assets/iconos/Destinos.svg" alt="">
-                              Destinos
-                            </li>
-                            <li class="menu__sublist-item">
-                              <img class="menu__icon-boking" src="/Assets/iconos/Usuarios.svg" alt="">
-                              Usuarios
-                            </li>
-                            <li class="menu__sublist-item" id="Traslado">
-                              <img class="menu__icon-boking" src="/Assets/iconos/Origen _de_traslado.svg" alt="">
-                              traslado
-                            </li>
-                          </ul>
-                    </li>
-                    <li class="menu__item"> 
-                        <img class="menu__icon-boking" src="/Assets/iconos/Carga_masiva.svg" alt="">
-                      <span class="menu__item-text">Carga Masiva</span>  
-                    </li>
-                </ul>
+  <section class="main">
+    <div class="menu">
+      <div class="menu__side">
+        <div class="menu__side-content">
+          <label class="menu__labelicono" for="contraer">
 
 
+            <div class="menu__icon-arrow">
+
+              <img src="/Assets/iconos/angle-left.svg" alt="">
 
             </div>
-           
+          </label>
+
+          <input id="contraer" type="checkbox">
+          <!-- <img width="190" src="./Assets/iconos-Logo/aaaa-gigapixel-standard v2-1x.png" alt=""> -->
+          <div class="menu__figure">
 
 
-            <div class="menu__profile">
-                <div class="menu__profile-content">
-                  <img class="menu__profile-img" src="/Assets/profile/prueba.jpg" alt="">
-        
-                  <span class="menu__item-text menu__item-text--wrap">
-                    Administrador del sistema
-                  </span>
-                </div>
-                <label for="" class="menu__profile-label"> 
-                  <svg class="menu__profile-logout" width="26" height="17" viewBox="0 0 22 17" fill="none" >
-                    <path d="M3.30883 7.67802L10.6577 7.67802C11.1937 7.67802 11.6267 8.08313 11.6267 8.58456C11.6267 9.08598 11.1937 9.49109 10.6577 9.49109L3.30883 9.49109L5.53137 11.5705C5.90987 11.9246 5.90987 12.4996 5.53137 12.8538C5.15287 13.2079 4.53819 13.2079 4.15969 12.8538L0.283873 9.22763C-0.0946249 8.87351 -0.0946249 8.29843 0.283873 7.94432L4.15969 4.31819C4.53819 3.96407 5.15287 3.96407 5.53137 4.31819C5.90987 4.6723 5.90987 5.24738 5.53137 5.6015L3.30883 7.67802ZM10.6577 15.1869L10.6577 10.3976C11.7266 10.3976 12.5957 9.58458 12.5957 8.58456C12.5957 7.58454 11.7266 6.77149 10.6577 6.77149L10.6577 1.81307C10.6577 0.813046 11.5268 8.75043e-07 12.5957 8.28321e-07L20.0621 5.01953e-07C21.131 4.55231e-07 22 0.813045 22 1.81306L22 15.1869C22 16.187 21.131 17 20.0621 17L12.5957 17C11.5268 17 10.6577 16.1869 10.6577 15.1869Z" fill="white"/>
-                    </svg>
-                    
-                  <span class="menu__item-text menu__item-text--pd">Cerrar Sesión</span></label>
+          </div>
+          <label for="input-movil">
+            <svg class="menu__icon-hamburger " width="20" viewBox="0 0 448 512">
+              <path fill="#ffffff"
+                d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
+            </svg>
+          </label>
+          <input id="input-movil" type="checkbox">
+
+          <ul class="menu__list">
+            <svg class="close-hamburger close" width="20" viewBox="0 0 384 512">
+              <path fill="#ffffff"
+                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+            </svg>
+
+            <li class="menu__item" id="bookingservice">
+              <img class="menu__icon-boking" src="/Assets/iconos/Booking_service.svg" alt="">
+              <span class="menu__item-text">Booking Service</span>
+            </li>
+            <li class="menu__item" id="dashboard">
+              <img class="menu__icon-boking" src="/Assets/iconos/Dashboard.svg" alt="">
+              <span class="menu__item-text">Dashboard</span>
+            </li>
+            <li class=" menu__item--sub">
+              <label class="menu__item-Administration active" for="subdrop">
+                <img class="menu__icon-boking" src="/Assets/iconos/Administración.svg" alt="">
+                <span class="menu__item-text">
+                  Administración
+                  <svg class="menu__angle-right" width="10" viewBox="0 0 320 512">
+                    <path fill="#ffffff"
+                      d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+                  </svg>
+                </span>
+
+              </label>
+
+              <input class="menu__sublist-input" id="subdrop" type="checkbox" checked>
+              <ul class="menu__sublist">
+                <li class="menu__sublist-item" id="Empresas">
+                 
+                    <img class="menu__icon-boking" src="/Assets/iconos/Empresas.svg" alt="">
+                    Empresas
+                 
+
+                </li>
+                <li class="menu__sublist-item" id="Areas">
+                  <img class="menu__icon-boking" src="/Assets/iconos/Áreas.svg" alt="">
+                  Áreas
+                </li>
+                <li class="menu__sublist-item active" id="Regimenes">
+                  <img class="menu__icon-boking" src="/Assets/iconos/Régimenes.svg" alt="">
+                  Régimenes
+                </li>
+                <li class="menu__sublist-item">
+                  <img class="menu__icon-boking" src="/Assets/iconos/Campamentos.svg" alt="">
+                  Campamentos
+                </li>
+                <li class="menu__sublist-item" id="Comedores">
+                  <img class="menu__icon-boking" src="/Assets/iconos/Comedores.svg" alt="">
+                  Comedores
+                </li>
+                <li class="menu__sublist-item" id="Destinos">
+                  <img class="menu__icon-boking" src="/Assets/iconos/Destinos.svg" alt="">
+                  Destinos
+                </li>
+                <li class="menu__sublist-item" id="Usuarios">
+                  <img class="menu__icon-boking" src="/Assets/iconos/Usuarios.svg" alt="">
+                  Usuarios
+                </li>
+                <li class="menu__sublist-item" id="Traslado">
+                  <img class="menu__icon-boking" src="/Assets/iconos/Origen _de_traslado.svg" alt="">
+                  traslado
+                </li>
+              </ul>
+            </li>
+            <li class="menu__item">
+              <img class="menu__icon-boking" src="/Assets/iconos/Carga_masiva.svg" alt="">
+              <span class="menu__item-text">Carga Masiva</span>
+            </li>
+          </ul>
+
+
+
+        </div>
+
+
+
+        <div class="menu__profile">
+          <div class="menu__profile-content">
+            <img class="menu__profile-img" src="/Assets/profile/prueba.jpg" alt="">
+
+            <span class="menu__item-text menu__item-text--wrap">
+              Administrador del sistema
+            </span>
+          </div>
+          <label for="" class="menu__profile-label">
+            <svg class="menu__profile-logout" width="26" height="17" viewBox="0 0 22 17" fill="none">
+              <path
+                d="M3.30883 7.67802L10.6577 7.67802C11.1937 7.67802 11.6267 8.08313 11.6267 8.58456C11.6267 9.08598 11.1937 9.49109 10.6577 9.49109L3.30883 9.49109L5.53137 11.5705C5.90987 11.9246 5.90987 12.4996 5.53137 12.8538C5.15287 13.2079 4.53819 13.2079 4.15969 12.8538L0.283873 9.22763C-0.0946249 8.87351 -0.0946249 8.29843 0.283873 7.94432L4.15969 4.31819C4.53819 3.96407 5.15287 3.96407 5.53137 4.31819C5.90987 4.6723 5.90987 5.24738 5.53137 5.6015L3.30883 7.67802ZM10.6577 15.1869L10.6577 10.3976C11.7266 10.3976 12.5957 9.58458 12.5957 8.58456C12.5957 7.58454 11.7266 6.77149 10.6577 6.77149L10.6577 1.81307C10.6577 0.813046 11.5268 8.75043e-07 12.5957 8.28321e-07L20.0621 5.01953e-07C21.131 4.55231e-07 22 0.813045 22 1.81306L22 15.1869C22 16.187 21.131 17 20.0621 17L12.5957 17C11.5268 17 10.6577 16.1869 10.6577 15.1869Z"
+                fill="white" />
+            </svg>
+
+            <span class="menu__item-text menu__item-text--pd">Cerrar Sesión</span></label>
+        </div>
+
+      </div>
+      <div class="content ">
+        <div class="content__header">
+          <h3 class="content__title">Administre sus Régimenes</h3>
+
+        </div>
+        <div>
+          <h4 class="content__title-sub"">Cree sus Régimenes de trabajo</h4>
+          </div>
+         
+          <div class=" content-table content-tabletReg">
+            <div class="content-table__header-Company ">
+              <h4 class="content-table__title-Company">Régimenes</h4>
+              <div class="searchInput-content">
+
+
+                <label for="serchVisible" class="searchInput-content__icon">
+
+                  <svg width="25" id="Capa_2" data-name="Capa 2" viewBox="0 0 19.23 19.11">
+                    <defs>
+                      <style>
+                        .cls-11 {
+                          fill: none;
+                        }
+
+                        .cls-11,
+                        .cls-14 {
+                          stroke: #6b7386;
+                          stroke-linecap: round;
+                          stroke-linejoin: round;
+                          stroke-width: 1.2px;
+                        }
+
+                        .cls-14 {
+                          fill: #ebf0fa;
+                        }
+                      </style>
+                    </defs>
+                    <g id="Capa_1-2" data-name="Capa 1">
+                      <path class="cls-14"
+                        d="m8.33,15.95c4.27,0,7.73-3.44,7.73-7.67S12.59.6,8.33.6.6,4.04.6,8.27s3.46,7.67,7.73,7.67Z" />
+                      <path class="cls-11" d="m18.63,18.51l-4.51-4.48" />
+                    </g>
+                  </svg>
+                </label>
+
+                <input type="checkbox" id="serchVisible" class="searchInput-content__visible">
+
+                <input class="searchInput-content__input" type="text" id="searchInput" placeholder="Buscar">
+                <label for="serchVisible" class="searchInput-content__iconArrow">
+                  <svg width="20" viewBox="0 0 448 512">
+                    <path fill="#6B7286"
+                      d="M4.7 244.7c-6.2 6.2-6.2 16.4 0 22.6l176 176c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L54.6 272 432 272c8.8 0 16-7.2 16-16s-7.2-16-16-16L54.6 240 203.3 91.3c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0l-176 176z" />
+                  </svg>
+                </label>
               </div>
-             
-         </div>
-         <div class="content">
-            <div class="content__header">
-                <h3 class="content__title">Administracion > Régimenes</h3>
-              
-            </div>
-            <div>
-                <h4 class="content__title-sub"">Cree sus Régimenes de trabajo</h4>
-            </div>
-           
-            <div class="content-table">
-                <div class="content-table__header-Company">
-                    <h4 class="content-table__title-Company">Régimenes</h4>
-                    <div  class="searchInput-content">
-                    
-                        
-                     <label for="serchVisible" class="searchInput-content__icon">
-                       
-                        <svg   width="25" id="Capa_2" data-name="Capa 2"  viewBox="0 0 19.23 19.11">
-                            <defs>
-                              <style>
-                                .cls-11 {
-                                  fill: none;
-                                }
-                          
-                                .cls-11, .cls-14 {
-                                  stroke: #6b7386;
-                                  stroke-linecap: round;
-                                  stroke-linejoin: round;
-                                  stroke-width: 1.2px;
-                                }
-                          
-                                .cls-14 {
-                                  fill: #ebf0fa;
-                                }
-                              </style>
-                            </defs>
-                            <g id="Capa_1-2" data-name="Capa 1">
-                              <path class="cls-14" d="m8.33,15.95c4.27,0,7.73-3.44,7.73-7.67S12.59.6,8.33.6.6,4.04.6,8.27s3.46,7.67,7.73,7.67Z"/>
-                              <path class="cls-11" d="m18.63,18.51l-4.51-4.48"/>
-                            </g>
-                                            </svg>
-                     </label>  
 
-                     <input type="checkbox" id="serchVisible" class="searchInput-content__visible">
+              <div class="actionsRe">
 
-                        <input class="searchInput-content__input" type="text" id="searchInput" placeholder="Buscar">
-                        <label for="serchVisible" class="searchInput-content__iconArrow">
-                            <svg  width="20" viewBox="0 0 448 512">
-                                <path fill="#6B7286" d="M4.7 244.7c-6.2 6.2-6.2 16.4 0 22.6l176 176c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L54.6 272 432 272c8.8 0 16-7.2 16-16s-7.2-16-16-16L54.6 240 203.3 91.3c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0l-176 176z"/></svg>
-                        </label>
-                    </div>
-               
-                    <div class="actions">
-                       
-            
-                        <button id="openModal" class="content-table__btn-add">
-                            <svg width="20"  viewBox="0 0 19.99 16">
-                                <path  fill="#fff" class="cls-1" d="m13.24,7.6c-1.39.81-2.24,2.29-2.24,3.9,0,3.46,3.74,5.62,6.74,3.89,1.39-.8,2.25-2.29,2.25-3.89,0-3.47-3.75-5.63-6.75-3.9Zm4.47,4.33h-1.78v1.79c0,.27-.23.5-.5.5s-.5-.23-.5-.5v-1.79h-1.79c-.28,0-.5-.22-.5-.5s.22-.5.5-.5h1.79v-1.79c0-.27.22-.5.5-.5s.5.23.5.5v1.79h1.78c.28,0,.5.22.5.5s-.22.5-.5.5Zm-5.72-4.67V1.5c0-.83-.67-1.5-1.49-1.5H1.5C.67,0,0,.67,0,1.5v13c0,.82.67,1.5,1.5,1.5h3v-2.5c0-.83.67-1.5,1.5-1.5s1.5.67,1.5,1.5v2.5h3c.47,0,.89-.22,1.16-.56-1.03-1-1.66-2.4-1.66-3.94,0-1.71.77-3.24,1.99-4.24Zm-7.99,1.24c0,.27-.23.5-.5.5h-1c-.28,0-.5-.23-.5-.5v-1c0-.28.22-.5.5-.5h1c.27,0,.5.22.5.5v1Zm0-4c0,.27-.23.5-.5.5h-1c-.28,0-.5-.23-.5-.5v-1c0-.27.22-.5.5-.5h1c.27,0,.5.23.5.5v1Zm3,4c0,.27-.23.5-.5.5h-1c-.28,0-.5-.23-.5-.5v-1c0-.28.22-.5.5-.5h1c.27,0,.5.22.5.5v1Zm0-4c0,.27-.23.5-.5.5h-1c-.28,0-.5-.23-.5-.5v-1c0-.27.22-.5.5-.5h1c.27,0,.5.23.5.5v1Zm3,4c0,.27-.23.5-.5.5h-1c-.28,0-.5-.23-.5-.5v-1c0-.28.22-.5.5-.5h1c.27,0,.5.22.5.5v1Zm0-4c0,.27-.23.5-.5.5h-1c-.28,0-.5-.23-.5-.5v-1c0-.27.22-.5.5-.5h1c.27,0,.5.23.5.5v1Z"/>
-                              
-                            </svg>
-                            Agregar Régimen</button>
-                    </div>
-                </div>
-                <div class="container">             
-                    
-                    <table id="empresasTable" class="table">
-                        <thead  class="table__head">
-                            <tr class="table__trhead">
-                                <th class="table__th"></th> <!-- Cambiado de posición -->
-                                <th class="table__th">Id Régimen</th>
-                                <th class="table__th table__th--notline">Descripción Regimen</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="table__td">
-                                    <button  class="edit-btn table__editbtn">
-                                        <svg  class="svg"  width="16"  viewBox="0 0 14.7 14.7">
-                                          <path  class="svg-color" fill="#6b7386" fill-rule="evenodd"  d="m9.95.46c.62-.62,1.62-.62,2.24,0l2.05,2.05c.62.62.62,1.62,0,2.24l-1.25,1.25L8.7,1.72l1.25-1.25Zm-2.37,2.37L.46,9.95c-.3.3-.46.7-.46,1.12v2.05c0,.87.71,1.58,1.58,1.58h2.05c.42,0,.82-.17,1.12-.46l7.12-7.12L7.58,2.84Z"/>
-                                        
-                                      </svg>
-                                    </button>
-                                </td>
-                                <td class="table__td">22</td>
-                                <td class="table__td table__td--notline">5x2</td>
-                            </tr>
-                            <tr>
-                                <td class="table__td">
-                                    <button class="edit-btn table__editbtn">
-                                        <svg  class="svg"  width="16"  viewBox="0 0 14.7 14.7">
-                                            <path  class="svg-color" fill="#6b7386" fill-rule="evenodd"  d="m9.95.46c.62-.62,1.62-.62,2.24,0l2.05,2.05c.62.62.62,1.62,0,2.24l-1.25,1.25L8.7,1.72l1.25-1.25Zm-2.37,2.37L.46,9.95c-.3.3-.46.7-.46,1.12v2.05c0,.87.71,1.58,1.58,1.58h2.05c.42,0,.82-.17,1.12-.46l7.12-7.12L7.58,2.84Z"/>
-                                          
-                                        </svg>
-                                    </button>
-                                </td class="table__td">
-                                <td class="table__td"> 43</td>
-                                <td class="table__td table__td--notline">13x15</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            
-                <!-- Modal -->
-                <div id="myModal" class="modal-company">
-                    <div class="modal-content modal-company__content">
-                       
-                        <h2 id="modalTitle" class="modal-company__title">Nuevo Régimen
-                      
-                            <svg class="sucess-svg2 close" width="20" viewBox="0 0 384 512"><path fill="#0C2B82" d="M324.5 411.1c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L214.6 256 347.1 123.5c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L192 233.4 59.6 100.9c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6L169.4 256 36.9 388.5c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0L192 278.6 324.5 411.1z"/></svg>
-                           </h2>
-                        <form id="addEmpresaForm" class="modal-company__form">
-                            <label for="idEmpresa">Id Régimen:</label>
-                            <input type="text" id="idEmpresa" name="idEmpresa" required class="modal-company__input">
-                            <label for="descripcionEmpresa">Descripción Régimen:</label>
-                            <input type="text" id="descripcionEmpresa" name="descripcionEmpresa" required class="modal-company__input">
-                            <div class="modal-company__content-buttons">
-                                <button type="button" class="modal-company__btn modal-company__btn--bg" id="companyBtnCancel">
-                                    <svg width="20" id="Capa_2" data-name="Capa 2" viewBox="0 0 17 17">
-                                        <defs>
-                                          <style>
-                                            .cls-10 {
-                                              fill: #fff;
-                                            }
-                          
-                                            .cls-2 {
-                                              fill: #6b7286;
-                                              stroke: #6b7286;
-                                              stroke-linecap: round;
-                                              stroke-width: 1.5px;
-                                            }
-                                          </style>
-                                        </defs>
-                                        <g id="Capa_2-2" data-name="Capa 20">
-                                          <rect class="cls-10" width="17" height="17" rx="4" ry="4" />
-                                          <path class="cls-2" d="m6,6l6,6" />
-                                          <path class="cls-2" d="m12,6l-6,6" />
-                                        </g>
-                                      </svg> 
-                                    Cancelar</button>
-                                <button type="submit" id="submitBtn" class="modal-company__btn">
-                                    <svg width="20"  viewBox="0 0 19.99 16">
-                                        <path  fill="#fff" class="cls-1" d="m13.24,7.6c-1.39.81-2.24,2.29-2.24,3.9,0,3.46,3.74,5.62,6.74,3.89,1.39-.8,2.25-2.29,2.25-3.89,0-3.47-3.75-5.63-6.75-3.9Zm4.47,4.33h-1.78v1.79c0,.27-.23.5-.5.5s-.5-.23-.5-.5v-1.79h-1.79c-.28,0-.5-.22-.5-.5s.22-.5.5-.5h1.79v-1.79c0-.27.22-.5.5-.5s.5.23.5.5v1.79h1.78c.28,0,.5.22.5.5s-.22.5-.5.5Zm-5.72-4.67V1.5c0-.83-.67-1.5-1.49-1.5H1.5C.67,0,0,.67,0,1.5v13c0,.82.67,1.5,1.5,1.5h3v-2.5c0-.83.67-1.5,1.5-1.5s1.5.67,1.5,1.5v2.5h3c.47,0,.89-.22,1.16-.56-1.03-1-1.66-2.4-1.66-3.94,0-1.71.77-3.24,1.99-4.24Zm-7.99,1.24c0,.27-.23.5-.5.5h-1c-.28,0-.5-.23-.5-.5v-1c0-.28.22-.5.5-.5h1c.27,0,.5.22.5.5v1Zm0-4c0,.27-.23.5-.5.5h-1c-.28,0-.5-.23-.5-.5v-1c0-.27.22-.5.5-.5h1c.27,0,.5.23.5.5v1Zm3,4c0,.27-.23.5-.5.5h-1c-.28,0-.5-.23-.5-.5v-1c0-.28.22-.5.5-.5h1c.27,0,.5.22.5.5v1Zm0-4c0,.27-.23.5-.5.5h-1c-.28,0-.5-.23-.5-.5v-1c0-.27.22-.5.5-.5h1c.27,0,.5.23.5.5v1Zm3,4c0,.27-.23.5-.5.5h-1c-.28,0-.5-.23-.5-.5v-1c0-.28.22-.5.5-.5h1c.27,0,.5.22.5.5v1Zm0-4c0,.27-.23.5-.5.5h-1c-.28,0-.5-.23-.5-.5v-1c0-.27.22-.5.5-.5h1c.27,0,.5.23.5.5v1Z"/>
-                                      
-                                    </svg>
-                                    Agregar un Régimen</button>
-                            </div>
-                           
-                        </form>
-                    </div>
-                </div>
+
+                <button id="openModal" class="content-table__btn-add">
+
+                  <svg width='20' id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20.46 15.55">
+
+                    <path fill="#fff"
+                      d="m7.77,0C3.48,0,0,3.48,0,7.77s3.48,7.78,7.77,7.78c1.43,0,2.77-.39,3.92-1.06-.76-.94-1.22-2.14-1.22-3.45,0-.72.14-1.42.41-2.07h-3.11c-.16,0-.31-.06-.42-.18-.11-.11-.18-.26-.18-.42V2.99c0-.16.07-.31.18-.42.11-.12.26-.18.42-.18s.31.06.42.18c.12.11.18.26.18.42v4.78h2.99c.06,0,.12.01.18.03.43-.61,1-1.13,1.67-1.52.63-.36,1.32-.59,2.03-.69-.95-3.23-3.94-5.59-7.47-5.59Zm7.69,6.57c-.59.06-1.18.25-1.75.58-1.39.8-2.24,2.29-2.24,3.89,0,.82.21,1.57.57,2.21.14.24.3.47.47.68.86-.65,1.58-1.49,2.1-2.45h-1c-.28,0-.5-.23-.5-.5s.22-.5.5-.5h1.46c.14-.38.25-.78.33-1.19v-.6c0-.13.05-.25.13-.34.01-.19.02-.39.02-.58,0-.41-.03-.81-.09-1.2Z" />
+                    <path fill="#fff"
+                      d="m19.53,8.32c-.13-.18-.28-.35-.44-.51-.83-.8-1.95-1.27-3.13-1.27-.16,0-.33.01-.5.03-.59.06-1.18.25-1.75.58-1.39.8-2.24,2.29-2.24,3.89,0,.82.21,1.57.57,2.21.14.24.3.47.47.68.1.12.21.24.33.35.21.2.43.38.67.54.12.07.25.15.38.21.25.14.52.25.79.33.42.12.85.19,1.29.19.75,0,1.52-.19,2.24-.61,1.39-.8,2.25-2.29,2.25-3.9,0-1.05-.35-1.99-.93-2.72Zm-1.35,3.16h-1.78v1.78c0,.28-.23.5-.5.5s-.5-.22-.5-.5v-1.78h-1.79c-.28,0-.5-.23-.5-.5s.22-.5.5-.5h1.79v-1.79c0-.13.05-.25.13-.34.09-.1.22-.16.37-.16.27,0,.5.22.5.5v1.79h1.78c.28,0,.5.22.5.5s-.22.5-.5.5Z" />
+                  </svg>
+                  Agregar Régimen</button>
+              </div>
             </div>
-         </div>
+            <div class="container">
 
-    </section>
+              <table id="empresasTable" class="table">
+                <thead class="table__head">
+                  <tr class="table__trhead">
+                    <th class="table__th"></th> <!-- Cambiado de posición -->
+                    <th class="table__th">Id Régimen</th>
+                    <th class="table__th table__th--notline">Descripción Regimen</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="table__td">
+                      <button class="edit-btn table__editbtn">
+                        <svg class="svg" width="16" viewBox="0 0 14.7 14.7">
+                          <path class="svg-color" fill="#6b7386" fill-rule="evenodd"
+                            d="m9.95.46c.62-.62,1.62-.62,2.24,0l2.05,2.05c.62.62.62,1.62,0,2.24l-1.25,1.25L8.7,1.72l1.25-1.25Zm-2.37,2.37L.46,9.95c-.3.3-.46.7-.46,1.12v2.05c0,.87.71,1.58,1.58,1.58h2.05c.42,0,.82-.17,1.12-.46l7.12-7.12L7.58,2.84Z" />
+
+                        </svg>
+                      </button>
+                    </td>
+                    <td class="table__td">22</td>
+                    <td class="table__td table__td--notline">5x2</td>
+                  </tr>
+                  <tr>
+                    <td class="table__td">
+                      <button class="edit-btn table__editbtn">
+                        <svg class="svg" width="16" viewBox="0 0 14.7 14.7">
+                          <path class="svg-color" fill="#6b7386" fill-rule="evenodd"
+                            d="m9.95.46c.62-.62,1.62-.62,2.24,0l2.05,2.05c.62.62.62,1.62,0,2.24l-1.25,1.25L8.7,1.72l1.25-1.25Zm-2.37,2.37L.46,9.95c-.3.3-.46.7-.46,1.12v2.05c0,.87.71,1.58,1.58,1.58h2.05c.42,0,.82-.17,1.12-.46l7.12-7.12L7.58,2.84Z" />
+
+                        </svg>
+                      </button>
+                    </td class="table__td">
+                    <td class="table__td"> 43</td>
+                    <td class="table__td table__td--notline">13x15</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Modal -->
+            <div id="myModal" class="modal-company">
+              <div class="modal-content modal-company__content">
+
+                <h2 id="modalTitle" class="modal-company__title">Nuevo Régimen
+
+                  <svg class="sucess-svg2 close" width="20" viewBox="0 0 384 512">
+                    <path fill="#0C2B82"
+                      d="M324.5 411.1c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L214.6 256 347.1 123.5c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L192 233.4 59.6 100.9c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6L169.4 256 36.9 388.5c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0L192 278.6 324.5 411.1z" />
+                  </svg>
+                </h2>
+                <form id="addEmpresaForm" class="modal-company__form">
+                  <label for="idEmpresa">Id Régimen:</label>
+                  <input type="text" id="idEmpresa" name="idEmpresa" required class="modal-company__input">
+                  <label for="descripcionEmpresa">Descripción Régimen:</label>
+                  <input type="text" id="descripcionEmpresa" name="descripcionEmpresa" required
+                    class="modal-company__input">
+                  <div class="modal-company__content-buttons">
+                    <button type="button" class="modal-company__btn modal-company__btn--bg" id="companyBtnCancel">
+                      <svg width="20" id="Capa_2" data-name="Capa 2" viewBox="0 0 17 17">
+                        <defs>
+                          <style>
+                            .cls-10 {
+                              fill: #fff;
+                            }
+
+                            .cls-2 {
+                              fill: #6b7286;
+                              stroke: #6b7286;
+                              stroke-linecap: round;
+                              stroke-width: 1.5px;
+                            }
+                          </style>
+                        </defs>
+                        <g id="Capa_2-2" data-name="Capa 20">
+                          <rect class="cls-10" width="17" height="17" rx="4" ry="4" />
+                          <path class="cls-2" d="m6,6l6,6" />
+                          <path class="cls-2" d="m12,6l-6,6" />
+                        </g>
+                      </svg>
+                      Cancelar</button>
+                    <button type="submit" id="submitBtn" class="modal-company__btn">
+
+                      <svg width='20' id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20.46 15.55">
+
+                        <path fill="#fff"
+                          d="m7.77,0C3.48,0,0,3.48,0,7.77s3.48,7.78,7.77,7.78c1.43,0,2.77-.39,3.92-1.06-.76-.94-1.22-2.14-1.22-3.45,0-.72.14-1.42.41-2.07h-3.11c-.16,0-.31-.06-.42-.18-.11-.11-.18-.26-.18-.42V2.99c0-.16.07-.31.18-.42.11-.12.26-.18.42-.18s.31.06.42.18c.12.11.18.26.18.42v4.78h2.99c.06,0,.12.01.18.03.43-.61,1-1.13,1.67-1.52.63-.36,1.32-.59,2.03-.69-.95-3.23-3.94-5.59-7.47-5.59Zm7.69,6.57c-.59.06-1.18.25-1.75.58-1.39.8-2.24,2.29-2.24,3.89,0,.82.21,1.57.57,2.21.14.24.3.47.47.68.86-.65,1.58-1.49,2.1-2.45h-1c-.28,0-.5-.23-.5-.5s.22-.5.5-.5h1.46c.14-.38.25-.78.33-1.19v-.6c0-.13.05-.25.13-.34.01-.19.02-.39.02-.58,0-.41-.03-.81-.09-1.2Z" />
+                        <path fill="#fff"
+                          d="m19.53,8.32c-.13-.18-.28-.35-.44-.51-.83-.8-1.95-1.27-3.13-1.27-.16,0-.33.01-.5.03-.59.06-1.18.25-1.75.58-1.39.8-2.24,2.29-2.24,3.89,0,.82.21,1.57.57,2.21.14.24.3.47.47.68.1.12.21.24.33.35.21.2.43.38.67.54.12.07.25.15.38.21.25.14.52.25.79.33.42.12.85.19,1.29.19.75,0,1.52-.19,2.24-.61,1.39-.8,2.25-2.29,2.25-3.9,0-1.05-.35-1.99-.93-2.72Zm-1.35,3.16h-1.78v1.78c0,.28-.23.5-.5.5s-.5-.22-.5-.5v-1.78h-1.79c-.28,0-.5-.23-.5-.5s.22-.5.5-.5h1.79v-1.79c0-.13.05-.25.13-.34.09-.1.22-.16.37-.16.27,0,.5.22.5.5v1.79h1.78c.28,0,.5.22.5.5s-.22.5-.5.5Z" />
+                      </svg>
+                      Agregar un Régimen</button>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
 
 </body>
+
 </html>

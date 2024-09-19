@@ -59,30 +59,120 @@ const servicios = ["Desayuno", "Almuerzo", "Cena", "Desayuno-Almuerzo-Cena"];
 const campamentos = ["KM37", "KM38", "La Oroya"];
 
 
-const data = Array.from({ length: 300 }, (_, i) => ({
-  id: 71316 + i,
-  fechaRegistro: new Date().toLocaleDateString(),
-  fotocheck: 10374994 + i,
-  dni: Math.floor(10000000 + Math.random() * 89999999),
-  nombres: `Persona ${i + 1}`,
-  area: areas[Math.floor(Math.random() * areas.length)],
-  regimen: regimenes[Math.floor(Math.random() * regimenes.length)],
-  origen: "Origen " + (i + 1),
-  destino: "Destino " + (i + 1),
-  comedor: "Comedor " + (i + 1),
-  campamento: campamentos[Math.floor(Math.random() * campamentos.length)],
-  servicio: servicios[Math.floor(Math.random() * servicios.length)],
-  empresa: empresas[Math.floor(Math.random() * empresas.length)],
-  guardia: i % 2 === 0 ? "Si" : "No",
-  alojamiento: i % 2 === 0 ? "Si" : "No",
-  fechaReservada: new Date().toLocaleDateString(),
-}));
+// const data = Array.from({ length: 300 }, (_, i) => ({
+//   id: 71316 + i,
+//   fechaRegistro: new Date().toLocaleDateString(),
+//   fotocheck: 10374994 + i,
+//   dni: Math.floor(10000000 + Math.random() * 89999999),
+//   nombres: `Persona ${i + 1}`,
+//   area: areas[Math.floor(Math.random() * areas.length)],
+//   regimen: regimenes[Math.floor(Math.random() * regimenes.length)],
+//   origen: "Origen " + (i + 1),
+//   destino: "Destino " + (i + 1),
+//   comedor: "Comedor " + (i + 1),
+//   campamento: campamentos[Math.floor(Math.random() * campamentos.length)],
+//   servicio: servicios[Math.floor(Math.random() * servicios.length)],
+//   empresa: empresas[Math.floor(Math.random() * empresas.length)],
+//   guardia: i % 2 === 0 ? "Si" : "No",
+//   alojamiento: i % 2 === 0 ? "Si" : "No",
+//   fechaReservada: new Date().toLocaleDateString(),
+// }));
+const data = Array.from({ length: 300 }, (_, i) => {
+  // Función para asignar "Si" o "No" aleatoriamente
+  const getRandomYesNo = () => Math.random() > 0.5 ? "Si" : "No";
+  
+  return {
+    id: 71316 + i,
+    fechaRegistro: new Date().toLocaleDateString(),
+    fotocheck: 10374994 + i,
+    dni: Math.floor(10000000 + Math.random() * 89999999),
+    nombres: `Persona ${i + 1}`,
+    area: areas[Math.floor(Math.random() * areas.length)],
+    regimen: regimenes[Math.floor(Math.random() * regimenes.length)],
+    origen: "Origen " + (i + 1),
+    destino: "Destino " + (i + 1),
+    comedor: "Comedor " + (i + 1),
+    campamento: campamentos[Math.floor(Math.random() * campamentos.length)],
+    servicio: servicios[Math.floor(Math.random() * servicios.length)],
+    empresa: empresas[Math.floor(Math.random() * empresas.length)],
+    guardia: getRandomYesNo(),  // Asignar aleatoriamente "Si" o "No"
+    alojamiento: getRandomYesNo(),  // Asignar aleatoriamente "Si" o "No"
+    fechaReservada: new Date().toLocaleDateString(),
+  };
+});
+
+
 
 // Variables globales
 let currentPage = 1;
 let recordsPerPage = 10;
 let filteredData = data;
 
+// function createEditableRow(item) {
+//   const row = document.createElement("tr");
+
+//   // Columna de edición
+//   const editCell = document.createElement("td");
+//   const editIcon = document.createElement("span");
+//   editIcon.classList.add("edit-icon");
+//   editIcon.innerHTML = ` <svg  class="svg"  width="16"  viewBox="0 0 14.7 14.7">
+//                                           <path  class="svg-color" fill="#6b7386" fill-rule="evenodd"  d="m9.95.46c.62-.62,1.62-.62,2.24,0l2.05,2.05c.62.62.62,1.62,0,2.24l-1.25,1.25L8.7,1.72l1.25-1.25Zm-2.37,2.37L.46,9.95c-.3.3-.46.7-.46,1.12v2.05c0,.87.71,1.58,1.58,1.58h2.05c.42,0,.82-.17,1.12-.46l7.12-7.12L7.58,2.84Z"/>
+                                        
+//                                       </svg>`; // Icono de lápiz (puedes usar FontAwesome o similar)
+//   editIcon.style.cursor = "pointer";
+//   editIcon.addEventListener("click", () => toggleEditMode(row, item, editIcon));
+//   editCell.appendChild(editIcon);
+//   row.appendChild(editCell);
+
+//   // Añadir las celdas de datos
+//   Object.keys(item).forEach((key) => {
+//     const cell = document.createElement("td");
+//     cell.textContent = item[key];
+//     cell.setAttribute("data-key", key); // Almacenar el nombre del campo en data-key
+//     row.appendChild(cell);
+//   });
+
+//   return row;
+// }
+// function createEditableRow(item) {
+//   const row = document.createElement("tr");
+
+//   // Columna de edición
+//   const editCell = document.createElement("td");
+//   const editIcon = document.createElement("span");
+//   editIcon.classList.add("edit-icon");
+//   editIcon.innerHTML = ` <svg class="svg" width="16" viewBox="0 0 14.7 14.7">
+//     <path class="svg-color" fill="#6b7386" fill-rule="evenodd" d="m9.95.46c.62-.62,1.62-.62,2.24,0l2.05,2.05c.62.62.62,1.62,0,2.24l-1.25,1.25L8.7,1.72l1.25-1.25Zm-2.37,2.37L.46,9.95c-.3.3-.46.7-.46,1.12v2.05c0,.87.71,1.58,1.58,1.58h2.05c.42,0,.82-.17,1.12-.46l7.12-7.12L7.58,2.84Z"/>
+//   </svg>`; // Icono de lápiz
+//   editIcon.style.cursor = "pointer";
+//   editIcon.addEventListener("click", () => toggleEditMode(row, item, editIcon));
+//   editCell.appendChild(editIcon);
+//   row.appendChild(editCell);
+
+//   // Añadir las celdas de datos
+//   Object.keys(item).forEach((key) => {
+//     const cell = document.createElement("td");
+
+//     if (key === 'guardia' || key === 'alojamiento') {
+//       // Crear un botón dentro de la celda para 'guardia' y 'alojamiento'
+//       const button = document.createElement("button");
+//       button.textContent = item[key];
+//       button.classList.add("status-button");
+//       button.addEventListener("click", () => {
+//         alert(`Button in ${key} clicked!`);
+//       });
+//       cell.appendChild(button);
+//     } else {
+//       // Para otras columnas, solo mostrar el texto
+//       cell.textContent = item[key];
+//     }
+    
+//     cell.setAttribute("data-key", key); // Almacenar el nombre del campo en data-key
+//     row.appendChild(cell);
+//   });
+
+//   return row;
+// }
 function createEditableRow(item) {
   const row = document.createElement("tr");
 
@@ -91,9 +181,9 @@ function createEditableRow(item) {
   const editIcon = document.createElement("span");
   editIcon.classList.add("edit-icon");
   editIcon.innerHTML = ` <svg  class="svg"  width="16"  viewBox="0 0 14.7 14.7">
-                                          <path  class="svg-color" fill="#6b7386" fill-rule="evenodd"  d="m9.95.46c.62-.62,1.62-.62,2.24,0l2.05,2.05c.62.62.62,1.62,0,2.24l-1.25,1.25L8.7,1.72l1.25-1.25Zm-2.37,2.37L.46,9.95c-.3.3-.46.7-.46,1.12v2.05c0,.87.71,1.58,1.58,1.58h2.05c.42,0,.82-.17,1.12-.46l7.12-7.12L7.58,2.84Z"/>
-                                        
-                                      </svg>`; // Icono de lápiz (puedes usar FontAwesome o similar)
+                                        <path  class="svg-color" fill="#6b7386" fill-rule="evenodd"  d="m9.95.46c.62-.62,1.62-.62,2.24,0l2.05,2.05c.62.62.62,1.62,0,2.24l-1.25,1.25L8.7,1.72l1.25-1.25Zm-2.37,2.37L.46,9.95c-.3.3-.46.7-.46,1.12v2.05c0,.87.71,1.58,1.58,1.58h2.05c.42,0,.82-.17,1.12-.46l7.12-7.12L7.58,2.84Z"/>
+                                      
+                                    </svg>`; // Icono de lápiz (puedes usar FontAwesome o similar)
   editIcon.style.cursor = "pointer";
   editIcon.addEventListener("click", () => toggleEditMode(row, item, editIcon));
   editCell.appendChild(editIcon);
@@ -102,13 +192,31 @@ function createEditableRow(item) {
   // Añadir las celdas de datos
   Object.keys(item).forEach((key) => {
     const cell = document.createElement("td");
-    cell.textContent = item[key];
+    const value = item[key];
+    
+    if (key === "guardia" || key === "alojamiento") {
+      const button = document.createElement("button");
+      button.textContent = value;
+      
+      // Añadir clase según el valor
+      if (value === "Si") {
+        button.classList.add("btn-si");
+      } else {
+        button.classList.add("btn-no");
+      }
+      
+      cell.appendChild(button);
+    } else {
+      cell.textContent = value;
+    }
+    
     cell.setAttribute("data-key", key); // Almacenar el nombre del campo en data-key
     row.appendChild(cell);
   });
 
   return row;
 }
+
 
 function toggleEditMode(row, item, editIcon) {
   const isEditing = row.classList.contains("editing");

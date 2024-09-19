@@ -16,7 +16,7 @@ openModalBtn.onclick = function() {
     editingRow = null;
     idEmpresaInput.value = "";
     descripcionEmpresaInput.value = "";
-    modalTitle.innerHTML = `Nueva Área <svg class="sucess-svg2 close" width="20" viewBox="0 0 384 512">
+    modalTitle.innerHTML = `Nuevo Destino <svg class="sucess-svg2 close" width="20" viewBox="0 0 384 512">
     <path fill="#0C2B82" d="M324.5 411.1c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L214.6 256 347.1 123.5c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L192 233.4 59.6 100.9c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6L169.4 256 36.9 388.5c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0L192 278.6 324.5 411.1z"/>
     </svg>`;
    
@@ -81,7 +81,7 @@ function openEditModal(row) {
     editingRow = row; // Almacena la fila que se está editando
     idEmpresaInput.value = row.cells[1].innerText; // Lee Id Empresa de la columna 1
     descripcionEmpresaInput.value = row.cells[2].innerText; // Lee Descripción Empresa de la columna 2
-    modalTitle.innerHTML = `Editar Área <svg class="sucess-svg2 close" width="20" viewBox="0 0 384 512">
+    modalTitle.innerHTML = `Editar Destino <svg class="sucess-svg2 close" width="20" viewBox="0 0 384 512">
     <path fill="#0C2B82" d="M324.5 411.1c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L214.6 256 347.1 123.5c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L192 233.4 59.6 100.9c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6L169.4 256 36.9 388.5c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0L192 278.6 324.5 411.1z"/>
 </svg>`;
    

@@ -16,7 +16,7 @@ openModalBtn.onclick = function() {
     editingRow = null;
     idEmpresaInput.value = "";
     descripcionEmpresaInput.value = "";
-    modalTitle.innerHTML = `Nueva Área <svg class="sucess-svg2 close" width="20" viewBox="0 0 384 512">
+    modalTitle.innerHTML = `Nuevo Usuario <svg class="sucess-svg2 close" width="20" viewBox="0 0 384 512">
     <path fill="#0C2B82" d="M324.5 411.1c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L214.6 256 347.1 123.5c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L192 233.4 59.6 100.9c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6L169.4 256 36.9 388.5c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0L192 278.6 324.5 411.1z"/>
     </svg>`;
    
@@ -57,7 +57,10 @@ form.onsubmit = function(event) {
         newRow.innerHTML = `
             <td class="table__td">
                  <button  class="edit-btn table__editbtn">
-                                       
+                                        <svg  class="svg"  width="16"  viewBox="0 0 14.7 14.7">
+                                          <path  class="svg-color" fill="#6b7386" fill-rule="evenodd"  d="m9.95.46c.62-.62,1.62-.62,2.24,0l2.05,2.05c.62.62.62,1.62,0,2.24l-1.25,1.25L8.7,1.72l1.25-1.25Zm-2.37,2.37L.46,9.95c-.3.3-.46.7-.46,1.12v2.05c0,.87.71,1.58,1.58,1.58h2.05c.42,0,.82-.17,1.12-.46l7.12-7.12L7.58,2.84Z"/>
+                                        
+                                      </svg>
                                     </button>
             </td>
             <td class="table__td">${idEmpresa}</td>
@@ -81,7 +84,7 @@ function openEditModal(row) {
     editingRow = row; // Almacena la fila que se está editando
     idEmpresaInput.value = row.cells[1].innerText; // Lee Id Empresa de la columna 1
     descripcionEmpresaInput.value = row.cells[2].innerText; // Lee Descripción Empresa de la columna 2
-    modalTitle.innerHTML = `Editar Área <svg class="sucess-svg2 close" width="20" viewBox="0 0 384 512">
+    modalTitle.innerHTML = `Editar Usuario <svg class="sucess-svg2 close" width="20" viewBox="0 0 384 512">
     <path fill="#0C2B82" d="M324.5 411.1c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L214.6 256 347.1 123.5c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L192 233.4 59.6 100.9c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6L169.4 256 36.9 388.5c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0L192 278.6 324.5 411.1z"/>
 </svg>`;
    
